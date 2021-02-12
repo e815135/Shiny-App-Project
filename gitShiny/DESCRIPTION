@@ -10,7 +10,11 @@ Imports:
     shiny (>= 1.5.0),
     attempt,
     DT,
-    glue,
+    glue
+Depends:
+    shinydashboard,
+    shinyWidgets,
+    DiagrammeR,
     htmltools
 Encoding: UTF-8
 LazyData: true
