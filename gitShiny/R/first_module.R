@@ -13,37 +13,37 @@
 first_module_ui <- function(id){
   ns <- NS(id)
   tagList(
-    dashboardPage(
-    dashboardHeader(title = "Learning Git"),
+    shinydashboard::dashboardPage(
+      shinydashboard::dashboardHeader(title = "Learning Git"),
     
     
     ############## sidebar
     
-    dashboardSidebar(
-      sidebarMenu(
-        menuItem("Introduction", tabName = "introduction", icon = icon("introduction")),
-        menuItem("1. Getting Started", 
-                 menuSubItem("1.1 Set Up", tabName = "setup", icon = icon("setup")),
-                 menuSubItem("1.2 Working with Files", tabName = "workingwithfiles", icon = icon("workingwithfiles")),
+    shinydashboard::dashboardSidebar(
+      shinydashboard::sidebarMenu(
+        shinydashboard::menuItem("Introduction", tabName = "introduction", icon = icon("introduction")),
+        shinydashboard::menuItem("1. Getting Started", 
+                                 shinydashboard::menuSubItem("1.1 Set Up", tabName = "setup", icon = icon("setup")),
+                                 shinydashboard::menuSubItem("1.2 Working with Files", tabName = "workingwithfiles", icon = icon("workingwithfiles")),
                  tabName = "gettingstarted", icon = icon("gettingstarted")),
-        menuItem("2. Branching", tabName = "branching", icon = icon("branching"))
+        shinydashboard::menuItem("2. Branching", tabName = "branching", icon = icon("branching"))
       )
     ),
     
     ############## body
     
-    dashboardBody(
-      tabItems(
+    shinydashboard::dashboardBody(
+      shinydashboard::tabItems(
         # INTRODUCTION PAGE
-        tabItem(tabName = "introduction",
+        shinydashboard::tabItem(tabName = "introduction",
                 fluidRow(
-                  box(title = "Introduction", width = 12,
+                  shinydashboard::box(title = "Introduction", width = 12,
                       tags$div("Never heard of Git of before?", tags$br(),
                                "Heard of it but haven’t got the foggiest?", tags$br(), 
                                "Just need a refresher?", tags$br(""),
                                "This app provides an", tags$b("interactive step-by-step guide"), 
                                "to the basics of using Git for Version Control.")),
-                  box(title = "What is Version Control?", width = 12,
+                  shinydashboard::box(title = "What is Version Control?", width = 12,
                       tags$div("Simply put:", tags$br(""),
                                tags$b(tags$em("Version control is a system that records changes 
                                               to a file or set of files over time so that you can 
@@ -52,27 +52,27 @@ first_module_ui <- function(id){
                                tags$br(""),
                                "Version control is very useful when collaborating on code 
                                and allows you to work on new features in an isolated environment.")),
-                  box(title = "What is Git?", width = 12,
+                  shinydashboard::box(title = "What is Git?", width = 12,
                       tags$div(tags$b("Git is a version control system."), "It is a better and easier 
                                solution than other version control systems, e.g. Subversion 
                                and SourceSafe,", tags$br(), " and can be used through a command line/terminal or a GUI (Graphical User Interface). "
                       ))
                       )),
         # SET UP PAGE
-        tabItem(tabName = "setup",
+        shinydashboard::tabItem(tabName = "setup",
                 fluidRow(
-                  box(title = "setting up git bash to work in and explain using git bash and terminology")
+                  shinydashboard::box(title = "setting up git bash to work in and explain using git bash and terminology")
                 )),
         # WORKING WITH FILES PAGE
-        tabItem(tabName = "workingwithfiles",
+        shinydashboard::tabItem(tabName = "workingwithfiles",
                 fluidRow(
-                  box(title = "Working with Files", width = 12,
+                  shinydashboard::box(title = "Working with Files", width = 12,
                       tags$div("It is important to understand how to navigate through files
                                in your system.",
                                tags$br(),
                                "This chapter covers creating and navigating working directories, as well as
                                giving you the chance to become familar with the command line.")),
-                  box(title = "Creating a Working Directory", width = 6,
+                  shinydashboard::box(title = "Creating a Working Directory", width = 6,
                       tags$div("A ", tags$b("working directory")," is a location where you would like to work in.",
                                tags$br(), "Let's look at an example:",
                                tags$br(""), "I would like to set my working directory as the folder 'name'.
@@ -89,19 +89,19 @@ first_module_ui <- function(id){
                       ))
                       )),
         # BRANCHING PAGE
-        tabItem(tabName = "branching",
+        shinydashboard::tabItem(tabName = "branching",
                 fluidRow(
-                  box(title = "Making a Commit", width = 12,
+                  shinydashboard::box(title = "Making a Commit", width = 12,
                       tags$div("When a change is made, you can commit this change by running",
                                tags$code("git commit"))),
-                  box(title = "Make commit on master branch", 
-                      actionBttn(inputId = "run1", label = "Run", style = "fill")),
-                  box(title = "Diagramme1", grVizOutput(outputId = "diagramme1"), width = 6),
-                  box(title = "Make commit on bugFix branch", 
-                      actionBttn(inputId = "run2", label = "Run", style = "fill")),
-                  box(title = "Diagramme2", grVizOutput(outputId = "diagramme2"), width = 6)
+                  shinydashboard::box(title = "Make commit on master branch", 
+                                      actionButton(inputId = "run1", label = "Run", style = "fill")),
+                  shinydashboard::box(title = "Diagramme1", DiagrammeR::grVizOutput(outputId = "diagramme1"), width = 6),
+                  shinydashboard::box(title = "Make commit on bugFix branch", 
+                                      actionButton(inputId = "run2", label = "Run", style = "fill")),
+                  shinydashboard::box(title = "Diagramme2", DiagrammeR::grVizOutput(outputId = "diagramme2"), width = 6)
                 )
-        )
+        )#shinyWidgets::actionBttn
         
                   )
                       ),
@@ -155,10 +155,11 @@ first_module_server <- function(id){
                                     ")
     val1 <- eventReactive(input$run1,
                           flowchart1)
-    output$diagramme1 <- renderGrViz(val1())
+    #output$diagramme1 <- DiagrammeR::renderGrViz(val1)
+    output$diagramme1 <- renderPlot(val1())
     val2 <- eventReactive(input$run2,
                           flowchart2)
-    output$diagramme2 <- renderGrViz(val2())
+    output$diagramme2 <- DiagrammeR::renderGrViz(val2())
  
   })
 }
