@@ -13,7 +13,8 @@ Imports:
     glue,
     shinydashboard,
     shinyWidgets,
-    DiagrammeR
+    DiagrammeR,
+    base64enc
 Depends:
     htmltools
 Encoding: UTF-8
