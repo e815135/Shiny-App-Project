@@ -36,8 +36,35 @@ app_ui <- function(request) {
                                      icon = icon("workingwithfiles")),
                                    tabName = "gettingstarted", 
                                    icon = icon("gettingstarted")),
-          # 2. Branching
-          shinydashboard::menuItem("2. Branching", 
+          # 2. Basic Git Workflow
+          shinydashboard::menuItem("2. Basic Git Workflow",
+                                   tabname = "workflow",
+                                   icon = icon("workflow")),
+          # 3. Fundamental Fit Commands
+          shinydashboard::menuItem("3. Git Commands", 
+                                   shinydashboard::menuSubItem(
+                                     "3.1 Git Commit", tabName = "commit", 
+                                     icon = icon("commit")),
+                                   shinydashboard::menuSubItem(
+                                     "3.2 Making Changes to a File", 
+                                     tabName = "changesfile", 
+                                     icon = icon("changesfile")),
+                                   shinydashboard::menuSubItem(
+                                     "3.3 Undoing Unchanges", 
+                                     tabName = "undochanges", 
+                                     icon = icon("undochanges")),
+                                   tabName = "commands", 
+                                   icon = icon("commands")),
+          # 4. Branching
+          shinydashboard::menuItem("4. Branching",
+                                   tabname = "INSERT",
+                                   icon = icon("INSERT")),
+          # 5. Merging
+          shinydashboard::menuItem("5. Merging",
+                                   tabname = "merging",
+                                   icon = icon("merging")),
+          # TEST CODE
+          shinydashboard::menuItem("TEST PAGE", 
                                    tabName = "branching", 
                                    icon = icon("branching"))
         )
@@ -62,6 +89,12 @@ app_ui <- function(request) {
           shinydashboard::tabItem(
             tabName = "workingwithfiles",
             mod_working_with_files_page_ui("working_with_files_page_ui_1")),
+          
+          # BASIC GIT WORKFLOW
+          shinydashboard::tabItem(
+            tabName = "workflow",
+            mod_basic_git_workflow_ui("basic_git_workflow_ui_1")
+          ),
           
           # BRANCHING PAGE
           shinydashboard::tabItem(
