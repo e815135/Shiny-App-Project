@@ -80,10 +80,10 @@ app_ui <- function(request) {
             tabName = "introduction", 
             mod_introduction_page_ui("introduction_page_ui_1")),
           
-          # GETTING STARTED PAGE
+          # SET UP PAGE
           shinydashboard::tabItem(
             tabName = "setup",
-            mod_getting_started_page_ui("getting_started_page_ui_1")),
+            mod_set_up_page_ui("set_up_page_ui_1")),
           
           # WORKING WITH FILES
           shinydashboard::tabItem(

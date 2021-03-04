@@ -1,6 +1,6 @@
 Package: gitShiny
 Title: gitShiny
-Version: 0.0.0.9000
+Version: 0.1
 Authors@R: person('Elizabeth', 'Brown', email = 'elizabethbettybrown8@gmail.com', role = c('cre', 'aut'))
 Description: This app is designed to be used as an interactive tool for learning Git for Version Control.
 License: MIT + file LICENSE
@@ -15,8 +15,6 @@ Imports:
     shinyWidgets,
     DiagrammeR,
     base64enc
-Depends:
-    htmltools
 Encoding: UTF-8
 LazyData: true
-RoxygenNote: 6.1.1
+RoxygenNote: 7.1.1
