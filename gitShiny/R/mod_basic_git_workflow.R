@@ -17,10 +17,10 @@ mod_basic_git_workflow_ui <- function(id){
         shinydashboard::box(width = 12,
                             title = "Basic Git Workflow",
                             tags$div(
-                              "Below describes the stages of
-                              a basic Git workflow used for 
-                              version control: press the 'Next' and 'Previous'
-                               buttons to navigate through the stages.")),
+                              "Below describes the stages from start to finish 
+                              of a basic Git workflow used for version control: 
+                              press the 'Next' and 'Previous' buttons to 
+                              navigate through the stages.")),
         shinydashboard::box(width = 7,
                             imageOutput(ns("image"))),
         shinydashboard::box(width = 12, 
