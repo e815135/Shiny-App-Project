@@ -140,13 +140,29 @@ mod_working_with_files_page_ui <- function(id){
                                    tags$br(""), 
                                    tags$code("$ rm -r example_dir"),
                                    tags$br(""))),
+      column( width = 6,
+              fluidRow(
       shinydashboard::box(title = 'Exercise', width = 6,
                           background = 'light-blue',
-                          tags$div("Navigate to your 'Documents' folder. 
-                                   Create a new directory called 'my_dir' that 
+                          tags$div("Navigate to your 'Documents' folder.",
+                                   tags$br(),
+                                   "Create a new directory called 'my_dir' that 
                                    contains an empty text file named 'hello.txt'
-                                   , making sure that the file exists.")),
-      shinydashboard::box(title = 'Tips!', width = 6,
+                                   , making sure that the file exists.",
+                                   tags$br())),
+      shinydashboard::box(title = 'Solution', width = 6,
+                          background = 'light-blue',
+                          collapsible = TRUE,
+                          collapsed = TRUE,
+                          tags$div(tags$code("$ cd Documents"), tags$br(),
+                                   tags$code("$ mkdir my_dir"), tags$br(),
+                                   tags$code("$ cd my_dir"), tags$br(),
+                                   tags$code("$ touch hello.txt"), tags$br(),
+                                   tags$code("$ ls"), tags$br(),
+                                   tags$code("hello.txt"))))
+      ),
+      column(width = 6,
+      shinydashboard::box(title = 'Tips!', width = 12,
                           background = 'orange',
                           tags$div("Tab completion is useful when working 
                                    in the command line. For example, when 
@@ -162,17 +178,7 @@ mod_working_with_files_page_ui <- function(id){
                                        you have available, you can double hit
                                        the Tab key and a list of possible 
                                        options will be printed to the screen"))
-                                           )),
-      shinydashboard::box(title = 'Solution', width = 6,
-                          background = 'light-blue',
-                          collapsible = TRUE,
-                          collapsed = TRUE,
-                          tags$div(tags$code("$ cd Documents"), tags$br(),
-                                   tags$code("$ mkdir my_dir"), tags$br(),
-                                   tags$code("$ cd my_dir"), tags$br(),
-                                   tags$code("$ touch hello.txt"), tags$br(),
-                                   tags$code("$ ls"), tags$br(),
-                                   tags$code("hello.txt"))
-                          )
+                                           )))
+      
   ))
 }

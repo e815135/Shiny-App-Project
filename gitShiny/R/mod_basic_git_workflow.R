@@ -7,38 +7,32 @@
 #' @noRd 
 #'
 #' @importFrom shiny NS tagList 
+
 mod_basic_git_workflow_ui <- function(id){
   ns <- NS(id)
-  tagList(
- 
-  )
+
+    tagList(
+      
+      fluidRow(
+        shinydashboard::box(plotOutput(ns("plot"))),
+        shinydashboard::box(actionButton(ns("do"), "Click Me")))
+    )
+      
+      
+  
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    
 #' basic_git_workflow Server Functions
 #'
 #' @noRd 
 mod_basic_git_workflow_server <- function(id){
   moduleServer( id, function(input, output, session){
     ns <- session$ns
- 
-  })
+    observeEvent(input$do, {
+      data(mtcars)
+      output$plot <- renderPlot(plot(mpg ~ disp, mtcars))
+    })
+})
 }
     
 ## To be copied in the UI

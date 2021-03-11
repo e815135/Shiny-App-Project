@@ -5,15 +5,10 @@ Authors@R: person('Elizabeth', 'Brown', email = 'elizabethbettybrown8@gmail.com'
 Description: This app is designed to be used as an interactive tool for learning Git for Version Control.
 License: MIT + file LICENSE
 Imports: 
-    config (>= 0.3),
     golem (>= 0.3.0),
     shiny (>= 1.5.0),
-    attempt,
-    DT,
-    glue,
-    shinydashboard,
-    shinyWidgets,
-    DiagrammeR,
+    config,
+    shinydashboard (>= 0.7.1),
     base64enc
 Encoding: UTF-8
 LazyData: true
