@@ -92,6 +92,12 @@ app_ui <- function(request) {
           shinydashboard::tabItem(
             tabName = "workflow",
             mod_basic_git_workflow_ui("basic_git_workflow_ui_1")
+          ),
+          
+          # TRACKING CHANGES
+          shinydashboard::tabItem(
+            tabName = "commit",
+            mod_tracking_changes_ui("tracking_changes_ui_1")
           )
           
           # # BRANCHING PAGE
