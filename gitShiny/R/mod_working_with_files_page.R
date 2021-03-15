@@ -146,17 +146,22 @@ mod_working_with_files_page_ui <- function(id){
                           background = 'light-blue',
                           tags$div("Navigate to your 'Documents' folder.",
                                    tags$br(),
-                                   "Create a new directory called 'my_dir' that 
-                                   contains an empty text file named 'hello.txt'
-                                   , making sure that the file exists.",
+                                   "Create a new directory called 'GitExercises'.",
+                                   tags$br(),
+                                   "Create a new directory within this called 
+                                   'Chapter1' that contains an empty text file 
+                                   named 'hello.txt', making sure that the file
+                                   exists.",
                                    tags$br())),
       shinydashboard::box(title = 'Solution', width = 6,
                           background = 'light-blue',
                           collapsible = TRUE,
                           collapsed = TRUE,
                           tags$div(tags$code("$ cd Documents"), tags$br(),
-                                   tags$code("$ mkdir my_dir"), tags$br(),
-                                   tags$code("$ cd my_dir"), tags$br(),
+                                   tags$code("$ mkdir GitExercises"), tags$br(),
+                                   tags$code("$ cd GitExercises"), tags$br(),
+                                   tags$code("$ mkdir Chapter1"), tags$br(),
+                                   tags$code("$ cd Chapter1"), tags$br(),
                                    tags$code("$ touch hello.txt"), tags$br(),
                                    tags$code("$ ls"), tags$br(),
                                    tags$code("hello.txt"))))

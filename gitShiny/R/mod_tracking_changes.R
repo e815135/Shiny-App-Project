@@ -11,6 +11,9 @@ mod_tracking_changes_ui <- function(id){
   ns <- NS(id)
   tagList(
     fluidRow(
+
+# Chapter introduction -----------------------------------------------------
+
       shinydashboard::box(width = 12,
                           title = "Tracking Changes",
                           tags$div("In this chapter we will cover the 
@@ -19,33 +22,366 @@ mod_tracking_changes_ui <- function(id){
                                    tags$br(""),
                                    "For this chapter you will need to launch the 
                                    Git Bash application (see chapter 1.1).")),
+
+# Make git repo -----------------------------------------------------------
+
       shinydashboard::box(width = 12,
-                          title = "Creating a Local Git Repository"),
+                          title = "Creating a Local Git Repository",
+                          tags$div("Firstly I need to create a Git repository on
+                                   my local machine. This is where Git tracks 
+                                   and records all the changes made in a 
+                                   project. Do do this, I create a directory 
+                                   (see chapter 1.2) and create my repository 
+                                   within that using the command ",
+                                   tags$code("git init"), 
+                                   " which creates an empty repository:",
+                                   tags$br(""),
+                                   tags$code("$ pwd"),
+                                   tags$br(),
+                                   tags$code("/c/Users/name"),
+                                   tags$br(),
+                                   tags$code("$ cd Documents"),
+                                   tags$br(),
+                                   tags$code("$ mkdir Example"),
+                                   tags$br(),
+                                   tags$code("$ cd Example"),
+                                   tags$br(""),
+                                   tags$code("$ git init"),
+                                   tags$br(),
+                                   tags$code(
+                                     "Initialized empty Git repository in 
+                                     C:/Users/name/Documents/Example/.git/"))),
+
+# Tracking a file ---------------------------------------------------------
+
+
       shinydashboard::box(width = 6,
-                          title = "Committing Changes"),
+                          title = "Tracking a File",
+                          tags$div("Now that I have a repository I can begin to add
+                                    and make changes to a file. First I am 
+                                   going to create an empty text file:",
+                                   tags$br(""),
+                                   tags$code("$ touch example.txt"),
+                                   tags$br(""),
+                                   "The command ", tags$code("git status"),
+                                   "allows me to see the current state of my 
+                                   working directory, staging area and whether
+                                    or not files are being tracked by Git. 
+                                   Running this command shows me that the file
+                                    'example.txt' is not being tracked by Git:",
+                                   tags$br("")),
+                          imageOutput(ns("status_1"), width = 600,
+                                      height = 150),
+                          tags$div(tags$br(""), 
+                                   "In order for Git to track this file I first
+                                   need to add it to the staging area. I do this 
+                                   by running the command ", 
+                                   tags$code("git add"),
+                                   " followed by the file name:",
+                                   tags$br(""),
+                                   tags$code("$ git add example.txt"),
+                                   tags$br(""),
+                                   "Running ",
+                                   tags$code("git status"),
+                                   " again we can see that now the file is in
+                                    the staging area:",
+                                   tags$br("")),
+                          imageOutput(ns("status_2"), width = 600,
+                                      height = 150),
+                          tags$div(tags$br(""),
+                                   "Next I commit this change to the git 
+                                   repository using the command ",
+                                   tags$code("git commit"), 
+                                   " followed by the name of the file and a 
+                                   commit message:",
+                                   tags$br(""),
+                                   tags$code("$ git commit example.txt
+                                              -m \"demonstrate git commit\""),
+                                   tags$br(),
+                                   tags$code("1 file changed, 0 insertions(+),
+                                              0 deletions(-)"),
+                                   tags$br(),
+                                   tags$code("create note XXXXXX example.txt"),
+                                   tags$br(""),
+                                   tags$i("Note: this may print other output 
+                                   which you can silence by following the on 
+                                   screen instructions that Git Bash provides."
+                                          ),
+                                   tags$br(""),
+                                   "Finally we can run ",
+                                   tags$code("git status"),
+                                   " again to see that there is nothing to 
+                                   commit and the working tree is clean (more on
+                                    this later):",
+                                   tags$br("")),
+                          imageOutput(ns("status_3"), width = 600,
+                                      height = 50),
+                          tags$div(
+                            tags$br(""),
+                            "Below summarises the stages above:"
+                          )
+                          ),
+
+# Committing a change -----------------------------------------------------
+
       shinydashboard::box(width = 6,
-                          imageOutput(ns("image")),
-                          actionButton(ns("previous_button"), "Previous"),
-                          actionButton(ns("next_button"), "Next")),
+                          title = "Committing a Change",
+                          tags$div("Since committing the text file, I have made
+                                    a change to the file and saved this change.
+                                    I can see that a change has been made 
+                                   by running ",
+                                   tags$code("git status"),
+                                   ":",
+                                   tags$br("")),
+                          imageOutput(ns("status_4"), width = 600,
+                                      height = 125),
+                          tags$div(tags$br(""), 
+                                   "Again, to commit this change to the 
+                                   repository I first add it to the staging 
+                                   area:",
+                                   tags$br(""),
+                                   tags$code("git add example.txt"),
+                                   tags$br(""),
+                                   "Running ",
+                                   tags$code("git status"),
+                                   " again I can see that now the change is in
+                                   the staging area:",
+                                   tags$br("")),
+                          imageOutput(ns("status_5"), width = 600,
+                                      height = 100),
+                          tags$div(tags$br(""),
+                                   "Next I commit this change to the git 
+                                   repository:",
+                                   tags$br(""),
+                                   tags$code("$ git commit example.txt
+                                              -m \"demonstrate committing a 
+                                             change to a file\""),
+                                   tags$br(),
+                                   tags$code("1 file changed, 1 insertions(+)"),
+                                   tags$br(""),
+                                   "Finally I can run ",
+                                   tags$code("git status"),
+                                   " again to see that there is nothing to 
+                                   commit and the working tree is clean:",
+                                   tags$br("")),
+                          imageOutput(ns("status_6"), width = 600,
+                                      height = 50),
+                          tags$div(
+                            tags$br(""),
+                            "I can see the previous commits I have made by 
+                             running ",
+                            tags$code("git log"), ":",
+                            tags$br("")),
+                            imageOutput(ns("log"), width = 600,
+                                        height = 175),
+                          tags$div(
+                            tags$br(""),
+                            "This tells me that I have made two commits and it
+                             displays the respective commit messages I gave
+                             previously.",
+                            tags$br(""),
+                            "Below summarises the stages above. The repository
+                             records the change made to the file but also 
+                            remembers the previous version of the file:"
+                          )),
+
+# workflows ---------------------------------------------------------------
+
+
       shinydashboard::box(width = 6,
-                          title = "Using the Vim Text Editor"),
+                          imageOutput(ns("image1")),
+                          actionButton(ns("previous_button1"), "Previous"),
+                          actionButton(ns("next_button1"), "Next")),
       shinydashboard::box(width = 6,
-                          title = "Commit Messages: Best Practices"),
+                          imageOutput(ns("image2")),
+                          actionButton(ns("previous_button2"), "Previous"),
+                          actionButton(ns("next_button2"), "Next")),
+
+# Vim text editor ---------------------------------------------------------
+
+
       shinydashboard::box(width = 6,
-                          title = "Why is there a Staging Area?"),
+                          title = "Using the Vim Text Editor",
+                          tags$div("Previously, when committing a change I 
+                                   assigned to the commit a commit message 
+                                   using the following code:",
+                                   tags$br(""),
+                                   tags$code("$ git commit example.txt -m 
+                                             \"demonstrate git commit\""),
+                                   tags$br(""),
+                                   "A commit message briefly describes the 
+                                   change we are committing. It is designed to 
+                                   allow us to clearly identify which stage of 
+                                   our work corresponds to each commit, which 
+                                   is helpful for reverting or merging changes 
+                                   (more on this later).",
+                                   tags$br(""),
+                                   tags$b(" You MUST assign a commit message to 
+                                          every commit you make."),
+                                   tags$br(""),
+                                   "The ",
+                                   tags$code("-m"),
+                                   " notation used above makes it easy to write 
+                                   a message, especially if your message is 
+                                   small. However, one method for 
+                                   leaving a commit message is to use the Vim 
+                                   text editor. This allows you to type longer 
+                                   commit messages.",
+                                   tags$br(""),
+                                   "When setting up Git Bash in Chapter 1.1,
+                                    Vim was selected as the default text editor.
+                                    This time if I run ",
+                                   tags$br(""),
+                                   tags$code("$ git commit example.txt"),
+                                   tags$br(""),
+                                   "Vim will open:",
+                                   tags$br("")
+                                   ),
+                          imageOutput(ns("vim"), width = 600,
+                                      height = 300),
+                          tags$div(tags$br(""),
+                                   "To leave a message, first I press the ",
+                                   tags$code("I"),
+                                   "key on my keyboard. Then I type my commit 
+                                   message. Once this is typed I press the ",
+                                   tags$code("esc"),
+                                   "key on my keyboard and then type ",
+                                   tags$code(":wq"),
+                                   " and press the ",
+                                   tags$code("Enter"),
+                                   "key on my keyboard which will save the
+                                   message and exit the text editor.",
+                                   tags$br(""),
+                                   tags$i("Note: there are other text editors 
+                                          which can be used.")
+                          )),
+
+# Commit messages best practice -------------------------------------------
+
+
+      shinydashboard::box(width = 6,
+                          title = "Commit Messages: Best Practices",
+                          tags$div("It is important, especially when working
+                                   collaboratively on a project, that each 
+                                   member of the team follows the same 
+                                   conventions.",
+                                   tags$br(""),
+                                   "The most common and recommended convention 
+                                   is to write the message in the imperative, 
+                                   e.g. \"Fix bug in example.R file\", 
+                                   rather than \"Fixed bug in example.R file\".
+                                   We also avoid using full stops at the end of 
+                                   commit messages.",
+                                   tags$br(""),
+                                   "Commit messages should be clear and 
+                                   meaningful and don't assume prior knowledge
+                                    of the situation.")),
+
+# why a staging area? ----------------------------------------------------
+
+
+      shinydashboard::box(width = 6,
+                          title = "Why is there a Staging Area?",
+                          tags$div("We can group related changes to multiple files
+                                    within the staging area under one commit 
+                                   with one commit message. This makes our 
+                                   commits more organised and easier to follow.",
+                                   tags$br(""),
+                                   "For example, we may have changes made to 
+                                   two files names 'example1.txt' and 
+                                   'example2.txt' which are in the staging area.
+                                   We can commit these under one commit using 
+                                   the following code:",
+                                   tags$br(""),
+                                   tags$code("$ git commit example1.txt 
+                                             example2.txt -m \"insert 
+                                             relevant commit message\""))),
+
+# Tips --------------------------------------------------------------------
+
+
       shinydashboard::box(width = 6,
                           title = "Tips!",
-                          background = "orange"),
+                          background = "orange",
+                          tags$div(
+                            tags$ul(
+                              tags$li(
+                                "The more commits made, the longer the git log
+                                will become. To exit the log, type ",
+                                tags$code("q"), 
+                                "and press the ",
+                                tags$code("Enter"),
+                                "key on your keyboard."
+                              ),
+                              tags$li(
+                                "When using the command line, you can use the up
+                                and down arrows on your keyboard to retrieve previous
+                                lines of code to run, saving time typing."
+                              )
+                            )
+                          )),
+
+# Exercise and solution ---------------------------------------------------
+
+
       column(width = 12,
              fluidRow(
                shinydashboard::box(width = 6,
                                    title = "Exercise",
-                                   background = "light-blue"),
+                                   background = "light-blue",
+                                   tags$div(
+                                     tags$ul(
+                                       tags$li(
+                                         "Navigate to the folder 'GitExercises'
+                                          created in Chapter 1.2 and make a new
+                                         directory named 'Chapter2', then 
+                                         navigate to this directory."
+                                       ),
+                                       tags$li(
+                                         "Create an empty git repository and an
+                                         empty text file named 'exercise1.txt'."
+                                       ),
+                                       tags$li(
+                                         "Commit this file to the repository."
+                                       ),
+                                       tags$li(
+                                         "Using file explorer (or equivalant), 
+                                         open the text file you have created,
+                                         add some text and save."
+                                       ),
+                                       tags$li(
+                                         "Commit this change."
+                                       )
+                                     )
+                                   )),
                shinydashboard::box(width = 6,
                                    title = "Solution",
                                    background = "light-blue",
                                    collapsible = TRUE,
-                                   collapsed = TRUE)
+                                   collapsed = TRUE,
+                                   tags$div(
+                                     tags$code("$ cd Documents/GitExercises"),
+                                     tags$br(),
+                                     tags$code("$ mkdir Chapter2"),
+                                     tags$br(),
+                                     tags$code("$ cd Chapter2"),
+                                     tags$br(),
+                                     tags$code("$ git init"),
+                                     tags$br(),
+                                     tags$code("$ touch exercise1.txt"),
+                                     tags$br(),
+                                     tags$code("$ git add exercise1.txt"),
+                                     tags$br(),
+                                     tags$code("$ git commit exercise1.txt
+                                                -m \"track file\""),
+                                     tags$br(),
+                                     "After change has been made to the file:",
+                                     tags$br(),
+                                     tags$code("$ git add exercise1.txt"),
+                                     tags$br(),
+                                     tags$code("$ git commit exercise1.txt
+                                                -m \"add text to file\"")
+                                   ))
              )
              )
       
@@ -60,12 +396,99 @@ mod_tracking_changes_ui <- function(id){
 mod_tracking_changes_server <- function(id){
   moduleServer( id, function(input, output, session){
     ns <- session$ns
- 
+    
+
+# static images: ----------------------------------------------------------
+
+    output$status_1 <- renderImage({
+      list(
+        src = file.path(
+          "R/images/tracking_changes/git_status_1.png"),
+        contentType = "image/png",
+        width = 600,
+        height = 150
+      )
+    }, deleteFile = FALSE)
+    
+    output$status_2 <- renderImage({
+      list(
+        src = file.path(
+          "R/images/tracking_changes/git_status_2.png"),
+        contentType = "image/png",
+        width = 600,
+        height = 150
+      )
+    }, deleteFile = FALSE)
+    
+    output$status_3 <- renderImage({
+      list(
+        src = file.path(
+          "R/images/tracking_changes/git_status_3.png"),
+        contentType = "image/png",
+        width = 600,
+        height = 50
+      )
+    }, deleteFile = FALSE)
+    
+    output$status_4 <- renderImage({
+      list(
+        src = file.path(
+          "R/images/tracking_changes/git_status_4.png"),
+        contentType = "image/png",
+        width = 600,
+        height = 125
+      )
+    }, deleteFile = FALSE)
+    
+    output$status_5 <- renderImage({
+      list(
+        src = file.path(
+          "R/images/tracking_changes/git_status_5.png"),
+        contentType = "image/png",
+        width = 600,
+        height = 100
+      )
+    }, deleteFile = FALSE)
+    
+    output$status_6 <- renderImage({
+      list(
+        src = file.path(
+          "R/images/tracking_changes/git_status_6.png"),
+        contentType = "image/png",
+        width = 600,
+        height = 50
+      )
+    }, deleteFile = FALSE)
+    
+    output$log <- renderImage({
+      list(
+        src = file.path(
+          "R/images/tracking_changes/git_log.png"),
+        contentType = "image/png",
+        width = 600,
+        height = 175
+      )
+    }, deleteFile = FALSE)
+    
+    output$vim <- renderImage({
+      list(
+        src = file.path(
+          "R/images/tracking_changes/vim.png"),
+        contentType = "image/png",
+        width = 600,
+        height = 300
+      )
+    }, deleteFile = FALSE)
+    
+    
+
+# tracking file workflow: -------------------------------------------------
+
     # set counter
-    counter <- reactiveValues(countervalue = 0)
+    counter1 <- reactiveValues(countervalue = 0)
     
     # Initial image to be shown
-    output$image <- renderImage({
+    output$image1 <- renderImage({
       list(
         src = file.path(
           "R/images/tracking_changes/commit_image_1.png"),
@@ -77,14 +500,14 @@ mod_tracking_changes_server <- function(id){
     
     # When Next button is pressed:
     
-    observeEvent(input$next_button, {
+    observeEvent(input$next_button1, {
       # If Next button pressed, increment by 1
-      counter$countervalue <- counter$countervalue + 1
+      counter1$countervalue <- counter1$countervalue + 1
       
       # Depending on countervalue, render the appropiate image
-      if (counter$countervalue == 1){
+      if (counter1$countervalue == 1){
         
-        output$image <- renderImage({
+        output$image1 <- renderImage({
           list(
             src = file.path(
               "R/images/tracking_changes/commit_image_2.png"),
@@ -94,8 +517,8 @@ mod_tracking_changes_server <- function(id){
           )
         }, deleteFile = FALSE)
         
-      } else if (counter$countervalue == 2) {
-        output$image <- renderImage({
+      } else if (counter1$countervalue == 2) {
+        output$image1 <- renderImage({
           list(
             src = file.path(
               "R/images/tracking_changes/commit_image_3.png"),
@@ -104,8 +527,8 @@ mod_tracking_changes_server <- function(id){
             height = 400
           )
         }, deleteFile = FALSE)
-      } else if (counter$countervalue == 3) {
-        output$image <- renderImage({
+      } else if (counter1$countervalue == 3) {
+        output$image1 <- renderImage({
           
           list(
             src = file.path(
@@ -116,8 +539,8 @@ mod_tracking_changes_server <- function(id){
           )
         }, deleteFile = FALSE)
         
-      } else if (counter$countervalue > 3) {
-        counter$countervalue <- 3
+      } else if (counter1$countervalue > 3) {
+        counter1$countervalue <- 3
       }    
       
     })
@@ -125,14 +548,14 @@ mod_tracking_changes_server <- function(id){
     # When Previous button is pressed:
     
     
-    observeEvent(input$previous_button, {
+    observeEvent(input$previous_button1, {
       # If Previous button pressed, increment by -1
-      counter$countervalue <- counter$countervalue - 1
+      counter1$countervalue <- counter1$countervalue - 1
       
       # Depending on countervalue, render the appropiate image
-      if (counter$countervalue == 1){
+      if (counter1$countervalue == 1){
         
-        output$image <- renderImage({
+        output$image1 <- renderImage({
           list(
             src = file.path(
               "R/images/tracking_changes/commit_image_2.png"),
@@ -142,8 +565,8 @@ mod_tracking_changes_server <- function(id){
           )
         }, deleteFile = FALSE)
         
-      } else if (counter$countervalue == 2) {
-        output$image <- renderImage({
+      } else if (counter1$countervalue == 2) {
+        output$image1 <- renderImage({
           list(
             src = file.path(
               "R/images/tracking_changes/commit_image_3.png"),
@@ -152,8 +575,8 @@ mod_tracking_changes_server <- function(id){
             height = 400
           )
         }, deleteFile = FALSE)
-      } else if (counter$countervalue == 3) {
-        output$image <- renderImage({
+      } else if (counter1$countervalue == 3) {
+        output$image1 <- renderImage({
           
           list(
             src = file.path(
@@ -164,12 +587,133 @@ mod_tracking_changes_server <- function(id){
           )
         }, deleteFile = FALSE)
         
-      } else if (counter$countervalue <= 0){
-        counter$countervalue <- 0
-        output$image <- renderImage({
+      } else if (counter1$countervalue <= 0){
+        counter1$countervalue <- 0
+        output$image1 <- renderImage({
           list(
             src = file.path(
               "R/images/tracking_changes/commit_image_1.png"),
+            contentType = "image/png",
+            width = 600,
+            height = 400
+          )
+        }, deleteFile = FALSE)
+      }
+      
+    })
+    
+
+# commiting change to file workflow: --------------------------------------
+ 
+    # set counter
+    counter2 <- reactiveValues(countervalue = 0)
+    
+    # Initial image to be shown
+    output$image2 <- renderImage({
+      list(
+        src = file.path(
+          "R/images/tracking_changes/commit_image_5.png"),
+        contentType = "image/png",
+        width = 600,
+        height = 400
+      )
+    }, deleteFile = FALSE)
+    
+    # When Next button is pressed:
+    
+    observeEvent(input$next_button2, {
+      # If Next button pressed, increment by 1
+      counter2$countervalue <- counter2$countervalue + 1
+      
+      # Depending on countervalue, render the appropiate image
+      if (counter2$countervalue == 1){
+        
+        output$image2 <- renderImage({
+          list(
+            src = file.path(
+              "R/images/tracking_changes/commit_image_6.png"),
+            contentType = "image/png",
+            width = 600,
+            height = 400
+          )
+        }, deleteFile = FALSE)
+        
+      } else if (counter2$countervalue == 2) {
+        output$image2 <- renderImage({
+          list(
+            src = file.path(
+              "R/images/tracking_changes/commit_image_7.png"),
+            contentType = "image/png",
+            width = 600,
+            height = 400
+          )
+        }, deleteFile = FALSE)
+      } else if (counter2$countervalue == 3) {
+        output$image2 <- renderImage({
+          
+          list(
+            src = file.path(
+              "R/images/tracking_changes/commit_image_8.png"),
+            contentType = "image/png",
+            width = 600,
+            height = 400
+          )
+        }, deleteFile = FALSE)
+        
+      } else if (counter2$countervalue > 3) {
+        counter2$countervalue <- 3
+      }    
+      
+    })
+    
+    # When Previous button is pressed:
+    
+    
+    observeEvent(input$previous_button2, {
+      # If Previous button pressed, increment by -1
+      counter2$countervalue <- counter2$countervalue - 1
+      
+      # Depending on countervalue, render the appropiate image
+      if (counter2$countervalue == 1){
+        
+        output$image2 <- renderImage({
+          list(
+            src = file.path(
+              "R/images/tracking_changes/commit_image_6.png"),
+            contentType = "image/png",
+            width = 600,
+            height = 400
+          )
+        }, deleteFile = FALSE)
+        
+      } else if (counter2$countervalue == 2) {
+        output$image2 <- renderImage({
+          list(
+            src = file.path(
+              "R/images/tracking_changes/commit_image_7.png"),
+            contentType = "image/png",
+            width = 600,
+            height = 400
+          )
+        }, deleteFile = FALSE)
+      } else if (counter2$countervalue == 3) {
+        output$image2 <- renderImage({
+          
+          list(
+            src = file.path(
+              "R/images/tracking_changes/commit_image_8.png"),
+            contentType = "image/png",
+            width = 600,
+            height = 400
+          )
+        }, deleteFile = FALSE)
+        
+      } else if (counter2$countervalue <= 0){
+        counter2$countervalue <- 0
+        output$image2 <- renderImage({
+          list(
+            src = file.path(
+              "R/images/tracking_changes/commit_image_5.png"),
             contentType = "image/png",
             width = 600,
             height = 400
@@ -183,9 +727,3 @@ mod_tracking_changes_server <- function(id){
     
   })
 }
-    
-## To be copied in the UI
-# mod_tracking_changes_ui("tracking_changes_ui_1")
-    
-## To be copied in the server
-# mod_tracking_changes_server("tracking_changes_ui_1")
