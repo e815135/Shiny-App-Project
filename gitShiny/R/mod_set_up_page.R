@@ -17,11 +17,13 @@ mod_set_up_page_ui <- function(id){
                                    Git Bash and explains some key terminology
                                    used throughout the materials."
                                    )),
+      # Installing git bash
       shinydashboard::box(title = "Installing Git Bash", width = 12,
                           tags$div("Git Bash is a popular application designed 
                                    for the use of Git from the command line. 
                                    We will use this throughout the subsequent 
                                    chapters.")),
+      # Downloading git bash
       shinydashboard::box(title = "Downloading Git Bash", width = 6,
                           tags$div("To download Git Bash click on the 
                                    following link: ",
@@ -36,6 +38,7 @@ mod_set_up_page_ui <- function(id){
                                    but if not press 'click here to download 
                                    manually' (see image)."
                                    )),
+      # Image - change to renderImage and remove dependency
       shinydashboard::box(width = 6,
                           img(
                             src = base64enc::dataURI(
@@ -43,6 +46,7 @@ mod_set_up_page_ui <- function(id){
                               mime="image/png"),
                             height = 400,
                             width = 600)),
+      # Begin git bash set up
       shinydashboard::box(width = 6, title = "Begin Git Bash Set Up",
                           tags$div("Go to your start menu and open Git Setup by
                                    searching the name.",
@@ -55,6 +59,7 @@ mod_set_up_page_ui <- function(id){
                                    'C:\\Users\\name'. For example, if your name 
                                    is Elizabeth Brown, the file path would be 
                                    'C:\\Users\\ebrown'. Then press Next.")),
+      # Image - change to renderImage and remove dependency
       shinydashboard::box(width = 6, 
                           img(
                             src = base64enc::dataURI(
@@ -62,12 +67,14 @@ mod_set_up_page_ui <- function(id){
                               mime="image/png"),
                             height = 400,
                             width = 600)),
+      # Default settings
       shinydashboard::box(width = 6, title = "Default Settings",
                           tags$div("There will be a series of prompts. Leave the 
                                    default selections and continue to 
                                    press Next.",
                                    tags$br(),
                                    "(see images to the right)")),
+      # Image - change to renderImage and remove dependency
       shinydashboard::box(width = 6, 
                           img(
                             src = base64enc::dataURI(
@@ -81,6 +88,7 @@ mod_set_up_page_ui <- function(id){
                                    tags$br(),
                                    "(see images to the right)")
                           ),
+      # Image - change to renderImage and remove dependency
       shinydashboard::box(width = 6, 
                           img(
                             src = base64enc::dataURI(
@@ -88,6 +96,7 @@ mod_set_up_page_ui <- function(id){
                               mime="image/png"),
                             height = 400,
                             width = 600)),
+      # Launch git bash
       shinydashboard::box(width = 6, title = "Launching Git Bash",
                           tags$div("Once installed, there will be a prompt to 
                                    finish the setup. You can launch Git Bash 
@@ -100,6 +109,7 @@ mod_set_up_page_ui <- function(id){
                                    The third image to the right shows the 
                                    application once opened."
                                    )),
+      # Image - change to renderImage and remove dependency
       shinydashboard::box(width = 6, 
                           img(
                             src = base64enc::dataURI(
@@ -107,6 +117,7 @@ mod_set_up_page_ui <- function(id){
                               mime="image/png"),
                             height = 400,
                             width = 600)),
+      # Key terminology - add to this as app develops
       shinydashboard::box(width = 12, title = "Key Terminology",
                           tags$div("The following terminology will be used 
                                    throughout the materials:",

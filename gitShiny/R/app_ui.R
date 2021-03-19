@@ -60,11 +60,7 @@ app_ui <- function(request) {
           # 5. Merging
           shinydashboard::menuItem("5. Merging",
                                    tabName = "merging",
-                                   icon = icon("merging")),
-          # TEST CODE
-          shinydashboard::menuItem("TEST PAGE", 
-                                   tabName = "branching", 
-                                   icon = icon("branching"))
+                                   icon = icon("merging"))
         )
       ),
       
@@ -100,13 +96,6 @@ app_ui <- function(request) {
             mod_tracking_changes_ui("tracking_changes_ui_1")
           )
           
-          # # BRANCHING PAGE
-          # shinydashboard::tabItem(
-          #   tabName = "branching",
-          #   mod_branching_page_ui("branching_page_ui_1"))
-          #      
-          #                    
-          # )),
         )),
       ############## skin
       

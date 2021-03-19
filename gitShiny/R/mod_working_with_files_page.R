@@ -21,6 +21,7 @@ mod_working_with_files_page_ui <- function(id){
                                    tags$br(""),
                                    "For this chapter you will need to launch the 
                                    Git Bash application (see chapter 1.1).")),
+      # What is a directory
       shinydashboard::box(title = "What is a Working Directory?", width = 6,
                           tags$div("A ", tags$b("working directory"),
                                    " is a location where you would 
@@ -80,6 +81,7 @@ mod_working_with_files_page_ui <- function(id){
                                    tags$code("$ pwd"),
                                    tags$br(), tags$code("/c/Users/name"),
                                    tags$br())),
+      # creating a directory
       shinydashboard::box(title = 'Creating a Directory', width = 6,
                           tags$div('As well as navigating through directories, 
                                    we can create and remove them using the 
@@ -140,6 +142,7 @@ mod_working_with_files_page_ui <- function(id){
                                    tags$br(""), 
                                    tags$code("$ rm -r example_dir"),
                                    tags$br(""))),
+      # Exercise and solution
       column( width = 6,
               fluidRow(
       shinydashboard::box(title = 'Exercise', width = 6,
@@ -166,6 +169,7 @@ mod_working_with_files_page_ui <- function(id){
                                    tags$code("$ ls"), tags$br(),
                                    tags$code("hello.txt"))))
       ),
+      # TIPS
       column(width = 6,
       shinydashboard::box(title = 'Tips!', width = 12,
                           background = 'orange',
