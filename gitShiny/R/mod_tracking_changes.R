@@ -30,7 +30,8 @@ mod_tracking_changes_ui <- function(id){
                           tags$div("Firstly I need to create a Git repository on
                                    my local machine. This is where Git tracks 
                                    and records all the changes made in a 
-                                   project. Do do this, I create a directory 
+                                   project.",
+                                   tags$br(),"Do do this, I create a directory 
                                    (see chapter 1.2) and create my repository 
                                    within that using the command ",
                                    tags$code("git init"), 
@@ -55,7 +56,7 @@ mod_tracking_changes_ui <- function(id){
 # Tracking a file ---------------------------------------------------------
 
 
-      shinydashboard::box(width = 6,
+      shinydashboard::box(width = 12,
                           title = "Tracking a File",
                           tags$div("Now that I have a repository I can begin to add
                                     and make changes to a file. First I am 
@@ -65,8 +66,9 @@ mod_tracking_changes_ui <- function(id){
                                    tags$br(""),
                                    "The command ", tags$code("git status"),
                                    "allows me to see the current state of my 
-                                   working directory, staging area and whether
-                                    or not files are being tracked by Git. 
+                                   working directory, staging area and whether",
+                                   tags$br(),
+                                    "or not files are being tracked by Git. 
                                    Running this command shows me that the file
                                     'example.txt' is not being tracked by Git:",
                                    tags$br("")),
@@ -76,6 +78,7 @@ mod_tracking_changes_ui <- function(id){
                                    "In order for Git to track this file I first
                                    need to add it to the staging area. I do this 
                                    by running the command ", 
+                                   tags$br(),
                                    tags$code("git add"),
                                    " followed by the file name:",
                                    tags$br(""),
@@ -92,7 +95,9 @@ mod_tracking_changes_ui <- function(id){
                                    "Next I commit this change to the git 
                                    repository using the command ",
                                    tags$code("git commit"), 
-                                   " followed by the name of the file and a 
+                                   " followed by the name",
+                                   tags$br(),
+                                   "of the file and a 
                                    commit message:",
                                    tags$br(""),
                                    tags$code("$ git commit example.txt
@@ -116,19 +121,26 @@ mod_tracking_changes_ui <- function(id){
                                    tags$br("")),
                           imageOutput(ns("status_3"), width = 600,
                                       height = 50),
-                          tags$div(
-                            tags$br(""),
-                            "Below summarises the stages above:"
-                          )
                           ),
+
+
+# worflow 1 ---------------------------------------------------------------
+
+      shinydashboard::box(width = 12,
+                          title = "Workflow for Tracking a File:",
+                          imageOutput(ns("image1")),
+                          actionButton(ns("previous_button1"), "Previous"),
+                          actionButton(ns("next_button1"), "Next")),
 
 # Committing a change -----------------------------------------------------
 
-      shinydashboard::box(width = 6,
+      shinydashboard::box(width = 12,
                           title = "Committing a Change",
                           tags$div("Since committing the text file, I have made
                                     a change to the file and saved this change.
-                                    I can see that a change has been made 
+                                    I can see that a change",
+                                   tags$br(),
+                                   "has been made 
                                    by running ",
                                    tags$code("git status"),
                                    ":",
@@ -180,19 +192,15 @@ mod_tracking_changes_ui <- function(id){
                              displays the respective commit messages I gave
                              previously.",
                             tags$br(""),
-                            "Below summarises the stages above. The repository
+                            "The repository
                              records the change made to the file but also 
-                            remembers the previous version of the file:"
+                            remembers the previous version of the file."
                           )),
 
-# workflows ---------------------------------------------------------------
+# workflow 2 ---------------------------------------------------------------
 
-
-      shinydashboard::box(width = 6,
-                          imageOutput(ns("image1")),
-                          actionButton(ns("previous_button1"), "Previous"),
-                          actionButton(ns("next_button1"), "Next")),
-      shinydashboard::box(width = 6,
+      shinydashboard::box(width = 12,
+                          title = "Workflow for Commit a Change",
                           imageOutput(ns("image2")),
                           actionButton(ns("previous_button2"), "Previous"),
                           actionButton(ns("next_button2"), "Next")),
@@ -200,7 +208,7 @@ mod_tracking_changes_ui <- function(id){
 # Vim text editor ---------------------------------------------------------
 
 
-      shinydashboard::box(width = 6,
+      shinydashboard::box(width = 12,
                           title = "Using the Vim Text Editor",
                           tags$div("Previously, when committing a change I 
                                    assigned to the commit a commit message 
@@ -211,7 +219,9 @@ mod_tracking_changes_ui <- function(id){
                                    tags$br(""),
                                    "A commit message briefly describes the 
                                    change we are committing. It is designed to 
-                                   allow us to clearly identify which stage of 
+                                   allow us to clearly identify",
+                                   tags$br(), 
+                                   "which stage of 
                                    our work corresponds to each commit, which 
                                    is helpful for reverting or merging changes 
                                    (more on this later).",
@@ -223,7 +233,9 @@ mod_tracking_changes_ui <- function(id){
                                    tags$code("-m"),
                                    " notation used above makes it easy to write 
                                    a message, especially if your message is 
-                                   small. However, one method for 
+                                   small.",
+                                   tags$br(),
+                                   "However, one method for 
                                    leaving a commit message is to use the Vim 
                                    text editor. This allows you to type longer 
                                    commit messages.",
@@ -243,25 +255,28 @@ mod_tracking_changes_ui <- function(id){
                                    "To leave a message, first I press the ",
                                    tags$code("I"),
                                    "key on my keyboard. Then I type my commit 
-                                   message. Once this is typed I press the ",
+                                   message.",
+                                   tags$br(),
+                                   "Once this is typed I press the ",
                                    tags$code("esc"),
                                    "key on my keyboard and then type ",
                                    tags$code(":wq"),
                                    " and press the ",
                                    tags$code("Enter"),
-                                   "key on my keyboard which will save the
+                                   "key on",
+                                   tags$br(),
+                                   "my keyboard which will save the
                                    message and exit the text editor.",
                                    tags$br(""),
                                    tags$i("Note: there are other text editors 
                                           which can be used.")
                           )),
 
-# Commit messages best practice -------------------------------------------
-
+# Commit messages best practice and why staging area? -------------------------------------------
 
       shinydashboard::box(width = 6,
-                          title = "Commit Messages: Best Practices",
-                          tags$div("It is important, especially when working
+                          tags$div(tags$h4("Commit Messages: Best Practices"),
+                                   "It is important, especially when working 
                                    collaboratively on a project, that each 
                                    member of the team follows the same 
                                    conventions.",
@@ -275,27 +290,25 @@ mod_tracking_changes_ui <- function(id){
                                    tags$br(""),
                                    "Commit messages should be clear and 
                                    meaningful and don't assume prior knowledge
-                                    of the situation.")),
-
-# why a staging area? ----------------------------------------------------
-
-
-      shinydashboard::box(width = 6,
-                          title = "Why is there a Staging Area?",
-                          tags$div("We can group related changes to multiple files
-                                    within the staging area under one commit 
-                                   with one commit message. This makes our 
+                                    of the situation.",
+                                   tags$br(""),
+                                   tags$h4("Why a Staging Area?"),
+                                   "We can group related changes to multiple files
+                                    within the staging area under one commit
+                                   with one commit message. This makes our
                                    commits more organised and easier to follow.",
                                    tags$br(""),
-                                   "For example, we may have changes made to 
-                                   two files names 'example1.txt' and 
+                                   "For example, we may have changes made to
+                                   two files names 'example1.txt' and
                                    'example2.txt' which are in the staging area.
-                                   We can commit these under one commit using 
+                                   We can commit these under one commit using
                                    the following code:",
                                    tags$br(""),
-                                   tags$code("$ git commit example1.txt 
-                                             example2.txt -m \"insert 
-                                             relevant commit message\""))),
+                                   tags$code("$ git commit example1.txt
+                                             example2.txt -m \"insert
+                                             relevant commit message\"")
+                                   )),
+
 
 # Tips --------------------------------------------------------------------
 
@@ -318,8 +331,8 @@ mod_tracking_changes_ui <- function(id){
                                 and down arrows on your keyboard to retrieve previous
                                 lines of code to run, saving time typing."
                               )
-                            )
-                          )),
+                              )
+                              )),
 
 # Exercise and solution ---------------------------------------------------
 
