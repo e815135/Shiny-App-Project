@@ -38,14 +38,10 @@ mod_set_up_page_ui <- function(id){
                                    but if not press 'click here to download 
                                    manually' (see image)."
                                    )),
-      # Image - change to renderImage and remove dependency
+      # Image 
       shinydashboard::box(width = 6,
-                          img(
-                            src = base64enc::dataURI(
-                              file="R/images/getting_started/set_up/download_git_bash.png", 
-                              mime="image/png"),
-                            height = 400,
-                            width = 600)),
+                          imageOutput(ns("download"))),
+      
       # Begin git bash set up
       shinydashboard::box(width = 6, title = "Begin Git Bash Set Up",
                           tags$div("Go to your start menu and open Git Setup by
@@ -59,14 +55,9 @@ mod_set_up_page_ui <- function(id){
                                    'C:\\Users\\name'. For example, if your name 
                                    is Elizabeth Brown, the file path would be 
                                    'C:\\Users\\ebrown'. Then press Next.")),
-      # Image - change to renderImage and remove dependency
+      # Image 
       shinydashboard::box(width = 6, 
-                          img(
-                            src = base64enc::dataURI(
-                              file="R/images/getting_started/set_up/setting_location.png", 
-                              mime="image/png"),
-                            height = 400,
-                            width = 600)),
+                          imageOutput(ns("location"))),
       # Default settings
       shinydashboard::box(width = 6, title = "Default Settings",
                           tags$div("There will be a series of prompts. Leave the 
@@ -74,28 +65,19 @@ mod_set_up_page_ui <- function(id){
                                    press Next.",
                                    tags$br(),
                                    "(see images to the right)")),
-      # Image - change to renderImage and remove dependency
+      # Image 
       shinydashboard::box(width = 6, 
-                          img(
-                            src = base64enc::dataURI(
-                              file="R/images/getting_started/set_up/default_settings.png", 
-                              mime="image/png"),
-                            height = 400,
-                            width = 600)),
+                          imageOutput(ns("default1"))),
+      
       shinydashboard::box(width = 6,
                           tags$div("Leave the default selections and continue 
                                    to press Next. Then finally press Install.",
                                    tags$br(),
                                    "(see images to the right)")
                           ),
-      # Image - change to renderImage and remove dependency
+      # Image
       shinydashboard::box(width = 6, 
-                          img(
-                            src = base64enc::dataURI(
-                              file="R/images/getting_started/set_up/default_settings2.png", 
-                              mime="image/png"),
-                            height = 400,
-                            width = 600)),
+                          imageOutput(ns("default2"))),
       # Launch git bash
       shinydashboard::box(width = 6, title = "Launching Git Bash",
                           tags$div("Once installed, there will be a prompt to 
@@ -109,14 +91,9 @@ mod_set_up_page_ui <- function(id){
                                    The third image to the right shows the 
                                    application once opened."
                                    )),
-      # Image - change to renderImage and remove dependency
+      # Image 
       shinydashboard::box(width = 6, 
-                          img(
-                            src = base64enc::dataURI(
-                              file="R/images/getting_started/set_up/opening.png", 
-                              mime="image/png"),
-                            height = 400,
-                            width = 600)),
+                          imageOutput(ns("opening"))),
       # Key terminology - add to this as app develops
       shinydashboard::box(width = 12, title = "Key Terminology",
                           tags$div("The following terminology will be used 
@@ -128,4 +105,68 @@ mod_set_up_page_ui <- function(id){
                           ))
     )
   )
+}
+
+#' set up page Server Functions
+#'
+#' @noRd 
+mod_set_up_page_server <- function(id){
+  moduleServer( id, function(input, output, session){
+    ns <- session$ns
+    
+    
+    # static images: ----------------------------------------------------------
+    
+    output$download <- renderImage({
+      list(
+        src = file.path(
+          "R/images/getting_started/set_up/download_git_bash.png"),
+        contentType = "image/png",
+        width = 600,
+        height = 400
+      )
+    }, deleteFile = FALSE)
+    
+    output$location <- renderImage({
+      list(
+        src = file.path(
+          "R/images/getting_started/set_up/setting_location.png"),
+        contentType = "image/png",
+        width = 600,
+        height = 400
+      )
+    }, deleteFile = FALSE)
+    
+    output$default1 <- renderImage({
+      list(
+        src = file.path(
+          "R/images/getting_started/set_up/default_settings.png"),
+        contentType = "image/png",
+        width = 600,
+        height = 400
+      )
+    }, deleteFile = FALSE)
+    
+    output$default2 <- renderImage({
+      list(
+        src = file.path(
+          "R/images/getting_started/set_up/default_settings2.png"),
+        contentType = "image/png",
+        width = 600,
+        height = 400
+      )
+    }, deleteFile = FALSE)
+    
+    output$opening <- renderImage({
+      list(
+        src = file.path(
+          "R/images/getting_started/set_up/opening.png"),
+        contentType = "image/png",
+        width = 600,
+        height = 400
+      )
+    }, deleteFile = FALSE)
+    
+  }
+)
 }
