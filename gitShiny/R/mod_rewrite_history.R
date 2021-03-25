@@ -93,6 +93,23 @@ mod_rewrite_history_ui <- function(id){
                                    )),
 
 
+# tip ---------------------------------------------------------------------
+
+      
+      column(width = 6,
+             fluidRow(
+             shinydashboard::box(title = 'Tip!', width = 12,
+                                 background = 'orange',
+                                 tags$div("When collaboratively working on a 
+                                            project, avoid ammending a commit that
+                                            another developer has made. It is 
+                                            likely they have based their work on
+                                            that commit so this could cause issues 
+                                            and it becomes confusing and 
+                                            complicated to resolve."
+                                 )))),
+
+
 # exercise and solution ----------------------------------------------------------------
 
       column(width = 12,
@@ -137,8 +154,6 @@ mod_rewrite_history_ui <- function(id){
                                      tags$code("$ git commit --amend --no-edit")
                                    ))
              ))
-    
-      
     )
  
   )
