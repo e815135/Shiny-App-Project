@@ -12,4 +12,6 @@ app_server <- function( input, output, session ) {
   mod_basic_git_workflow_server("basic_git_workflow_ui_1")
   # Tracking changes server
   mod_tracking_changes_server("tracking_changes_ui_1")
+  # Rewriting history server
+  mod_rewrite_history_server("rewrite_history_ui_1")
 }

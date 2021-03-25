@@ -48,9 +48,19 @@ app_ui <- function(request) {
                                      tabName = "commit", 
                                      icon = icon("commit")),
                                    shinydashboard::menuSubItem(
-                                     "3.2 Undoing Changes", 
-                                     tabName = "undochanges", 
-                                     icon = icon("undochanges")),
+                                     "3.2 Rewriting History", 
+                                     tabName = "rewrite", 
+                                     icon = icon("rewrite")),
+                                   shinydashboard::menuSubItem(
+                                     "3.3 Removing Untracked Files",
+                                     tabName = "untracked",
+                                     icon = icon("untracked")
+                                   ),
+                                   shinydashboard::menuSubItem(
+                                     "3.4 Reverting Changes",
+                                     tabName = "revert",
+                                     icon = icon("revert")
+                                   ),
                                    tabName = "commands", 
                                    icon = icon("commands")),
           # 4. Branching
@@ -94,6 +104,12 @@ app_ui <- function(request) {
           shinydashboard::tabItem(
             tabName = "commit",
             mod_tracking_changes_ui("tracking_changes_ui_1")
+          ),
+          
+          # REWRITING HISTORY
+          shinydashboard::tabItem(
+            tabName = "rewrite",
+            mod_rewrite_history_ui("rewrite_history_ui_1")
           )
           
         )),

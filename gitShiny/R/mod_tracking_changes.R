@@ -120,7 +120,7 @@ mod_tracking_changes_ui <- function(id){
                                     this later):",
                                    tags$br("")),
                           imageOutput(ns("status_3"), width = 600,
-                                      height = 50),
+                                      height = 50)
                           ),
 
 
@@ -347,7 +347,7 @@ mod_tracking_changes_ui <- function(id){
                                        tags$li(
                                          "Navigate to the folder 'GitExercises'
                                           created in Chapter 1.2 and make a new
-                                         directory named 'Chapter2', then 
+                                         directory named 'Chapter3', then 
                                          navigate to this directory."
                                        ),
                                        tags$li(
@@ -375,9 +375,9 @@ mod_tracking_changes_ui <- function(id){
                                    tags$div(
                                      tags$code("$ cd Documents/GitExercises"),
                                      tags$br(),
-                                     tags$code("$ mkdir Chapter2"),
+                                     tags$code("$ mkdir Chapter3"),
                                      tags$br(),
-                                     tags$code("$ cd Chapter2"),
+                                     tags$code("$ cd Chapter3"),
                                      tags$br(),
                                      tags$code("$ git init"),
                                      tags$br(),
