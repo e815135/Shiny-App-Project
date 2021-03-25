@@ -81,6 +81,9 @@ mod_rewrite_history_ui <- function(id){
                                    tags$code("$ git add example2.txt"),
                                    tags$br(),
                                    tags$code("$ git commit --amend --no-edit"),
+                                   tags$br(),
+                                   tags$code(" 2 files changed, 1 insertion(+), 
+                                             1 deletion(-)"),
                                    tags$br(""),
                                    "The first line adds the file to the staging 
                                    area and the second adds this change to the 
