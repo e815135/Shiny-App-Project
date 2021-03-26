@@ -110,6 +110,18 @@ app_ui <- function(request) {
           shinydashboard::tabItem(
             tabName = "rewrite",
             mod_rewrite_history_ui("rewrite_history_ui_1")
+          ),
+          
+          # REMOVING UNTRACKED FILES
+          shinydashboard::tabItem(
+            tabName = "untracked",
+            mod_untrack_file_ui("untrack_file_ui_1")
+          ),
+          
+          # REVERTING CHANGES
+          shinydashboard::tabItem(
+            tabName = "revert",
+            mod_revert_changes_ui("revert_changes_ui_1")
           )
           
         )),

@@ -14,4 +14,6 @@ app_server <- function( input, output, session ) {
   mod_tracking_changes_server("tracking_changes_ui_1")
   # Rewriting history server
   mod_rewrite_history_server("rewrite_history_ui_1")
+  # Revert changes server
+  mod_revert_changes_server("revert_changes_ui_1")
 }
