@@ -183,8 +183,6 @@ mod_revert_changes_server <- function(id){
  
 
 # workflow ----------------------------------------------------------------
-
-    # tracking file workflow: -------------------------------------------------
     
     # set counter
     counter <- reactiveValues(countervalue = 0)
