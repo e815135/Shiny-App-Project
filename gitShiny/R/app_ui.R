@@ -64,13 +64,29 @@ app_ui <- function(request) {
                                    tabName = "commands", 
                                    icon = icon("commands")),
           # 4. Branching
-          shinydashboard::menuItem("4. Branching",
-                                   tabName = "INSERT",
-                                   icon = icon("INSERT")),
-          # 5. Merging
-          shinydashboard::menuItem("5. Merging",
-                                   tabName = "merging",
-                                   icon = icon("merging"))
+          shinydashboard::menuItem("4. Basic Git Branching",
+                                   shinydashboard::menuSubItem(
+                                     "4.1 Introduction to Branching",
+                                     tabName = "intro_branching",
+                                     icon = icon("intro_branching")
+                                   ),
+                                   shinydashboard::menuSubItem(
+                                     "4.2 Working on a Branch",
+                                     tabName = "branch",
+                                     icon = icon("branch")
+                                   ),
+                                   shinydashboard::menuSubItem(
+                                     "4.3 Introduction to Merging",
+                                     tabName = "merging",
+                                     icon = icon("merging")
+                                   ),
+                                   shinydashboard::menuSubItem(
+                                     "4.4 Merge Conflicts",
+                                     tabName = "conflicts",
+                                     icon = icon("conflicts")
+                                   ),
+                                   tabName = "basic_branching",
+                                   icon = icon("basic_branching"))
         )
       ),
       
