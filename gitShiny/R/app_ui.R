@@ -138,6 +138,12 @@ app_ui <- function(request) {
           shinydashboard::tabItem(
             tabName = "revert",
             mod_revert_changes_ui("revert_changes_ui_1")
+          ),
+          
+          # INTRODUCTION TO BRANCHING
+          shinydashboard::tabItem(
+            tabName = "intro_branching",
+            mod_basic_branching_ui("basic_branching_ui_1")
           )
           
         )),

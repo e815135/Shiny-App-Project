@@ -16,4 +16,6 @@ app_server <- function( input, output, session ) {
   mod_rewrite_history_server("rewrite_history_ui_1")
   # Revert changes server
   mod_revert_changes_server("revert_changes_ui_1")
+  # Introduction to branching
+  mod_basic_branching_server("basic_branching_ui_1")
 }

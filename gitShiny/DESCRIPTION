@@ -9,8 +9,7 @@ Imports:
     shiny (>= 1.5.0),
     config,
     shinydashboard (>= 0.7.1),
-    pkgload,
-    DiagrammeR
+    pkgload
 Encoding: UTF-8
 LazyData: true
 RoxygenNote: 7.1.1
