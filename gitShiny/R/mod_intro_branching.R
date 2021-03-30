@@ -21,12 +21,7 @@ mod_basic_branching_ui <- function(id){
                                    "Branching allows us to develop multiple 
                                    aspects of our project isolated from the main
                                    branch. This is particularly useful when 
-                                   working collaboratively on a project.",
-                                   tags$br(),
-                                   "The default branch is the ",
-                                   tags$code("master"),
-                                   "branch. It is best practice to work on 
-                                   a different branch from this.")),
+                                   working collaboratively on a project.")),
       shinydashboard::box(width = 12,
                           title = "Example of Branching in Practice",
                           imageOutput(ns("workflow"),
