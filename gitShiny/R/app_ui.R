@@ -144,6 +144,18 @@ app_ui <- function(request) {
           shinydashboard::tabItem(
             tabName = "intro_branching",
             mod_basic_branching_ui("basic_branching_ui_1")
+          ),
+          
+          # WORKING ON BRANCH
+          shinydashboard::tabItem(
+            tabName = "branch",
+            mod_on_branch_ui("on_branch_ui_1")
+          ),
+          
+          # INTRO TO MERGING
+          shinydashboard::tabItem(
+            tabName = "merging",
+            mod_intro_merging_ui("intro_merging_ui_1")
           )
           
         )),

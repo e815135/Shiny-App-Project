@@ -18,4 +18,8 @@ app_server <- function( input, output, session ) {
   mod_revert_changes_server("revert_changes_ui_1")
   # Introduction to branching
   mod_basic_branching_server("basic_branching_ui_1")
+  # Working on a branch server
+  mod_on_branch_server("on_branch_ui_1")
+  # Introduction to merging
+  mod_intro_merging_server("intro_merging_ui_1")
 }
