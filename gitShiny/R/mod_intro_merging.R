@@ -100,7 +100,9 @@ mod_intro_merging_ui <- function(id){
                                    tags$br(""),
                                    tags$code("$ git checkout example_branch"),
                                    tags$br(),
-                                   tags$code("$ git merge master")
+                                   tags$code("$ git merge master"),
+                                   tags$br(""),
+                                   "This is known as a fast-forward merge."
                                    )),
 
 # summmary workflow -------------------------------------------------------
