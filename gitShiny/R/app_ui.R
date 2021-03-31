@@ -156,6 +156,12 @@ app_ui <- function(request) {
           shinydashboard::tabItem(
             tabName = "merging",
             mod_intro_merging_ui("intro_merging_ui_1")
+          ),
+          
+          # MERGE CONFLICTS
+          shinydashboard::tabItem(
+            tabName = "conflicts",
+            mod_merge_conflicts_ui("merge_conflicts_ui_1")
           )
           
         )),

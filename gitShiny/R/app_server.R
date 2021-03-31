@@ -22,4 +22,6 @@ app_server <- function( input, output, session ) {
   mod_on_branch_server("on_branch_ui_1")
   # Introduction to merging
   mod_intro_merging_server("intro_merging_ui_1")
+  # Merge conflicts
+  mod_merge_conflicts_server("merge_conflicts_ui_1")
 }
