@@ -12,10 +12,100 @@ mod_intro_merging_ui <- function(id){
   tagList(
  
     fluidRow(
+
+# intro to merging --------------------------------------------------------
+      
       shinydashboard::box(title = "Introduction to Merging",
-                          width = 12),
+                          width = 12,
+                          tags$div("Let's say we have reached a milestone in a 
+                                   project where we would like to draw together 
+                                   developers' work and deploy something into 
+                                   production.",
+                                   tags$br(),
+                                   "Git branching has been used so pieces of 
+                                   work sit on separate branches.",
+                                   tags$br(),
+                                   "We use Git to merge the relevant branches
+                                   so all of the work sits on one branch. To do 
+                                   this we use the command",
+                                   tags$code("git merge"),
+                                   ".",
+                                   tags$br(""),
+                                   "In this chapter we will look at merging two
+                                   branches.",
+                                   tags$br(""),
+                                   "How does ",
+                                   tags$code("git merge"),
+                                   "work?",
+                                   tags$br(""),
+                                   tags$code("git merge"),
+                                   "takes two commit points, usually the tips of
+                                   the branches, and finds a common commit. Git
+                                   then combines the subsequent commits in each
+                                   branch into one history.",
+                                   tags$br(),
+                                   "This creates a new merge commit which 
+                                   combines all of the changes.
+                                   Git is clever and determines how the 
+                                   merging is done.")),
+
+
+# merging two branches ----------------------------------------------------
+
+
       shinydashboard::box(title = "Merging Two Branches",
-                          width = 12),
+                          width = 12,
+                          tags$div("Usually we would like to merge two 
+                                   branches.",
+                                   tags$br(""),
+                                   "At the end of the practical exampe in 
+                                   Chapter 4.2, the branch",
+                                   tags$code("example_branch"),
+                                   "was ahead of the ",
+                                   tags$code("master"),
+                                   "branch by one commit.",
+                                   tags$br(),
+                                   "Now we would like to merge",
+                                   tags$code("example_branch"),
+                                   "into the ",
+                                   tags$code("master"),
+                                   "branch. To do this, we first make sure we 
+                                   are working on the master branch:",
+                                   tags$br(""),
+                                   tags$code("$ git checkout master"),
+                                   tags$br(""),
+                                   "Then we use ",
+                                   tags$code("git merge"),
+                                   ", specifying the branch we would like to 
+                                   merge into ",
+                                   tags$code("master"),
+                                   ":",
+                                   tags$br(""),
+                                   tags$code("$ git merge example_branch"),
+                                   tags$br(""),
+                                   "Using the ",
+                                   tags$code("cat"),
+                                   "command we can see that the merge has taken
+                                   place:",
+                                   tags$br(""),
+                                   imageOutput(ns("merged"),
+                                               width = 300,
+                                               height = 75),
+                                   tags$br(""),
+                                   "Finally, ",
+                                   tags$code("example_branch"),
+                                   "is still pointing its last commit and not
+                                   the merge commit. To ensure it points to the
+                                   merge commit we run:",
+                                   tags$br(""),
+                                   tags$code("$ git checkout example_branch"),
+                                   tags$br(),
+                                   tags$code("$ git merge master")
+                                   )),
+
+# summmary workflow -------------------------------------------------------
+
+
       shinydashboard::box(title = "Summary",
                           width = 12,
                           imageOutput(ns("workflow"),
@@ -23,20 +113,63 @@ mod_intro_merging_ui <- function(id){
                                       height = 400),
                           actionButton(ns("previous_button"), "Previous"),
                           actionButton(ns("next_button"), "Next")),
-      # Exercise and solution
+     
+
+# exercise and solution ---------------------------------------------------
+
+
       column( width = 6,
               fluidRow(
                 shinydashboard::box(title = 'Exercise', width = 6,
-                                    background = 'light-blue'),
+                                    background = 'light-blue',
+                                    tags$div("Following the exercise in 
+                                             Chapter 4.2, navigate to the file
+                                             path 'GitExercises/Chapter4' and
+                                             merge ", 
+                                             tags$code("new_branch"),
+                                             "onto the ",
+                                             tags$code("master"),
+                                             "branch.")),
                 shinydashboard::box(title = 'Solution', width = 6,
                                     background = 'light-blue',
                                     collapsible = TRUE,
-                                    collapsed = TRUE))
+                                    collapsed = TRUE,
+                                    tags$div(
+                                      tags$code("$ cd GitExercises/Chapter4"),
+                                      tags$br(),
+                                      tags$code("$ git checkout master"),
+                                      tags$br(),
+                                      tags$code("$ git merge new_branch"),
+                                      tags$br(),
+                                      tags$code("$ git checkout new_branch"),
+                                      tags$br(),
+                                      tags$code("$ git merge master")
+                                             )))
       ),
-      # TIPS
+     
+
+# tips --------------------------------------------------------------------
+
+
       column(width = 6,
              shinydashboard::box(title = 'Tips!', width = 12,
-                                 background = 'orange'))
+                                 background = 'orange',
+                                 tags$div("In Chapter 3.4 we referred to 
+                                          something called the",
+                                          tags$code("HEAD"),
+                                          ". This is used as a pointer to point
+                                          to a specific commit on a specific 
+                                          branch. To help a merge execute 
+                                          smoothly, we make sure the ,",
+                                          tags$code("HEAD"),
+                                          "is pointed at the branch which is 
+                                          receiving the merge, in our case this
+                                          was the ",
+                                          tags$code("master"),
+                                          "branch. To do this, we ran",
+                                          tags$code("git checkout master"),
+                                          "."
+                                          )))
     )
   )
 }
@@ -47,6 +180,22 @@ mod_intro_merging_ui <- function(id){
 mod_intro_merging_server <- function(id){
   moduleServer( id, function(input, output, session){
     ns <- session$ns
+    
+
+# static images -----------------------------------------------------------
+
+    output$merged <- renderImage({
+      list(
+        src = file.path(
+          "R/images/intro_merging/merged.png"),
+        contentType = "image/png",
+        width = 300,
+        height = 75
+      )
+    }, deleteFile = FALSE)    
+    
+
+# summary workflow --------------------------------------------------------
     
     # set counter
     counter <- reactiveValues(countervalue = 0)
