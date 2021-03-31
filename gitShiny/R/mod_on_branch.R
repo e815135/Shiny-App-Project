@@ -169,8 +169,9 @@ mod_on_branch_ui <- function(id){
                                                 to the file and commit this change."),
                                         tags$li("Create and move to a new branch
                                                 called 'new_branch'."),
-                                        tags$li("Make another change to the text
-                                                file and commit this change."),
+                                        tags$li("Make a change to the text file 
+                                                on a new line and commit this
+                                                change."),
                                         tags$li("Switch back to the master 
                                                 branch. Using the command ",
                                                 tags$code("$ cat exercise1.txt"),
