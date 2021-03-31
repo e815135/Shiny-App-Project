@@ -223,11 +223,18 @@ mod_on_branch_ui <- function(id){
       column(width = 6,
              shinydashboard::box(title = 'Tip!', width = 12,
                                  background = 'orange',
-                                 tags$div("When working on a project is it 
-                                          best practice to always work on a 
-                                          branch that is not the",
-                                          tags$code("master"),
-                                          "branch.")))
+                                 tags$div(tags$ul(tags$li(
+                                   "When working on a project is it best 
+                                   practice to always work on a branch 
+                                   that is not the",
+                                   tags$code("master"),
+                                   "branch."),
+                                   tags$li(
+                                     "Running the following will show a graphical
+                                     representation of the branches:",
+                                     tags$code("$ git log --graph 
+                                               --pretty=oneline --abbrev-commit")
+                                     )))))
     )
     
     
