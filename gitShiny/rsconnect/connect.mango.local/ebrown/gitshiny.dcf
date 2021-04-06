@@ -5,8 +5,8 @@ account: ebrown
 server: connect.mango.local
 hostUrl: https://connect.mango.local/__api__
 appId: 100
-bundleId: 7688
+bundleId: 7805
 url: https://connect.mango.local:443/content/100/
-when: 1616086011.11689
+when: 1616504001.82085
 asMultiple: FALSE
 asStatic: FALSE
