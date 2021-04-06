@@ -1,6 +1,6 @@
 #' untrack_file UI Function
 #'
-#' @description A shiny Module.
+#' @description Module for untracking files page.
 #'
 #' @param id,input,output,session Internal parameters for {shiny}.
 #'
@@ -32,7 +32,7 @@ mod_untrack_file_ui <- function(id){
                                    performs a hard file system deletion.
                                    Let's look at an example:",
                                    tags$br(""),
-                                   "First I will create an empty file and check
+                                   "First we will create an empty file and check
                                    that this file is untracked:",
                                    tags$br(""),
                                    tags$code("$ touch example3.txt"),
@@ -42,17 +42,17 @@ mod_untrack_file_ui <- function(id){
                                    tags$code("git clean"),
                                    " requires a force option to initiate any file
                                    deletion. This acts as a safety mechanism.
-                                    Before performing the deletion I can use 
+                                    Before performing the deletion we can use 
                                    the option", 
                                    tags$code("-n"),
-                                   "to check which files would be removed, called
+                                   "to check which files would be removed, aka
                                    a dry run:",
                                    tags$br(""),
                                    tags$code("$ git clean -n"),
                                    tags$br(),
                                    tags$code("Would remove example3.txt"),
                                    tags$br(""),
-                                   "In order to execute the deletion, I use the 
+                                   "In order to execute the deletion, we use the 
                                    force option", 
                                    tags$code("-f"),
                                    ":",
@@ -61,8 +61,8 @@ mod_untrack_file_ui <- function(id){
                                    tags$br(),
                                    tags$code("Removing example3.txt"),
                                    tags$br(""),
-                                   "Now I can see that the file has been deleted
-                                   from my file system:",
+                                   "Now we can see that the file has been deleted
+                                   from our file system:",
                                    tags$br(""),
                                    tags$code("$ ls"),
                                    tags$br(),
@@ -78,9 +78,9 @@ mod_untrack_file_ui <- function(id){
                                    " can also be used to remove untracked 
                                    directories:",
                                    tags$br(""),
-                                   "First I will create a new directory with an empty
+                                   "First we will create a new directory with an empty
                                    text file within it. Returning to the original
-                                   working directory I can run ",
+                                   working directory we can run ",
                                    tags$code("git status"),
                                    "to see
                                    that this new directory is untracked:",
@@ -95,7 +95,7 @@ mod_untrack_file_ui <- function(id){
                                    tags$br(),
                                    tags$code("$ git status"),
                                    tags$br(""),
-                                   "I can perform a dry run using the option",
+                                   "we can perform a dry run using the option",
                                    tags$code("-dn"),
                                    ":",
                                    tags$br(""),
@@ -103,7 +103,7 @@ mod_untrack_file_ui <- function(id){
                                    tags$br(),
                                    tags$code("Would remove example_dir/"),
                                    tags$br(""),
-                                   "To execute the deletion I use the force option
+                                   "To execute the deletion we use the force option
                                    as before and the option",
                                    tags$code("-d"),
                                    "to specify untracked directories:",
@@ -166,18 +166,3 @@ mod_untrack_file_ui <- function(id){
   )
 }
     
-#' untrack_file Server Functions
-#'
-#' @noRd 
-mod_untrack_file_server <- function(id){
-  moduleServer( id, function(input, output, session){
-    ns <- session$ns
- 
-  })
-}
-    
-## To be copied in the UI
-# mod_untrack_file_ui("untrack_file_ui_1")
-    
-## To be copied in the server
-# mod_untrack_file_server("untrack_file_ui_1")

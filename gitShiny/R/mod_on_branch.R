@@ -1,6 +1,6 @@
 #' on_branch UI Function
 #'
-#' @description A shiny Module.
+#' @description Module for working on a branch page.
 #'
 #' @param id,input,output,session Internal parameters for {shiny}.
 #'
@@ -15,7 +15,10 @@ mod_on_branch_ui <- function(id){
       shinydashboard::box(width = 12,
                           title = "Working on a Branch",
                           tags$div("In this chapter we will look at the basics
-                                   of branching on our local device.")),
+                                   of branching on our local device.",
+                                   tags$br(""),
+                                   "For this chapter you will need to launch the 
+                                   Git Bash application (see chapter 1.1).")),
 
 # creating and switching branches -----------------------------------------
       
@@ -31,44 +34,48 @@ mod_on_branch_ui <- function(id){
                                                height = 25),
                                    tags$br(""),
                                    "To create a branch called 'example_branch',
-                                   I run the following:",
+                                   we run the following:",
                                    tags$br(""),
                                    tags$code("$ git branch example_branch"),
                                    tags$br(""),
-                                   "In order to switch from the master to this
-                                   new branch I run the following:",
+                                   "In order to switch from",
+                                   tags$code("master"),
+                                   "to this new branch we run the following:",
                                    tags$br(""),
                                    tags$code("$ git checkout example_branch"),
                                    tags$br(),
                                    tags$code("Switched to branch 'example_branch'"),
                                    tags$br(""),
-                                   "As a shorthand, I can create a new branch
+                                   "As a shorthand, we can create a new branch
                                    and switch to is using the ",
                                    tags$code("-b"), 
                                    "option:",
                                    tags$br(""),
                                    tags$code("$ git checkout -b example_branch"),
                                    tags$br(""),
-                                   "Next I can list all available branches. The
-                                   asterisk tells us that me that I am currently
-                                   working on example_branch:",
+                                   "Next we can list all available branches. The
+                                   asterisk tells us that us that we are currently
+                                   working on",
+                                   tags$code("example_branch"),
+                                   ":",
                                    tags$br(""),
                                    tags$code("git branch -a"),
                                    tags$br(),
-                                   tags$code("* example_branch",
-                                             tags$br(),
-                                             "  master"),
+                                   tags$code("* example_branch"),
+                                   tags$br(),
+                                   "  ",
+                                   tags$code("master"),
                                    tags$br(""),
-                                   "I can also rename branches. To rename the 
-                                   branch I am currently on I can run:",
+                                   "We can also rename branches. To rename the 
+                                   branch we are currently on we can run:",
                                    tags$br(""),
                                    tags$code("$ git branch -m new_name"),
                                    tags$br(""),
-                                   "I can also rename a specified branch:",
+                                   "We can also rename a specified branch:",
                                    tags$br(""),
                                    tags$code("$ git branch -m old_name new_name"),
                                    tags$br(""),
-                                   "Lastly, to delete a branch I can run:",
+                                   "Lastly, to delete a branch we run:",
                                    tags$br(""),
                                    tags$code("$ git branch -d example_branch"),
                                    tags$br(""),
@@ -82,12 +89,12 @@ mod_on_branch_ui <- function(id){
 
       shinydashboard::box(width = 6,
                           title = "Practical Example",
-                          tags$div("For this example I have an empty 
-                                   repository and I am currently working on the ",
+                          tags$div("For this example we have an empty 
+                                   repository and we are currently working on the ",
                                    tags$code("master"),
                                    "branch.",
                                    tags$br(),
-                                   "First I will create an empty text file, 
+                                   "First we will create an empty text file, 
                                    open it and make the following change:",
                                    tags$br(""),
                                    tags$code("$ touch example.txt"),
@@ -96,19 +103,19 @@ mod_on_branch_ui <- function(id){
                                                width = 300,
                                                height = 100),
                                    tags$br(""),
-                                   "I then save and commit this change.",
+                                   "We then save and commit this change.",
                                    tags$br(""),
-                                   "Next I will create and switch 
+                                   "Next we will create and switch 
                                    to a new branch:",
                                    tags$br(""),
                                    tags$code("$ git checkout -b example_branch"),
                                    tags$br(""),
-                                   "Now opening the text file I can see that
+                                   "Now opening the text file we can see that
                                    the previous addition is still there, as this
                                    change corresponds to a commit that is common
-                                   in both branches.",
+                                   to both branches.",
                                    tags$br(),
-                                   "Working on this new branch, I can add 
+                                   "Working on this new branch, we can add 
                                    another line to the file as follows, save 
                                    it and commit the change:",
                                    tags$br(""),
@@ -119,13 +126,12 @@ mod_on_branch_ui <- function(id){
                                    "We can check this change has only been 
                                    committed on the new branch and not on the",
                                    tags$code("master"),
-                                   "branch.",
-                                   tags$br(),
-                                   "Switching back to the",
+                                   "branch. Switching back to the",
                                    tags$code("master"),
                                    "branch and opening the file we can see that
-                                   the change made on 'example_branch' is not 
-                                   present:",
+                                   the change made on",
+                                   tags$code("example_branch"),
+                                   "is not present:",
                                    tags$br(""),
                                    tags$code("$ git checkout master"),
                                    tags$br(""),
@@ -133,9 +139,12 @@ mod_on_branch_ui <- function(id){
                                                width = 300,
                                                height = 100),
                                    tags$br(""),
-                                   "To describe this we can say that 
-                                   \"'example_branch' is ahead of 'master' by one
-                                   commit\"."
+                                   "To describe this we can say:",
+                                   tags$b("\"",
+                                   tags$code("example_branch"),
+                                   "is ahead of",
+                                   tags$code("master"),
+                                   "by 1 commit\".")
                                    )),
 
 
@@ -463,9 +472,3 @@ mod_on_branch_server <- function(id){
     
   })
 }
-    
-## To be copied in the UI
-# mod_on_branch_ui("on_branch_ui_1")
-    
-## To be copied in the server
-# mod_on_branch_server("on_branch_ui_1")

@@ -1,6 +1,6 @@
 #' intro_merging UI Function
 #'
-#' @description A shiny Module.
+#' @description Module for introduction to merging page.
 #'
 #' @param id,input,output,session Internal parameters for {shiny}.
 #'
@@ -22,7 +22,7 @@ mod_intro_merging_ui <- function(id){
                                    developers' work and deploy something into 
                                    production.",
                                    tags$br(),
-                                   "Git branching has been used so pieces of 
+                                   "Git Branching has been used so pieces of 
                                    work sit on separate branches.",
                                    tags$br(),
                                    "We use Git to merge the relevant branches
@@ -34,6 +34,9 @@ mod_intro_merging_ui <- function(id){
                                    "In this chapter we will look at merging two
                                    branches.",
                                    tags$br(""),
+                                   "For this chapter you will need to launch the 
+                                   Git Bash application (see chapter 1.1).",
+                                   tags$br(""),
                                    "How does ",
                                    tags$code("git merge"),
                                    "work?",
@@ -41,10 +44,9 @@ mod_intro_merging_ui <- function(id){
                                    tags$code("git merge"),
                                    "takes two commit points, usually the tips of
                                    the branches, and finds a common commit. Git
-                                   then combines the subsequent commits in each
-                                   branch into one history.",
-                                   tags$br(),
-                                   "This creates a new merge commit which 
+                                   then combines the subsequent commits on each
+                                   branch into one history. This creates a new 
+                                   merge commit which 
                                    combines all of the changes.
                                    Git is clever and determines how the 
                                    merging is done.")),
@@ -58,7 +60,7 @@ mod_intro_merging_ui <- function(id){
                           tags$div("Usually we would like to merge two 
                                    branches.",
                                    tags$br(""),
-                                   "At the end of the practical exampe in 
+                                   "At the end of the practical example in 
                                    Chapter 4.2, the branch",
                                    tags$code("example_branch"),
                                    "was ahead of the ",
@@ -70,7 +72,9 @@ mod_intro_merging_ui <- function(id){
                                    "into the ",
                                    tags$code("master"),
                                    "branch. To do this, we first make sure we 
-                                   are working on the master branch:",
+                                   are working on the",
+                                   tags$code("master"),
+                                   "branch:",
                                    tags$br(""),
                                    tags$code("$ git checkout master"),
                                    tags$br(""),
@@ -102,7 +106,8 @@ mod_intro_merging_ui <- function(id){
                                    tags$br(),
                                    tags$code("$ git merge master"),
                                    tags$br(""),
-                                   "This is known as a fast-forward merge."
+                                   "This is known as a",
+                                   tags$b("fast-forward merge.")
                                    )),
 
 # summmary workflow -------------------------------------------------------
@@ -162,7 +167,7 @@ mod_intro_merging_ui <- function(id){
                                           ". This is used as a pointer to point
                                           to a specific commit on a specific 
                                           branch. To help a merge execute 
-                                          smoothly, we make sure the ,",
+                                          smoothly, we make sure the",
                                           tags$code("HEAD"),
                                           "is pointed at the branch which is 
                                           receiving the merge, in our case this
@@ -439,9 +444,4 @@ mod_intro_merging_server <- function(id){
  
   })
 }
-    
-## To be copied in the UI
-# mod_intro_merging_ui("intro_merging_ui_1")
-    
-## To be copied in the server
-# mod_intro_merging_server("intro_merging_ui_1")
+

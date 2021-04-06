@@ -1,6 +1,6 @@
 #' tracking_changes UI Function
 #'
-#' @description A shiny Module.
+#' @description Module for tracking changes page.
 #'
 #' @param id,input,output,session Internal parameters for {shiny}.
 #'
@@ -27,12 +27,12 @@ mod_tracking_changes_ui <- function(id){
 
       shinydashboard::box(width = 12,
                           title = "Creating a Local Git Repository",
-                          tags$div("Firstly I need to create a Git repository on
-                                   my local machine. This is where Git tracks 
+                          tags$div("Firstly we need to create a Git repository on
+                                   our local machine. This is where Git tracks 
                                    and records all the changes made in a 
                                    project.",
-                                   tags$br(),"Do do this, I create a directory 
-                                   (see chapter 1.2) and create my repository 
+                                   tags$br(),"Do do this, we create a directory 
+                                   (see chapter 1.2) and create our repository 
                                    within that using the command ",
                                    tags$code("git init"), 
                                    " which creates an empty repository:",
@@ -58,25 +58,25 @@ mod_tracking_changes_ui <- function(id){
 
       shinydashboard::box(width = 12,
                           title = "Tracking a File",
-                          tags$div("Now that I have a repository I can begin to add
-                                    and make changes to a file. First I am 
+                          tags$div("Now that we have a repository we can begin to add
+                                    and make changes to a file. First we are 
                                    going to create an empty text file:",
                                    tags$br(""),
                                    tags$code("$ touch example.txt"),
                                    tags$br(""),
                                    "The command ", tags$code("git status"),
-                                   "allows me to see the current state of my 
+                                   "allows us to see the current state of our 
                                    working directory, staging area and whether",
                                    tags$br(),
                                     "or not files are being tracked by Git. 
-                                   Running this command shows me that the file
+                                   Running this command shows us that the file
                                     'example.txt' is not being tracked by Git:",
                                    tags$br("")),
                           imageOutput(ns("status_1"), width = 600,
                                       height = 150),
                           tags$div(tags$br(""), 
-                                   "In order for Git to track this file I first
-                                   need to add it to the staging area. I do this 
+                                   "In order for Git to track this file we first
+                                   need to add it to the staging area. We do this 
                                    by running the command ", 
                                    tags$br(),
                                    tags$code("git add"),
@@ -92,7 +92,7 @@ mod_tracking_changes_ui <- function(id){
                           imageOutput(ns("status_2"), width = 600,
                                       height = 150),
                           tags$div(tags$br(""),
-                                   "Next I commit this change to the git 
+                                   "Next we commit this change to the git 
                                    repository using the command ",
                                    tags$code("git commit"), 
                                    " followed by the name",
@@ -112,6 +112,10 @@ mod_tracking_changes_ui <- function(id){
                                    which you can silence by following the on 
                                    screen instructions that Git Bash provides."
                                           ),
+                                   tags$br(""),
+                                   "Git commits represent a change(s) that has
+                                   been made to a file, including creating or 
+                                   removing a file.",
                                    tags$br(""),
                                    "Finally we can run ",
                                    tags$code("git status"),
@@ -136,9 +140,9 @@ mod_tracking_changes_ui <- function(id){
 
       shinydashboard::box(width = 12,
                           title = "Committing a Change",
-                          tags$div("Since committing the text file, I have made
+                          tags$div("Since committing the text file, we have made
                                     a change to the file and saved this change.
-                                    I can see that a change",
+                                    We can see that a change",
                                    tags$br(),
                                    "has been made 
                                    by running ",
@@ -149,20 +153,20 @@ mod_tracking_changes_ui <- function(id){
                                       height = 125),
                           tags$div(tags$br(""), 
                                    "Again, to commit this change to the 
-                                   repository I first add it to the staging 
+                                   repository we first add it to the staging 
                                    area:",
                                    tags$br(""),
                                    tags$code("git add example.txt"),
                                    tags$br(""),
                                    "Running ",
                                    tags$code("git status"),
-                                   " again I can see that now the change is in
+                                   " again we can see that now the change is in
                                    the staging area:",
                                    tags$br("")),
                           imageOutput(ns("status_5"), width = 600,
                                       height = 100),
                           tags$div(tags$br(""),
-                                   "Next I commit this change to the git 
+                                   "Next we commit this change to the git 
                                    repository:",
                                    tags$br(""),
                                    tags$code("$ git commit example.txt
@@ -171,7 +175,7 @@ mod_tracking_changes_ui <- function(id){
                                    tags$br(),
                                    tags$code("1 file changed, 1 insertions(+)"),
                                    tags$br(""),
-                                   "Finally I can run ",
+                                   "Finally we can run ",
                                    tags$code("git status"),
                                    " again to see that there is nothing to 
                                    commit and the working tree is clean:",
@@ -180,7 +184,7 @@ mod_tracking_changes_ui <- function(id){
                                       height = 50),
                           tags$div(
                             tags$br(""),
-                            "I can see the previous commits I have made by 
+                            "We can see the previous commits we have made by 
                              running ",
                             tags$code("git log"), ":",
                             tags$br("")),
@@ -188,13 +192,9 @@ mod_tracking_changes_ui <- function(id){
                                         height = 175),
                           tags$div(
                             tags$br(""),
-                            "This tells me that I have made two commits and it
-                             displays the respective commit messages I gave
-                             previously.",
-                            tags$br(""),
-                            "The repository
-                             records the change made to the file but also 
-                            remembers the previous version of the file."
+                            "This tells us that we have made two commits and it
+                             displays the respective commit messages we gave
+                             previously."
                           )),
 
 # workflow 2 ---------------------------------------------------------------
@@ -210,7 +210,7 @@ mod_tracking_changes_ui <- function(id){
 
       shinydashboard::box(width = 12,
                           title = "Using the Vim Text Editor",
-                          tags$div("Previously, when committing a change I 
+                          tags$div("Previously, when committing a change we 
                                    assigned to the commit a commit message 
                                    using the following code:",
                                    tags$br(""),
@@ -223,26 +223,25 @@ mod_tracking_changes_ui <- function(id){
                                    tags$br(), 
                                    "which stage of 
                                    our work corresponds to each commit, which 
-                                   is helpful for reverting or merging changes 
-                                   (more on this later).",
+                                   is helpful for later development.",
                                    tags$br(""),
-                                   tags$b(" You MUST assign a commit message to 
+                                   tags$b("You MUST assign a commit message to 
                                           every commit you make."),
                                    tags$br(""),
                                    "The ",
                                    tags$code("-m"),
                                    " notation used above makes it easy to write 
-                                   a message, especially if your message is 
+                                   a message, especially if the message is 
                                    small.",
                                    tags$br(),
                                    "However, one method for 
                                    leaving a commit message is to use the Vim 
-                                   text editor. This allows you to type longer 
+                                   text editor. This allows us to type longer 
                                    commit messages.",
                                    tags$br(""),
                                    "When setting up Git Bash in Chapter 1.1,
                                     Vim was selected as the default text editor.
-                                    This time if I run ",
+                                    This time if we run ",
                                    tags$br(""),
                                    tags$code("$ git commit example.txt"),
                                    tags$br(""),
@@ -252,20 +251,20 @@ mod_tracking_changes_ui <- function(id){
                           imageOutput(ns("vim"), width = 600,
                                       height = 300),
                           tags$div(tags$br(""),
-                                   "To leave a message, first I press the ",
+                                   "To leave a message, first w press the ",
                                    tags$code("I"),
-                                   "key on my keyboard. Then I type my commit 
+                                   "key on our keyboard. Then we type our commit 
                                    message.",
                                    tags$br(),
-                                   "Once this is typed I press the ",
+                                   "Once this is typed we press the ",
                                    tags$code("esc"),
-                                   "key on my keyboard and then type ",
+                                   "key on our keyboard and then type ",
                                    tags$code(":wq"),
                                    " and press the ",
                                    tags$code("Enter"),
                                    "key on",
                                    tags$br(),
-                                   "my keyboard which will save the
+                                   "our keyboard, which will save the
                                    message and exit the text editor.",
                                    tags$br(""),
                                    tags$i("Note: there are other text editors 
@@ -327,9 +326,14 @@ mod_tracking_changes_ui <- function(id){
                                 "key on your keyboard."
                               ),
                               tags$li(
-                                "When using the command line, you can use the up
-                                and down arrows on your keyboard to retrieve previous
+                                "When using the command line, we can use the up
+                                and down arrows on our keyboard to retrieve previous
                                 lines of code to run, saving time typing."
+                              ),
+                              tags$li(
+                                "If we create a file and make a change to it,
+                                we can commit both these changes under one commit - 
+                                it is not neccessary to track the file first."
                               )
                               )
                               )),

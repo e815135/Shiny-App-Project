@@ -1,6 +1,6 @@
-#' basic_branching UI Function
+#' intro_branching UI Function
 #'
-#' @description A shiny Module.
+#' @description Module for introduction to branching page.
 #'
 #' @param id,input,output,session Internal parameters for {shiny}.
 #'
@@ -21,7 +21,10 @@ mod_basic_branching_ui <- function(id){
                                    "Branching allows us to develop multiple 
                                    aspects of our project isolated from the main
                                    branch. This is particularly useful when 
-                                   working collaboratively on a project.")),
+                                   working collaboratively on a project.",
+                                   tags$br(""),
+                                   "For this chapter you will need to launch the 
+                                   Git Bash application (see chapter 1.1).")),
       shinydashboard::box(width = 12,
                           title = "Example of Branching in Practice",
                           imageOutput(ns("workflow"),

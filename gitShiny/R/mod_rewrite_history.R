@@ -1,6 +1,6 @@
 #' rewrite_history UI Function
 #'
-#' @description A shiny Module.
+#' @description Module for rewriting history page.
 #'
 #' @param id,input,output,session Internal parameters for {shiny}.
 #'
@@ -34,15 +34,15 @@ mod_rewrite_history_ui <- function(id){
                                    tags$br(""),
                                    "Running ", 
                                    tags$code("git log"),
-                                   "we can see from the previous chapter's example
+                                   "we can see from Chapter 3.2's example
                                    the following two commits:",
                                    tags$br("")),
                           imageOutput(ns("log1"),
                                       width = 600,
                                       height = 175),
-                          tags$div("I would like to change the commit message
+                          tags$div("We would like to change the most recent commit message
                                    to 'rewrite commit message'. To do this 
-                                   I run the following code:",
+                                   we run the following code:",
                                    tags$br(""),
                                    tags$code("$ git commit --amend -m \"rewrite
                                              commit message\""),
@@ -52,7 +52,7 @@ mod_rewrite_history_ui <- function(id){
                                    tags$br(""),
                                    "Now running ",
                                    tags$code("git log"),
-                                   " I can see the rewritten commit message:",
+                                   " we can see the rewritten commit message:",
                                    tags$br("")),
                           imageOutput(ns("log2"),
                                       width = 600,
@@ -69,13 +69,13 @@ mod_rewrite_history_ui <- function(id){
                                    In this chapter we will add a new file to 
                                    a previous commit.",
                                    tags$br(""),
-                                   "First, for the purposes of an example, I will
+                                   "First, for the purposes of an example, we will
                                    create a new file named 'example2.txt':",
                                    tags$br(""),
                                    tags$code("$ touch example2.txt"),
                                    tags$br(""),
-                                   "Now say I would like to add this file to 
-                                   my previous commit. To do this I run the 
+                                   "Now say we would like to add this file to 
+                                   our previous commit. To do this we run the 
                                    following code:",
                                    tags$br(""),
                                    tags$code("$ git add example2.txt"),
@@ -91,7 +91,7 @@ mod_rewrite_history_ui <- function(id){
                                    tags$br(),
                                    "The ", 
                                    tags$code("--no-edit"),
-                                   "command is used here as I don't want to 
+                                   "command is used here as we don't want to 
                                    change the commit message."
                                    )),
 

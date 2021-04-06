@@ -14,8 +14,7 @@ mod_set_up_page_ui <- function(id){
     fluidRow(
       shinydashboard::box(title = "Set Up", width = 12,
                           tags$div("This chapter covers the installation of
-                                   Git Bash and explains some key terminology
-                                   used throughout the materials."
+                                   Git Bash."
                                    )),
       # Installing git bash
       shinydashboard::box(title = "Installing Git Bash", width = 12,
@@ -40,7 +39,9 @@ mod_set_up_page_ui <- function(id){
                                    )),
       # Image 
       shinydashboard::box(width = 6,
-                          imageOutput(ns("download"))),
+                          imageOutput(ns("download"),
+                                      width = 600,
+                                      height = 400)),
       
       # Begin git bash set up
       shinydashboard::box(width = 6, title = "Begin Git Bash Set Up",
@@ -57,7 +58,9 @@ mod_set_up_page_ui <- function(id){
                                    'C:\\Users\\ebrown'. Then press Next.")),
       # Image 
       shinydashboard::box(width = 6, 
-                          imageOutput(ns("location"))),
+                          imageOutput(ns("location"),
+                                      width = 600,
+                                      height = 400)),
       # Default settings
       shinydashboard::box(width = 6, title = "Default Settings",
                           tags$div("There will be a series of prompts. Leave the 
@@ -67,7 +70,9 @@ mod_set_up_page_ui <- function(id){
                                    "(see images to the right)")),
       # Image 
       shinydashboard::box(width = 6, 
-                          imageOutput(ns("default1"))),
+                          imageOutput(ns("default1"),
+                                      width = 600,
+                                      height = 400)),
       
       shinydashboard::box(width = 6,
                           tags$div("Leave the default selections and continue 
@@ -77,7 +82,9 @@ mod_set_up_page_ui <- function(id){
                           ),
       # Image
       shinydashboard::box(width = 6, 
-                          imageOutput(ns("default2"))),
+                          imageOutput(ns("default2"),
+                                      width = 600,
+                                      height = 400)),
       # Launch git bash
       shinydashboard::box(width = 6, title = "Launching Git Bash",
                           tags$div("Once installed, there will be a prompt to 
@@ -93,16 +100,9 @@ mod_set_up_page_ui <- function(id){
                                    )),
       # Image 
       shinydashboard::box(width = 6, 
-                          imageOutput(ns("opening"))),
-      # Key terminology - add to this as app develops
-      shinydashboard::box(width = 12, title = "Key Terminology",
-                          tags$div("The following terminology will be used 
-                                   throughout the materials:",
-                          tags$br(""),
-                          tags$b("run a command"),
-                          ": type the given command in the command line and 
-                          press the Enter key in order to run it."
-                          ))
+                          imageOutput(ns("opening"),
+                                      width = 600,
+                                      height = 400))
     )
   )
 }

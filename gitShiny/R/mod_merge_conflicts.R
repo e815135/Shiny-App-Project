@@ -1,6 +1,6 @@
 #' merge_conflicts UI Function
 #'
-#' @description A shiny Module.
+#' @description Module for merge conflicts page.
 #'
 #' @param id,input,output,session Internal parameters for {shiny}.
 #'
@@ -28,7 +28,10 @@ mod_merge_conflicts_ui <- function(id){
                                    before making the merge commit.",
                                    tags$br(""),
                                    "In this chapter we will look at how to 
-                                   resolve a simple merge conflict.")),
+                                   resolve a simple merge conflict.",
+                                   tags$br(""),
+                                   "For this chapter you will need to launch the 
+                                   Git Bash application (see chapter 1.1).")),
 
 
 # resolving a conflict ----------------------------------------------------
@@ -117,7 +120,7 @@ mod_merge_conflicts_ui <- function(id){
                                    staging area and leaving the default merge 
                                    commit message.",
                                    tags$br(""),
-                                   "Now the merge conflict has been resolved,
+                                   "Now that the merge conflict has been resolved,
                                    we can perform a fast-forward merge like
                                    in Chapter 4.3:",
                                    tags$br(""),
@@ -141,7 +144,7 @@ mod_merge_conflicts_ui <- function(id){
                                         tags$li("Create an empty text file 
                                                 called 'exercise2.txt'."),
                                         tags$li("On the first line of the file,
-                                                add soem text and save and 
+                                                add some text and save and 
                                                 commit this change."),
                                         tags$li("Create and switch to a new 
                                                 branch called 'next_branch'."),
@@ -300,8 +303,3 @@ mod_merge_conflicts_server <- function(id){
   })
 }
     
-## To be copied in the UI
-# mod_merge_conflicts_ui("merge_conflicts_ui_1")
-    
-## To be copied in the server
-# mod_merge_conflicts_server("merge_conflicts_ui_1")

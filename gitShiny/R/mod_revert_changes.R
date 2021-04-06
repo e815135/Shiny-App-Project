@@ -1,6 +1,6 @@
 #' revert_changes UI Function
 #'
-#' @description A shiny Module.
+#' @description Module for reverting changes page.
 #'
 #' @param id,input,output,session Internal parameters for {shiny}.
 #'
@@ -21,7 +21,7 @@ mod_revert_changes_ui <- function(id){
                                    is to track the history of changes made to
                                    files, and so naturally this means we have
                                    the ability to 'undo' our changes. There are 
-                                   a number of different types of ways to 'undo'
+                                   a number of different ways to 'undo'
                                    changes. In this chapter we will use ",
                                    tags$code("git revert"),
                                    "to revert back to the most recent commit in
@@ -38,7 +38,14 @@ mod_revert_changes_ui <- function(id){
                                   "figures out how to revert the changes made 
                                   in a given commit and creates a new commit 
                                   with the inverse content. This prevents any 
-                                  commit history being lost."),
+                                  commit history being lost.",
+                                  tags$br(),
+                                  "For example, if we wanted to revert back to
+                                  the version of file in a previous commit,",
+                                  tags$code("git revert"),
+                                  "would create a new commit and the file in 
+                                  our directory would be in that previous
+                                  condition."),
                          imageOutput(ns("workflow")),
                          actionButton(ns("previous_button"), "Previous"),
                          actionButton(ns("next_button"), "Next")),
@@ -50,7 +57,7 @@ mod_revert_changes_ui <- function(id){
                           tags$div("Let's look at an example of reverting back
                                    to our most recent commit:",
                                    tags$br(""),
-                                   "First I will create an empty text file and 
+                                   "First we will create an empty text file and 
                                    commit the file to the git repository:",
                                    tags$br(""),
                                    tags$code("$ touch example5.txt"),
@@ -60,15 +67,15 @@ mod_revert_changes_ui <- function(id){
                                    tags$code("$ git commit example5.txt -m
                                              \"track file example5.txt\""),
                                    tags$br(""),
-                                   "Next I want to make some changes to the file.",
+                                   "Next we want to make some changes to the file.",
                                    tags$br(),
-                                   "First I open the file and make the following
+                                   "First we open the file and make the following
                                    change:",
                                    tags$br(""),
                                    imageOutput(ns("change1"),
                                                width = 450,
                                                height = 100),
-                                   "I save this change and then in Git Bash I 
+                                   "We save this change and then in Git Bash we 
                                    commit this change:",
                                    tags$br(""),
                                    tags$code("$ git add example5.txt"),
@@ -77,7 +84,7 @@ mod_revert_changes_ui <- function(id){
                                              add first change to the file 
                                              example5.txt\""),
                                    tags$br(""),
-                                   "Similarly I make and commit a second change
+                                   "Similarly we make and commit a second change
                                    to the file:",
                                    tags$br(""),
                                    imageOutput(ns("change2"),
@@ -89,8 +96,8 @@ mod_revert_changes_ui <- function(id){
                                              add second change to file 
                                              example5.txt\""),
                                    tags$br(""),
-                                   "Now I would like to revert back to the first
-                                   change I made to the file. To do this I run 
+                                   "Now we would like to revert back to the first
+                                   change we made to the file. To do this we run 
                                    the following:",
                                    tags$br(""),
                                    tags$code("$ git revert HEAD --no-edit"),
@@ -105,14 +112,13 @@ mod_revert_changes_ui <- function(id){
                                           this option prompts the user to give 
                                           a commit message."),
                                    tags$br(""),
-                                   "I can now see that a new commit has been 
-                                   made which is the inverse of the previous 
-                                   commit:",
+                                   "We can now see that a new commit has been 
+                                   made:",
                                    tags$br(""),
                                    imageOutput(ns("log"),
                                                height = 300),
                                    tags$br(""),
-                                   "Finally, opening the text file I can see
+                                   "Finally, opening the text file we can see
                                    that the previous change has been reverted:",
                                    tags$br(""),
                                    imageOutput(ns("reverted"),
@@ -239,8 +245,32 @@ mod_revert_changes_server <- function(id){
           )
         }, deleteFile = FALSE)
         
-      } else if (counter$countervalue > 3) {
-        counter$countervalue <- 3
+      } else if (counter$countervalue == 4) {
+        output$workflow <- renderImage({
+          
+          list(
+            src = file.path(
+              "R/images/revert_changes/revert_5.png"),
+            contentType = "image/png",
+            width = 600,
+            height = 400
+          )
+        }, deleteFile = FALSE)
+        
+      } else if (counter$countervalue == 5) {
+        output$workflow <- renderImage({
+          
+          list(
+            src = file.path(
+              "R/images/revert_changes/revert_6.png"),
+            contentType = "image/png",
+            width = 600,
+            height = 400
+          )
+        }, deleteFile = FALSE)
+        
+      } else if (counter$countervalue > 5) {
+        counter$countervalue <- 5
       }    
       
     })
@@ -281,6 +311,30 @@ mod_revert_changes_server <- function(id){
           list(
             src = file.path(
               "R/images/revert_changes/revert_4.png"),
+            contentType = "image/png",
+            width = 600,
+            height = 400
+          )
+        }, deleteFile = FALSE)
+        
+      } else if (counter$countervalue == 4) {
+        output$workflow <- renderImage({
+          
+          list(
+            src = file.path(
+              "R/images/revert_changes/revert_5.png"),
+            contentType = "image/png",
+            width = 600,
+            height = 400
+          )
+        }, deleteFile = FALSE)
+        
+      } else if (counter$countervalue == 5) {
+        output$workflow <- renderImage({
+          
+          list(
+            src = file.path(
+              "R/images/revert_changes/revert_6.png"),
             contentType = "image/png",
             width = 600,
             height = 400
