@@ -9,15 +9,19 @@ app_ui <- function(request) {
     # Leave this function for adding external resources
     golem_add_external_resources(),
     
-    ################# dashboard page title
-    
+
+# dashboard page title ----------------------------------------------------
+
     
     shinydashboard::dashboardPage(
       shinydashboard::dashboardHeader(
         title = "Learning Git"),
       
       
-      ############## sidebar
+
+# sidebar -----------------------------------------------------------------
+
+
       
       shinydashboard::dashboardSidebar(
         shinydashboard::sidebarMenu(
@@ -90,7 +94,10 @@ app_ui <- function(request) {
         )
       ),
       
-      ############## body
+
+# body --------------------------------------------------------------------
+
+
       
       shinydashboard::dashboardBody(
         shinydashboard::tabItems(
@@ -165,7 +172,9 @@ app_ui <- function(request) {
           )
           
         )),
-      ############## skin
+
+
+# skin --------------------------------------------------------------------
       
       skin = "yellow"
       )
@@ -193,8 +202,6 @@ golem_add_external_resources <- function(){
       path = app_sys('app/www'),
       app_title = 'gitShiny'
     )
-    # Add here other external resources
-    # for example, you can add shinyalert::useShinyalert() 
   )
 }
 
