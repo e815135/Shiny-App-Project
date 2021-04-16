@@ -515,6 +515,13 @@ mod_tracking_changes_server <- function(id){
       )
     }, deleteFile = FALSE)
     
+    # Disable next button at the end of workflow
+    
+    observe({
+      shinyjs::toggleState("next_button1",
+                           condition = counter1$countervalue < 3)
+    })
+    
     # When Next button is pressed:
     
     observeEvent(input$next_button1, {
@@ -556,10 +563,15 @@ mod_tracking_changes_server <- function(id){
           )
         }, deleteFile = FALSE)
         
-      } else if (counter1$countervalue > 3) {
-        counter1$countervalue <- 3
-      }    
+      }     
       
+    })
+    
+    # Disable previous button at the start of workflow
+    
+    observe({
+      shinyjs::toggleState("previous_button1",
+                           condition = counter1$countervalue > 0)
     })
     
     # When Previous button is pressed:
@@ -605,7 +617,7 @@ mod_tracking_changes_server <- function(id){
         }, deleteFile = FALSE)
         
       } else if (counter1$countervalue <= 0){
-        counter1$countervalue <- 0
+
         output$image1 <- renderImage({
           list(
             src = file.path(
@@ -635,6 +647,13 @@ mod_tracking_changes_server <- function(id){
         height = 400
       )
     }, deleteFile = FALSE)
+    
+    # Disable next button at the end of workflow
+    
+    observe({
+      shinyjs::toggleState("next_button2",
+                           condition = counter2$countervalue < 3)
+    })
     
     # When Next button is pressed:
     
@@ -677,10 +696,15 @@ mod_tracking_changes_server <- function(id){
           )
         }, deleteFile = FALSE)
         
-      } else if (counter2$countervalue > 3) {
-        counter2$countervalue <- 3
       }    
       
+    })
+    
+    # Disable previous button at the start of workflow
+    
+    observe({
+      shinyjs::toggleState("previous_button2",
+                           condition = counter2$countervalue > 0)
     })
     
     # When Previous button is pressed:
@@ -726,7 +750,6 @@ mod_tracking_changes_server <- function(id){
         }, deleteFile = FALSE)
         
       } else if (counter2$countervalue <= 0){
-        counter2$countervalue <- 0
         output$image2 <- renderImage({
           list(
             src = file.path(

@@ -14,6 +14,7 @@ mod_basic_git_workflow_ui <- function(id){
     tagList(
       
       fluidRow(
+        shinyjs::useShinyjs(),
         shinydashboard::box(width = 12,
                             title = "Basic Git Workflow",
                             tags$div(
@@ -51,6 +52,12 @@ mod_basic_git_workflow_server <- function(id){
       )
     }, deleteFile = FALSE)
     
+    # Disable next button at the end of the workflow
+    observe({
+      shinyjs::toggleState("next_button",
+                           condition = counter$countervalue < 9)
+    })
+    
     # When Next button is pressed:
     
     observeEvent(input$next_button, {
@@ -59,7 +66,7 @@ mod_basic_git_workflow_server <- function(id){
 
       # Depending on countervalue, render the appropiate image
       if (counter$countervalue == 1){
-        
+      
       output$image <- renderImage({
         list(
           src = file.path(
@@ -169,14 +176,16 @@ mod_basic_git_workflow_server <- function(id){
             height = 400
           )
         }, deleteFile = FALSE)
-        
-        # cap after 9 clicks
-      } else if (counter$countervalue > 9) {
-        counter$countervalue <- 9
+
       }    
       
     })
       
+    # enable previous button only when next button has been pressed
+    observe({
+      shinyjs::toggleState("previous_button",
+                           condition = counter$countervalue > 0)
+    })
       
       # When Previous button is pressed:
       
@@ -299,8 +308,7 @@ mod_basic_git_workflow_server <- function(id){
         }, deleteFile = FALSE)
         
         # set lower bound for clicks
-      } else if (counter$countervalue <= 0){
-        counter$countervalue <- 0
+      } else if (counter$countervalue == 0){
         output$image <- renderImage({
           list(
             src = file.path(

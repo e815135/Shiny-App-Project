@@ -204,6 +204,13 @@ mod_revert_changes_server <- function(id){
       )
     }, deleteFile = FALSE)
     
+    # Disable next button at the end of workflow
+    
+    observe({
+      shinyjs::toggleState("next_button",
+                           condition = counter$countervalue < 5)
+    })
+    
     # When Next button is pressed:
     
     observeEvent(input$next_button, {
@@ -269,10 +276,15 @@ mod_revert_changes_server <- function(id){
           )
         }, deleteFile = FALSE)
         
-      } else if (counter$countervalue > 5) {
-        counter$countervalue <- 5
       }    
       
+    })
+    
+    # Disable previous button at the start of workflow
+    
+    observe({
+      shinyjs::toggleState("previous_button",
+                           condition = counter$countervalue > 0)
     })
     
     # When Previous button is pressed:
@@ -342,7 +354,7 @@ mod_revert_changes_server <- function(id){
         }, deleteFile = FALSE)
         
       } else if (counter$countervalue <= 0){
-        counter$countervalue <- 0
+
         output$workflow <- renderImage({
           list(
             src = file.path(
