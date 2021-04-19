@@ -322,7 +322,7 @@ mod_on_branch_server <- function(id){
     
     observe({
       shinyjs::toggleState("next_button",
-                           condition = counter$countervalue < 5)
+                           condition = counter$countervalue < 6)
     })
     
     # When Next button is pressed:
@@ -384,6 +384,18 @@ mod_on_branch_server <- function(id){
           list(
             src = file.path(
               "R/images/work_on_branch/workflow6.png"),
+            contentType = "image/png",
+            width = 600,
+            height = 400
+          )
+        }, deleteFile = FALSE)
+        
+      } else if (counter$countervalue == 6) {
+        output$workflow <- renderImage({
+          
+          list(
+            src = file.path(
+              "R/images/work_on_branch/workflow7.png"),
             contentType = "image/png",
             width = 600,
             height = 400
@@ -461,6 +473,18 @@ mod_on_branch_server <- function(id){
           list(
             src = file.path(
               "R/images/work_on_branch/workflow6.png"),
+            contentType = "image/png",
+            width = 600,
+            height = 400
+          )
+        }, deleteFile = FALSE)
+        
+      } else if (counter$countervalue == 6) {
+        output$workflow <- renderImage({
+          
+          list(
+            src = file.path(
+              "R/images/work_on_branch/workflow7.png"),
             contentType = "image/png",
             width = 600,
             height = 400
