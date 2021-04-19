@@ -20,6 +20,16 @@ mod_tracking_changes_ui <- function(id){
                                    fundamental Git commands used to track 
                                    the changes we make to files.",
                                    tags$br(""),
+                                   "Unlike a usual save of a file, Git records
+                                   the changes made to a file using
+                                   commits. ",
+                                   tags$br(),
+                                   "Where a usual save stores a new 
+                                   version of a file, a Git commit stores the 
+                                   specific changes made to the file.",
+                                   tags$br(),
+                                   "These commits then form the file's Git history.",
+                                   tags$br(""),
                                    "For this chapter you will need to launch the 
                                    Git Bash application (see chapter 1.1).")),
 
@@ -31,7 +41,7 @@ mod_tracking_changes_ui <- function(id){
                                    our local machine. This is where Git tracks 
                                    and records all the changes made in a 
                                    project.",
-                                   tags$br(),"Do do this, we create a directory 
+                                   tags$br(),"To do this, we create a directory 
                                    (see chapter 1.2) and create our repository 
                                    within that using the command ",
                                    tags$code("git init"), 
