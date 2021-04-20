@@ -13,7 +13,7 @@ mod_rewrite_history_ui <- function(id){
     fluidRow(
       
       shinydashboard::box(width = 12,
-                          title = "Rewriting History",
+                          title = "3.2 Rewriting History",
                           tags$div("In this chapter we will cover how to rewrite
                                    a previous commit.",
                                    tags$br(""),

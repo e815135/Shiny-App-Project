@@ -15,7 +15,7 @@ mod_intro_merging_ui <- function(id){
 
 # intro to merging --------------------------------------------------------
       
-      shinydashboard::box(title = "Introduction to Merging",
+      shinydashboard::box(title = "4.3 Introduction to Merging",
                           width = 12,
                           tags$div("Let's say we have reached a milestone in a 
                                    project where we would like to draw together 

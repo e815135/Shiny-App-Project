@@ -18,7 +18,7 @@ mod_merge_conflicts_ui <- function(id){
 
       
       shinydashboard::box(width = 12,
-                          title = "Merge Conflicts",
+                          title = "4.4 Merge Conflicts",
                           tags$div("A merge conflict takes place when something
                                    has been changed in both of the branches' 
                                    histories.",

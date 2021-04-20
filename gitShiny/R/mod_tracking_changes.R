@@ -15,7 +15,7 @@ mod_tracking_changes_ui <- function(id){
 # Chapter introduction -----------------------------------------------------
 
       shinydashboard::box(width = 12,
-                          title = "Tracking Changes",
+                          title = "3.1 Tracking Changes",
                           tags$div("In this chapter we will cover the 
                                    fundamental Git commands used to track 
                                    the changes we make to files.",

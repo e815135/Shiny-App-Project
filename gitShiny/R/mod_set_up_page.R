@@ -12,7 +12,7 @@ mod_set_up_page_ui <- function(id){
   
   tagList(
     fluidRow(
-      shinydashboard::box(title = "Set Up", width = 12,
+      shinydashboard::box(title = "1.1 Set Up", width = 12,
                           tags$div("This chapter covers the installation of
                                    Git Bash."
                                    )),

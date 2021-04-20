@@ -16,7 +16,7 @@ mod_revert_changes_ui <- function(id){
     
     fluidRow(
       shinydashboard::box(width = 12,
-                          title = "Reverting Changes",
+                          title = "3.4 Reverting Changes",
                           tags$div("The purpose of using Git for version control
                                    is to track the history of changes made to
                                    files, and so naturally this means we have

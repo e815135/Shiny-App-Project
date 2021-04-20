@@ -13,7 +13,7 @@ mod_untrack_file_ui <- function(id){
     
     fluidRow(
       shinydashboard::box(width = 12,
-                          title = "Removing Untracked Files",
+                          title = "3.3 Removing Untracked Files",
                           tags$div("This chapter will cover how to delete 
                                    untracked files.",
                                    tags$br(""),

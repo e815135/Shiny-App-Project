@@ -11,7 +11,7 @@ mod_working_with_files_page_ui <- function(id){
   ns <- NS(id)
   tagList(
     fluidRow(
-      shinydashboard::box(title = "Working with Files", width = 12,
+      shinydashboard::box(title = "1.2 Working with Files", width = 12,
                           tags$div("It is important to understand how to 
                                    navigate through files in your system. 
                                    This chapter covers creating and navigating

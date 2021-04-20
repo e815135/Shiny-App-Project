@@ -16,7 +16,7 @@ mod_basic_git_workflow_ui <- function(id){
       fluidRow(
         shinyjs::useShinyjs(),
         shinydashboard::box(width = 12,
-                            title = "Basic Git Workflow",
+                            title = "2. Basic Git Workflow",
                             tags$div(
                               "Below describes the stages of a basic Git 
                               workflow used for version control.")),

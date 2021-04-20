@@ -13,7 +13,7 @@ mod_on_branch_ui <- function(id){
  
     fluidRow(
       shinydashboard::box(width = 12,
-                          title = "Working on a Branch",
+                          title = "4.2 Working on a Branch",
                           tags$div("In this chapter we will look at the basics
                                    of branching on our local device.",
                                    tags$br(""),

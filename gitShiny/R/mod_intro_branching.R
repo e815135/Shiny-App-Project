@@ -13,7 +13,7 @@ mod_basic_branching_ui <- function(id){
     
     fluidRow(
       shinydashboard::box(width = 12,
-                          title = "Introduction to Branching",
+                          title = "4.1 Introduction to Branching",
                           tags$div("When working on a project, we may want to 
                                    work on different features without affecting
                                    the main part of the project.",
