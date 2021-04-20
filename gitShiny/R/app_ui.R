@@ -8,7 +8,6 @@ app_ui <- function(request) {
   tagList(
     # Leave this function for adding external resources
     golem_add_external_resources(),
-    
 
 # dashboard page title ----------------------------------------------------
 
@@ -25,6 +24,7 @@ app_ui <- function(request) {
       
       shinydashboard::dashboardSidebar(
         shinydashboard::sidebarMenu(
+          id = "tabs",
           # Introduction
           shinydashboard::menuItem("Introduction", 
                                    tabName = "introduction", 
@@ -100,6 +100,29 @@ app_ui <- function(request) {
 
       
       shinydashboard::dashboardBody(
+        shinyjs::useShinyjs(),
+        #shinyjs::extendShinyjs(text = "shinyjs.toTop = function() {document.body.scrollTop = 0;}"),
+        bootstrapPage('',
+                      
+                      navbarPageWithInputs(
+                        title = "",
+                        position = "fixed-bottom",
+                        input1 = actionButton("previous_button",
+                                              label = "previous",
+                                              style = 'float:left; padding:6px; font-size:100%'),
+                        input2 = actionButton("next_button",
+                                               label = "Next: ",
+                                               style = 'float:right; padding:6px; font-size:100%')
+                      ),
+                      
+                      tags$style(type = 'text/css', '.navbar { background-color: #f39c12;
+                           color: #f39c12; }',
+                                 
+                                 '.navbar-dropdown { background-color: #f39c12;
+                           color: #f39c12; }',
+                                 
+                      )),
+
         shinydashboard::tabItems(
           
           # INTRODUCTION PAGE

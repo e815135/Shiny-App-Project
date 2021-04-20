@@ -6,6 +6,97 @@
 #' @noRd
 app_server <- function( input, output, session ) {
   
+
+# navigation server -------------------------------------------------------
+
+  
+  observeEvent(input$next_button, {
+    
+    newtab <- switch(input$tabs,
+                     "introduction" = "setup",
+                     "setup" = "workingwithfiles",
+                     "workingwithfiles" = "workflow",
+                     "workflow" = "commit",
+                     "commit" = "rewrite",
+                     "rewrite" = "untracked",
+                     "untracked" = "revert",
+                     "revert" = "intro_branching",
+                     "intro_branching" = "branch",
+                     "branch" = "merging",
+                     "merging" = "conflicts"
+                     )
+    shinydashboard::updateTabItems(session, "tabs", newtab)
+  })
+  
+  observeEvent(input$previous_button, {
+    
+    newtab <- switch(input$tabs,
+                     "introduction" = "",
+                     "setup" = "introduction",
+                     "workingwithfiles" = "setup",
+                     "workflow" = "workingwithfiles",
+                     "commit" = "workflow",
+                     "rewrite" = "commit",
+                     "untracked" = "rewrite",
+                     "revert" = "untracked",
+                     "intro_branching" = "revert",
+                     "branch" = "intro_branching",
+                     "merging" = "branch",
+                     "conflicts" = "merging"
+                     )
+    shinydashboard::updateTabItems(session, "tabs", newtab)
+  })
+  
+  observe({
+    shinyjs::toggle("previous_button", condition = input$tabs != "introduction")
+    shinyjs::toggle("next_button", condition = input$tabs != "conflicts")
+  })
+  
+  label_options_previous <- c(
+    "introduction" = "",
+    "setup" = "Introduction",
+    "workingwithfiles" = "1.1 Set Up",
+    "workflow" = "1.2 Working with Files",
+    "commit" = "2. Basic Git Workflow",
+    "rewrite" = "3.1 Tracking Changes",
+    "untracked" = "3.2 Rewriting History",
+    "revert" = "3.3 Removing Untracked Files",
+    "intro_branching" = "3.4 Reverting Changes",
+    "branch" = "4.1 Introduction to Branching",
+    "merging" = "4.2 Working on a Branch",
+    "conflicts" = "4.3 Introduction to Merging"
+  )
+  
+  label_options_next <- c(
+    "introduction" = "1.1 Set Up",
+    "setup" = "1.2 Working with Files",
+    "workingwithfiles" = "2. Basic Git Workflow",
+    "workflow" = "3.1 Tracking Changes",
+    "commit" = "3.2 Rewriting History",
+    "rewrite" = "3.3 Removing Untracked Files",
+    "untracked" = "3.4 Reverting Changes",
+    "revert" = "4.1 Introduction to Branching",
+    "intro_branching" = "4.2 Working on a Branch",
+    "branch" = "4.3 Introduction to Merging",
+    "merging" = "4.4 Merge Conflicts",
+    "conflicts" = ""
+  )
+
+  observeEvent(input$tabs, {
+    text1 <- label_options_next[[input$tabs]]
+    updateActionButton(session, "next_button", label = paste("Next: ", text1))
+    text2 <- label_options_previous[[input$tabs]]
+    updateActionButton(session, "previous_button", label = paste("Previous: ", text2))
+    #js$toTop()
+    shinyjs::runjs("window.scrollTo(0, 0)")
+
+  })
+
+  
+  
+
+# module server functions -------------------------------------------------
+  
   # Set up page server 
   mod_set_up_page_server("set_up_page_ui_1")
   # Basic git workflow server 
