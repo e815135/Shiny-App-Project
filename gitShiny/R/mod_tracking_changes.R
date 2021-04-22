@@ -410,7 +410,9 @@ mod_tracking_changes_ui <- function(id){
                                                 -m \"add text to file\"")
                                    ))
              )
-             )
+             ),
+# Adds whitespace as bottom so can see all of page with navbar
+headerPanel(""),
       
     )
  

@@ -202,7 +202,9 @@ mod_working_with_files_page_ui <- function(id){
                                        tags$code("Tab"),
                                        "key and a list of possible options 
                                        will be printed to the screen"))
-                                           )))
+                                           ))),
+      # Adds whitespace as bottom so can see all of page with navbar
+      headerPanel(""),
       
   ))
 }

@@ -156,7 +156,9 @@ mod_rewrite_history_ui <- function(id){
                                      tags$br(),
                                      tags$code("$ git commit --amend --no-edit")
                                    ))
-             ))
+             )),
+# Adds whitespace as bottom so can see all of page with navbar
+headerPanel(""),
     )
  
   )

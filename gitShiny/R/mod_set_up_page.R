@@ -103,7 +103,9 @@ mod_set_up_page_ui <- function(id){
                           imageOutput(ns("opening"),
                                       width = 600,
                                       height = 400))
-    )
+    ),
+    # Adds whitespace as bottom so can see all of page with navbar
+    headerPanel(""),
   )
 }
 

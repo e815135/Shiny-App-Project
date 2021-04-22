@@ -223,7 +223,9 @@ mod_merge_conflicts_ui <- function(id){
                                              tags$code("git merge --abort"),
                                              ".")
                                    )
-                                 )))
+                                 ))),
+# Adds whitespace as bottom so can see all of page with navbar
+headerPanel(""),
 
     )
  

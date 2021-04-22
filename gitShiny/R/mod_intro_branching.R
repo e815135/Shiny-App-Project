@@ -32,7 +32,9 @@ mod_basic_branching_ui <- function(id){
                                       height = 400),
                           actionButton(ns("previous_button"), "Previous"),
                           actionButton(ns("next_button"), "Next"))
-    )
+    ),
+    # Adds whitespace as bottom so can see all of page with navbar
+    headerPanel(""),
  
   )
 }

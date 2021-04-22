@@ -176,7 +176,9 @@ mod_intro_merging_ui <- function(id){
                                           "branch. To do this, we ran",
                                           tags$code("git checkout master"),
                                           "."
-                                          )))
+                                          ))),
+# Adds whitespace as bottom so can see all of page with navbar
+headerPanel(""),
     )
   )
 }

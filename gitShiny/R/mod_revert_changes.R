@@ -173,7 +173,9 @@ mod_revert_changes_ui <- function(id){
                                                  \"make change to file\""),
                                        tags$br(),
                                        tags$code("$ git revert HEAD --no-edit")
-                                       ))))
+                                       )))),
+# Adds whitespace as bottom so can see all of page with navbar
+headerPanel(""),
     )
     
  

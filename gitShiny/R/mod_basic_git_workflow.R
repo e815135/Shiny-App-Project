@@ -25,7 +25,9 @@ mod_basic_git_workflow_ui <- function(id){
         shinydashboard::box(width = 12, 
                             actionButton(ns("previous_button"), "Previous"),
                             actionButton(ns("next_button"), "Next"))
-      )
+      ),
+      # Adds whitespace as bottom so can see all of page with navbar
+      headerPanel(""),
 
     )
 

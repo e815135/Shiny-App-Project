@@ -156,7 +156,9 @@ mod_untrack_file_ui <- function(id){
                                  tags$div("It is recommended to always perform
                                           a dry run before executing any file 
                                           deletion."
-                                 )))
+                                 ))),
+# Adds whitespace as bottom so can see all of page with navbar
+headerPanel(""),
 
     )
     
