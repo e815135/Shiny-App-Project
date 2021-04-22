@@ -92,13 +92,13 @@ mod_intro_merging_ui <- function(id){
                                    "command we can see that the merge has taken
                                    place:",
                                    tags$br(""),
-                                   imageOutput(ns("merged"),
-                                               width = 300,
-                                               height = 75),
+                                   tags$code("$ cat example.txt"),
+                                   tags$br(),
+                                   tags$code("change made on branch example_branch"),
                                    tags$br(""),
                                    "Finally, ",
                                    tags$code("example_branch"),
-                                   "is still pointing its last commit and not
+                                   "is still pointing to its last commit and not
                                    the merge commit. To ensure it points to the
                                    merge commit we run:",
                                    tags$br(""),
@@ -177,6 +177,12 @@ mod_intro_merging_ui <- function(id){
                                           tags$code("git checkout master"),
                                           "."
                                           ))),
+shinydashboard::box(title = "Another Example", width = 12,
+                    imageOutput(ns("another_example"),
+                                width = 600,
+                                height = 400),
+                    actionButton(ns("previous_button2"), "Previous"),
+                    actionButton(ns("next_button2"), "Next")),
 # Adds whitespace as bottom so can see all of page with navbar
 headerPanel(""),
     )
@@ -190,20 +196,7 @@ mod_intro_merging_server <- function(id){
   moduleServer( id, function(input, output, session){
     ns <- session$ns
     
-
-# static images -----------------------------------------------------------
-
-    output$merged <- renderImage({
-      list(
-        src = file.path(
-          "R/images/intro_merging/merged.png"),
-        contentType = "image/png",
-        width = 300,
-        height = 75
-      )
-    }, deleteFile = FALSE)    
     
-
 # summary workflow --------------------------------------------------------
     
     # set counter
@@ -446,6 +439,259 @@ mod_intro_merging_server <- function(id){
           list(
             src = file.path(
               "R/images/intro_merging/workflow1.png"),
+            contentType = "image/png",
+            width = 600,
+            height = 400
+          )
+        }, deleteFile = FALSE)
+      }
+      
+    }) 
+    
+
+# another example workflow ------------------------------------------------
+
+    
+    
+    counter2 <- reactiveValues(countervalue = 0)
+    
+    # Initial image to be shown
+    output$another_example <- renderImage({
+      list(
+        src = file.path(
+          "R/images/intro_merging/another1.png"),
+        contentType = "image/png",
+        width = 600,
+        height = 400
+      )
+    }, deleteFile = FALSE)
+    
+    # Disable next button at the end of workflow
+    
+    observe({
+      shinyjs::toggleState("next_button2",
+                           condition = counter2$countervalue < 8)
+    })
+    
+    # When Next button is pressed:
+    
+    observeEvent(input$next_button2, {
+      # If Next button pressed, increment by 1
+      counter2$countervalue <- counter2$countervalue + 1
+      
+      # Depending on countervalue, render the appropiate image
+      if (counter2$countervalue == 1){
+        
+        output$another_example <- renderImage({
+          list(
+            src = file.path(
+              "R/images/intro_merging/another2.png"),
+            contentType = "image/png",
+            width = 600,
+            height = 400
+          )
+        }, deleteFile = FALSE)
+        
+      } else if (counter2$countervalue == 2) {
+        output$another_example <- renderImage({
+          list(
+            src = file.path(
+              "R/images/intro_merging/another3.png"),
+            contentType = "image/png",
+            width = 600,
+            height = 400
+          )
+        }, deleteFile = FALSE)
+      } else if (counter2$countervalue == 3) {
+        output$another_example <- renderImage({
+          
+          list(
+            src = file.path(
+              "R/images/intro_merging/another4.png"),
+            contentType = "image/png",
+            width = 600,
+            height = 400
+          )
+        }, deleteFile = FALSE)
+        
+      } else if (counter2$countervalue == 4) {
+        output$another_example <- renderImage({
+          
+          list(
+            src = file.path(
+              "R/images/intro_merging/another5.png"),
+            contentType = "image/png",
+            width = 600,
+            height = 400
+          )
+        }, deleteFile = FALSE)
+        
+      } else if (counter2$countervalue == 5) {
+        output$another_example <- renderImage({
+          
+          list(
+            src = file.path(
+              "R/images/intro_merging/another6.png"),
+            contentType = "image/png",
+            width = 600,
+            height = 400
+          )
+        }, deleteFile = FALSE)
+        
+      } else if (counter2$countervalue == 6) {
+        output$another_example <- renderImage({
+          
+          list(
+            src = file.path(
+              "R/images/intro_merging/another7.png"),
+            contentType = "image/png",
+            width = 600,
+            height = 400
+          )
+        }, deleteFile = FALSE)
+        
+      } else if (counter2$countervalue == 7) {
+        output$another_example <- renderImage({
+          
+          list(
+            src = file.path(
+              "R/images/intro_merging/another8.png"),
+            contentType = "image/png",
+            width = 600,
+            height = 400
+          )
+        }, deleteFile = FALSE)
+        
+      } else if (counter2$countervalue == 8) {
+        output$another_example <- renderImage({
+          
+          list(
+            src = file.path(
+              "R/images/intro_merging/another9.png"),
+            contentType = "image/png",
+            width = 600,
+            height = 400
+          )
+        }, deleteFile = FALSE)
+        
+      }     
+      
+    })
+    
+    # Disable previous button at the start of workflow
+    
+    observe({
+      shinyjs::toggleState("previous_button2",
+                           condition = counter2$countervalue > 0)
+    })
+    
+    # When Previous button is pressed:
+    
+    
+    observeEvent(input$previous_button2, {
+      # If Previous button pressed, increment by -1
+      counter2$countervalue <- counter2$countervalue - 1
+      
+      # Depending on countervalue, render the appropiate image
+      if (counter2$countervalue == 1){
+        
+        output$another_example <- renderImage({
+          list(
+            src = file.path(
+              "R/images/intro_merging/another2.png"),
+            contentType = "image/png",
+            width = 600,
+            height = 400
+          )
+        }, deleteFile = FALSE)
+        
+      } else if (counter2$countervalue == 2) {
+        output$another_example <- renderImage({
+          list(
+            src = file.path(
+              "R/images/intro_merging/another3.png"),
+            contentType = "image/png",
+            width = 600,
+            height = 400
+          )
+        }, deleteFile = FALSE)
+      } else if (counter2$countervalue == 3) {
+        output$another_example <- renderImage({
+          
+          list(
+            src = file.path(
+              "R/images/intro_merging/another4.png"),
+            contentType = "image/png",
+            width = 600,
+            height = 400
+          )
+        }, deleteFile = FALSE)
+        
+      } else if (counter2$countervalue == 4) {
+        output$another_example <- renderImage({
+          
+          list(
+            src = file.path(
+              "R/images/intro_merging/another5.png"),
+            contentType = "image/png",
+            width = 600,
+            height = 400
+          )
+        }, deleteFile = FALSE)
+        
+      } else if (counter2$countervalue == 5) {
+        output$another_example <- renderImage({
+          
+          list(
+            src = file.path(
+              "R/images/intro_merging/another6.png"),
+            contentType = "image/png",
+            width = 600,
+            height = 400
+          )
+        }, deleteFile = FALSE)
+        
+      } else if (counter2$countervalue == 6) {
+        output$another_example <- renderImage({
+          
+          list(
+            src = file.path(
+              "R/images/intro_merging/another7.png"),
+            contentType = "image/png",
+            width = 600,
+            height = 400
+          )
+        }, deleteFile = FALSE)
+        
+      } else if (counter2$countervalue == 7) {
+        output$another_example <- renderImage({
+          
+          list(
+            src = file.path(
+              "R/images/intro_merging/another8.png"),
+            contentType = "image/png",
+            width = 600,
+            height = 400
+          )
+        }, deleteFile = FALSE)
+        
+      } else if (counter2$countervalue == 8) {
+        output$another_example <- renderImage({
+          
+          list(
+            src = file.path(
+              "R/images/intro_merging/another9.png"),
+            contentType = "image/png",
+            width = 600,
+            height = 400
+          )
+        }, deleteFile = FALSE)
+        
+      } else if (counter2$countervalue <= 0){
+        output$another_example <- renderImage({
+          list(
+            src = file.path(
+              "R/images/intro_merging/another1.png"),
             contentType = "image/png",
             width = 600,
             height = 400
