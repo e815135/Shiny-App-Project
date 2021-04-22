@@ -89,39 +89,53 @@ mod_on_branch_ui <- function(id){
 
       shinydashboard::box(width = 6,
                           title = "Practical Example",
-                          tags$div("For this example we have an empty 
+                          tags$div("This example demonstrates that any changes 
+                                   committed to one branch are independent from
+                                   others.",
+                                   tags$br(""),
+                                   "For this example we have an empty 
                                    repository and we are currently working on the ",
                                    tags$code("master"),
                                    "branch.",
                                    tags$br(),
-                                   "First we will create an empty text file, 
-                                   open it and make the following change:",
+                                   "First we will create an empty text file and 
+                                   commit this file on the",
+                                   tags$code("master"),
+                                   "branch:",
                                    tags$br(""),
                                    tags$code("$ touch example.txt"),
-                                   tags$br(""),
-                                   imageOutput(ns("change1"),
-                                               width = 300,
-                                               height = 100),
-                                   tags$br(""),
-                                   "We then save and commit this change.",
+                                   tags$br(),
+                                   tags$code("$ git add example.txt"),
+                                   tags$br(),
+                                   tags$code("$ git commit example.txt -m \"
+                                             track empty text file\""),
                                    tags$br(""),
                                    "Next we will create and switch 
                                    to a new branch:",
                                    tags$br(""),
                                    tags$code("$ git checkout -b example_branch"),
                                    tags$br(""),
-                                   "Now opening the text file we can see that
-                                   the previous addition is still there, as this
-                                   change corresponds to a commit that is common
-                                   to both branches.",
+                                   "We can see that on this branch we still have
+                                   the empty text file. This is because the commit
+                                   representing the creation of this file
+                                   is common to both branches.",
+                                   tags$br(""),
+                                   tags$code("$ ls"),
                                    tags$br(),
+                                   tags$code("example.txt"),
+                                   tags$br(""),
                                    "Working on this new branch, we can add 
-                                   another line to the file as follows, save 
+                                   a line to the file as follows, save 
                                    it and commit the change:",
                                    tags$br(""),
-                                   imageOutput(ns("change2"),
-                                               width = 400,
-                                               height = 150),
+                                   imageOutput(ns("change"),
+                                               width = 300,
+                                               height = 125),
+                                   tags$br(),
+                                   tags$code("$ git add example.txt"),
+                                   tags$br(),
+                                   tags$code("$ git commit example.txt -m \"
+                                             add change to file for example\""),
                                    tags$br(""),
                                    "We can check this change has only been 
                                    committed on the new branch and not on the",
@@ -135,11 +149,12 @@ mod_on_branch_ui <- function(id){
                                    tags$br(""),
                                    tags$code("$ git checkout master"),
                                    tags$br(""),
-                                   imageOutput(ns("change1_again"),
+                                   imageOutput(ns("original"),
                                                width = 300,
-                                               height = 100),
+                                               height = 125),
                                    tags$br(""),
                                    "To describe this we can say:",
+                                   tags$br(),
                                    tags$b("\"",
                                    tags$code("example_branch"),
                                    "is ahead of",
@@ -174,15 +189,15 @@ mod_on_branch_ui <- function(id){
                                                 named 'Chapter4' and navigate
                                                 into it."),
                                         tags$li("Create an empty text file named
-                                                'exercise1.txt'. Make a change
-                                                to the file and commit this change."),
+                                                'exercise1.txt'. Allow Git to 
+                                                track this file."),
                                         tags$li("Create and move to a new branch
                                                 called 'new_branch'."),
                                         tags$li("Make a change to the text file 
-                                                on a new line and commit this
-                                                change."),
-                                        tags$li("Switch back to the master 
-                                                branch. Using the command ",
+                                                commit this change."),
+                                        tags$li("Switch back to the",
+                                                tags$code("master"),
+                                                "branch. Using the command ",
                                                 tags$code("$ cat exercise1.txt"),
                                                 "to print the contents of the 
                                                 file, check that the change made
@@ -201,8 +216,6 @@ mod_on_branch_ui <- function(id){
                                              tags$br(),
                                              tags$code("$ touch exercise1.txt"),
                                              tags$br(),
-                                             "After first change is made to file:",
-                                             tags$br(),
                                              tags$code("$ git add exercise1.txt"),
                                              tags$br(),
                                              tags$code("$ git commit 
@@ -212,7 +225,7 @@ mod_on_branch_ui <- function(id){
                                              tags$code("$ git checkout -b 
                                                        new_branch"),
                                              tags$br(),
-                                             "After second change is made:",
+                                             "After change is made:",
                                              tags$br(),
                                              tags$code("$ git add exercise1.txt"),
                                              tags$br(),
@@ -232,18 +245,14 @@ mod_on_branch_ui <- function(id){
       column(width = 6,
              shinydashboard::box(title = 'Tip!', width = 12,
                                  background = 'orange',
-                                 tags$div(tags$ul(tags$li(
-                                   "When working on a project is it best 
-                                   practice to always work on a branch 
-                                   that is not the",
-                                   tags$code("master"),
-                                   "branch."),
-                                   tags$li(
-                                     "Running the following will show a graphical
-                                     representation of the branches:",
-                                     tags$code("$ git log --graph 
+                                 tags$div("Running the following will show a 
+                                          graphical representation of the branches:",
+                                          tags$br(),
+                                          tags$code("$ git log --graph 
                                                --pretty=oneline --abbrev-commit")
-                                     )))))
+                                          ))),
+# Adds whitespace as bottom so can see all of page with navbar
+headerPanel(""),
     )
     
     
@@ -271,33 +280,23 @@ mod_on_branch_server <- function(id){
       )
     }, deleteFile = FALSE)
     
-    output$change1 <- renderImage({
+    output$change <- renderImage({
       list(
         src = file.path(
-          "R/images/work_on_branch/change1.png"),
+          "R/images/work_on_branch/change.png"),
         contentType = "image/png",
         width = 300,
-        height = 100
+        height = 125
       )
     }, deleteFile = FALSE)
     
-    output$change2 <- renderImage({
+    output$original <- renderImage({
       list(
         src = file.path(
-          "R/images/work_on_branch/change2.png"),
-        contentType = "image/png",
-        width = 400,
-        height = 150
-      )
-    }, deleteFile = FALSE)
-    
-    output$change1_again <- renderImage({
-      list(
-        src = file.path(
-          "R/images/work_on_branch/change1_again.png"),
+          "R/images/work_on_branch/original.png"),
         contentType = "image/png",
         width = 300,
-        height = 100
+        height = 125
       )
     }, deleteFile = FALSE)
 
