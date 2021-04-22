@@ -1,6 +1,10 @@
-#' navbarPageWithInputs
+#' Navigation Bar with Input Widgets
 #'
-#' This function allows for an action button to be placed within a navigation bar.
+#' @param ... Arguments in shiny::navbarPage
+#' @param input1 first input widget
+#' @param input2 second input widget
+#'
+#' @return A navigation bar with input widgets within it
 #' @import shiny
 
 navbarPageWithInputs <- function(..., input1, input2) {
