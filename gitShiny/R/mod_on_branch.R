@@ -246,7 +246,8 @@ mod_on_branch_ui <- function(id){
              shinydashboard::box(title = 'Tip!', width = 12,
                                  background = 'orange',
                                  tags$div("Running the following will show a 
-                                          graphical representation of the branches:",
+                                          graphical representation of the commits 
+                                          on the current branch:",
                                           tags$br(),
                                           tags$code("$ git log --graph 
                                                --pretty=oneline --abbrev-commit")
