@@ -40,28 +40,28 @@ mod_merge_conflicts_ui <- function(id){
                           title = "Resolving a Conflict",
                           tags$div("Let's look at an example:",
                                    tags$br(""),
-                                   "Following the same steps as the practical 
-                                   example in Chapter 4.2, we have a file called
-                                   example2.txt which looks like this on the",
-                                   tags$code("master"),
-                                   "branch:",
+                                   "On a branch called",
+                                   tags$code("development"),
+                                   "we have a text file with the following 
+                                   change committed:",
                                    tags$br(""),
                                    imageOutput(ns("change1"),
                                                width = 250,
                                                height = 75),
                                    tags$br(""),
-                                   "and this on the branch",
-                                   tags$code("example_branch"),
-                                   ":",
+                                   "At the same time as this branch was created
+                                   , a new branch called ",
+                                   tags$code("another_branch"),
+                                   "was made and a different change was committed:",
                                    tags$br(""),
                                    imageOutput(ns("change2"),
-                                               width = 300,
+                                               width = 250,
                                                height = 75),
                                    tags$br(""),
                                    "Just like in Chapter 4.3, we can merge",
-                                   tags$code("example_branch"),
+                                   tags$code("another_branch"),
                                    "onto the ",
-                                   tags$code("master"),
+                                   tags$code("development"),
                                    "branch by running",
                                    tags$code("git merge"),
                                    ".",
@@ -89,7 +89,7 @@ mod_merge_conflicts_ui <- function(id){
                                    tags$br(),
                                    "=======",
                                    tags$br(),
-                                   ">>>>>>> example_branch",
+                                   ">>>>>>> another_branch",
                                    tags$br(),
                                    "has been added. This tells us where in the
                                    file the conflict has taken place:",
@@ -103,7 +103,7 @@ mod_merge_conflicts_ui <- function(id){
                                    manually update and save the file like so:",
                                    tags$br(""),
                                    imageOutput(ns("resolve_file"),
-                                               width = 300,
+                                               width = 250,
                                                height = 75),
                                    tags$br(""),
                                    "Next, in the command line we add and commit
@@ -126,7 +126,14 @@ mod_merge_conflicts_ui <- function(id){
                                    tags$br(""),
                                    tags$code("$ git checkout example_branch"),
                                    tags$br(),
-                                   tags$code("$ git merge master")
+                                   tags$code("$ git merge master"),
+                                   tags$br(""),
+                                   "We can see a visualisation of this merge within 
+                                   Git Bash:",
+                                   tags$br(""),
+                                   imageOutput(ns("graph"),
+                                               width = 500,
+                                               height = 150)
                                    )),
 
 # exercise and solution ---------------------------------------------------
@@ -142,10 +149,16 @@ mod_merge_conflicts_ui <- function(id){
                                                 switch to the master branch if 
                                                 not already on it."),
                                         tags$li("Create an empty text file 
-                                                called 'exercise2.txt'."),
+                                                called 'exercise2.txt' and allow 
+                                                Git to track this file."),
+                                        tags$li("Create and switch to a new branch called 
+                                                'development'."),
                                         tags$li("On the first line of the file,
                                                 add some text and save and 
                                                 commit this change."),
+                                        tags$li("Switch back to the ",
+                                                tags$code("master"),
+                                                "branch."),
                                         tags$li("Create and switch to a new 
                                                 branch called 'next_branch'."),
                                         tags$li("On this branch, open exercise2.txt
@@ -153,8 +166,15 @@ mod_merge_conflicts_ui <- function(id){
                                                 file. Again, save and commit this
                                                 change."),
                                         tags$li("Merge next_branch onto the 
-                                                master branch, solving any merge
-                                                conflicts.")
+                                                development branch, solving any merge
+                                                conflicts."),
+                                        tags$li(tags$i("Extra:"),
+                                                "predict what would happen if 
+                                                'next_branch' had been created 
+                                                from the 'development' branch 
+                                                instead of the",
+                                                tags$code("master"),
+                                                "branch.")
                                       )
                                     )),
                 
@@ -170,12 +190,21 @@ mod_merge_conflicts_ui <- function(id){
                                       tags$br(),
                                       tags$code("$ touch exercise2.txt"),
                                       tags$br(),
+                                      tags$code("$ git add exercise2.txt"),
+                                      tags$br(),
+                                      tags$code("$ git commit exercise2.txt
+                                                -m \"commit message\""),
+                                      tags$br(),
+                                      tags$code("$ git checkout -b development"),
+                                      tags$br(),
                                       "After first change:",
                                       tags$br(),
                                       tags$code("$ git add exercise2.txt"),
                                       tags$br(),
                                       tags$code("$ git commit exercise2.txt
                                                 -m \"commit message\""),
+                                      tags$br(),
+                                      tags$code("$ git checkout master"),
                                       tags$br(),
                                       tags$code("$ git checkout -b next_branch"),
                                       tags$br(),
@@ -188,7 +217,7 @@ mod_merge_conflicts_ui <- function(id){
                                       tags$br(),
                                       "Attempt merge:",
                                       tags$br(),
-                                      tags$code("$ git checkout master"),
+                                      tags$code("$ git checkout development"),
                                       tags$br(),
                                       tags$code("$ git merge next_branch"),
                                       tags$br(),
@@ -202,7 +231,14 @@ mod_merge_conflicts_ui <- function(id){
                                       tags$br(),
                                       tags$code("$ git checkout next_branch"),
                                       tags$br(),
-                                      tags$code("$ git merge master")
+                                      tags$code("$ git merge development"),
+                                      tags$br(""),
+                                      tags$i("Extra:"),
+                                      "next_branch would have been one commit
+                                      ahead of the development branch, so when
+                                      merging no merge conflicts would occur as 
+                                      Git would know that the first change had 
+                                      been rewritten by the second."
                                     )))
       ),
       
@@ -256,7 +292,7 @@ mod_merge_conflicts_server <- function(id){
         src = file.path(
           "R/images/merge_conflicts/change2.png"),
         contentType = "image/png",
-        width = 300,
+        width = 250,
         height = 75
       )
     }, deleteFile = FALSE)
@@ -294,10 +330,20 @@ mod_merge_conflicts_server <- function(id){
     output$resolve_file <- renderImage({
       list(
         src = file.path(
-          "R/images/merge_conflicts/resolve_file.png"),
+          "R/images/merge_conflicts/change2.png"),
         contentType = "image/png",
-        width = 300,
+        width = 250,
         height = 75
+      )
+    }, deleteFile = FALSE)
+    
+    output$graph <- renderImage({
+      list(
+        src = file.path(
+          "R/images/merge_conflicts/graph.png"),
+        contentType = "image/png",
+        width = 500,
+        height = 150
       )
     }, deleteFile = FALSE)
     
