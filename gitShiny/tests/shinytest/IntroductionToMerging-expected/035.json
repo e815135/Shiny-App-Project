@@ -1,0 +1,75 @@
+{
+  "input": {
+    "basic_branching_ui_1-next_button": 0,
+    "basic_branching_ui_1-previous_button": 0,
+    "basic_git_workflow_ui_1-next_button": 0,
+    "basic_git_workflow_ui_1-previous_button": 0,
+    "intro_merging_ui_1-next_button": 8,
+    "intro_merging_ui_1-next_button2": 8,
+    "intro_merging_ui_1-previous_button": 8,
+    "intro_merging_ui_1-previous_button2": 8,
+    "next_button": 1,
+    "on_branch_ui_1-next_button": 0,
+    "on_branch_ui_1-previous_button": 0,
+    "previous_button": 0,
+    "revert_changes_ui_1-next_button": 0,
+    "revert_changes_ui_1-previous_button": 0,
+    "sidebarCollapsed": false,
+    "sidebarItemExpanded": "4.BasicGitBranching",
+    "tabs": "conflicts",
+    "tracking_changes_ui_1-next_button1": 0,
+    "tracking_changes_ui_1-next_button2": 0,
+    "tracking_changes_ui_1-previous_button1": 0,
+    "tracking_changes_ui_1-previous_button2": 0
+  },
+  "output": {
+    "intro_merging_ui_1-another_example": {
+      "src": "[image data sha1: 3921187b09712beb088a8c067813183090f2e052]",
+      "width": 600,
+      "height": 400
+    },
+    "intro_merging_ui_1-workflow": {
+      "src": "[image data sha1: 1240d4bb345dd885cf5d951699c1d6f8c78bccdc]",
+      "width": 600,
+      "height": 400
+    },
+    "merge_conflicts_ui_1-change1": {
+      "src": "[image data sha1: ceef080c3b7300a3d57f0e5ab38d2b4a7bfba457]",
+      "width": 250,
+      "height": 75
+    },
+    "merge_conflicts_ui_1-change2": {
+      "src": "[image data sha1: 6989c2cd6d44654968918d93a6dc81a22c483931]",
+      "width": 250,
+      "height": 75
+    },
+    "merge_conflicts_ui_1-conflict": {
+      "src": "[image data sha1: 6dfdbaebe9b741423cf4fa5c1714692a80f3717c]",
+      "width": 400,
+      "height": 75
+    },
+    "merge_conflicts_ui_1-conflict_file": {
+      "src": "[image data sha1: c6aaf2f6799b5259eab25ea3537994a4fa7ed13a]",
+      "width": 300,
+      "height": 125
+    },
+    "merge_conflicts_ui_1-git_status": {
+      "src": "[image data sha1: 5239bd2219dbe1ee199e63ecea24d2cf9c4061db]",
+      "width": 500,
+      "height": 150
+    },
+    "merge_conflicts_ui_1-graph": {
+      "src": "[image data sha1: 175ef70243b0893a8c799eca389a3173d7436bab]",
+      "width": 500,
+      "height": 150
+    },
+    "merge_conflicts_ui_1-resolve_file": {
+      "src": "[image data sha1: 6989c2cd6d44654968918d93a6dc81a22c483931]",
+      "width": 250,
+      "height": 75
+    }
+  },
+  "export": {
+
+  }
+}

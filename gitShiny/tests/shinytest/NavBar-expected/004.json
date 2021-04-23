@@ -1,0 +1,60 @@
+{
+  "input": {
+    "basic_branching_ui_1-next_button": 0,
+    "basic_branching_ui_1-previous_button": 0,
+    "basic_git_workflow_ui_1-next_button": 0,
+    "basic_git_workflow_ui_1-previous_button": 0,
+    "intro_merging_ui_1-next_button": 0,
+    "intro_merging_ui_1-next_button2": 0,
+    "intro_merging_ui_1-previous_button": 0,
+    "intro_merging_ui_1-previous_button2": 0,
+    "next_button": 1,
+    "on_branch_ui_1-next_button": 0,
+    "on_branch_ui_1-previous_button": 0,
+    "previous_button": 1,
+    "revert_changes_ui_1-next_button": 0,
+    "revert_changes_ui_1-previous_button": 0,
+    "sidebarCollapsed": false,
+    "sidebarItemExpanded": null,
+    "tabs": "workflow",
+    "tracking_changes_ui_1-next_button1": 0,
+    "tracking_changes_ui_1-next_button2": 0,
+    "tracking_changes_ui_1-previous_button1": 0,
+    "tracking_changes_ui_1-previous_button2": 0
+  },
+  "output": {
+    "basic_git_workflow_ui_1-image": {
+      "src": "[image data sha1: 7ada7a73bd70197ad1767b48b69d1a10749f4aa3]",
+      "width": 700,
+      "height": 400
+    },
+    "set_up_page_ui_1-default1": {
+      "src": "[image data sha1: d8b1cf4bb2a24a0608baccdad8a9046af82ee707]",
+      "width": 600,
+      "height": 400
+    },
+    "set_up_page_ui_1-default2": {
+      "src": "[image data sha1: 652c9a0f85f232403957ad8069d4ccb377acafe1]",
+      "width": 600,
+      "height": 400
+    },
+    "set_up_page_ui_1-download": {
+      "src": "[image data sha1: 21d505bee5e299d6de5491c3e3f7dfd4bcfb22b0]",
+      "width": 600,
+      "height": 400
+    },
+    "set_up_page_ui_1-location": {
+      "src": "[image data sha1: e1d6b4a6fe109dc5c37845d7914fbc3d69543f8b]",
+      "width": 600,
+      "height": 400
+    },
+    "set_up_page_ui_1-opening": {
+      "src": "[image data sha1: a7953e336375cce59620103c72d9f15e2f5a9253]",
+      "width": 600,
+      "height": 400
+    }
+  },
+  "export": {
+
+  }
+}

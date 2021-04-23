@@ -1,0 +1,40 @@
+{
+  "input": {
+    "basic_branching_ui_1-next_button": 0,
+    "basic_branching_ui_1-previous_button": 0,
+    "basic_git_workflow_ui_1-next_button": 0,
+    "basic_git_workflow_ui_1-previous_button": 0,
+    "intro_merging_ui_1-next_button": 8,
+    "intro_merging_ui_1-next_button2": 8,
+    "intro_merging_ui_1-previous_button": 8,
+    "intro_merging_ui_1-previous_button2": 6,
+    "next_button": 0,
+    "on_branch_ui_1-next_button": 0,
+    "on_branch_ui_1-previous_button": 0,
+    "previous_button": 0,
+    "revert_changes_ui_1-next_button": 0,
+    "revert_changes_ui_1-previous_button": 0,
+    "sidebarCollapsed": false,
+    "sidebarItemExpanded": "4.BasicGitBranching",
+    "tabs": "merging",
+    "tracking_changes_ui_1-next_button1": 0,
+    "tracking_changes_ui_1-next_button2": 0,
+    "tracking_changes_ui_1-previous_button1": 0,
+    "tracking_changes_ui_1-previous_button2": 0
+  },
+  "output": {
+    "intro_merging_ui_1-another_example": {
+      "src": "[image data sha1: 2d3ef802771ff9483f300808216e1019eecd5103]",
+      "width": 600,
+      "height": 400
+    },
+    "intro_merging_ui_1-workflow": {
+      "src": "[image data sha1: 1240d4bb345dd885cf5d951699c1d6f8c78bccdc]",
+      "width": 600,
+      "height": 400
+    }
+  },
+  "export": {
+
+  }
+}

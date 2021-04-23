@@ -1,0 +1,12 @@
+name: gitshiny
+title: gitShiny
+username: ebrown
+account: ebrown
+server: connect.mango.local
+hostUrl: https://connect.mango.local/__api__
+appId: 100
+bundleId: 7841
+url: https://connect.mango.local:443/content/100/
+when: 1619193403.22607
+asMultiple: FALSE
+asStatic: FALSE

@@ -1,0 +1,35 @@
+{
+  "input": {
+    "basic_branching_ui_1-next_button": 0,
+    "basic_branching_ui_1-previous_button": 0,
+    "basic_git_workflow_ui_1-next_button": 0,
+    "basic_git_workflow_ui_1-previous_button": 0,
+    "intro_merging_ui_1-next_button": 0,
+    "intro_merging_ui_1-next_button2": 0,
+    "intro_merging_ui_1-previous_button": 0,
+    "intro_merging_ui_1-previous_button2": 0,
+    "next_button": 0,
+    "on_branch_ui_1-next_button": 0,
+    "on_branch_ui_1-previous_button": 0,
+    "previous_button": 0,
+    "revert_changes_ui_1-next_button": 0,
+    "revert_changes_ui_1-previous_button": 0,
+    "sidebarCollapsed": false,
+    "sidebarItemExpanded": null,
+    "tabs": "workflow",
+    "tracking_changes_ui_1-next_button1": 0,
+    "tracking_changes_ui_1-next_button2": 0,
+    "tracking_changes_ui_1-previous_button1": 0,
+    "tracking_changes_ui_1-previous_button2": 0
+  },
+  "output": {
+    "basic_git_workflow_ui_1-image": {
+      "src": "[image data sha1: 7ada7a73bd70197ad1767b48b69d1a10749f4aa3]",
+      "width": 700,
+      "height": 400
+    }
+  },
+  "export": {
+
+  }
+}
