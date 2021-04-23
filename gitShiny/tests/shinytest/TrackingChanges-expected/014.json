@@ -1,0 +1,80 @@
+{
+  "input": {
+    "basic_branching_ui_1-next_button": 0,
+    "basic_branching_ui_1-previous_button": 0,
+    "basic_git_workflow_ui_1-next_button": 0,
+    "basic_git_workflow_ui_1-previous_button": 0,
+    "intro_merging_ui_1-next_button": 0,
+    "intro_merging_ui_1-next_button2": 0,
+    "intro_merging_ui_1-previous_button": 0,
+    "intro_merging_ui_1-previous_button2": 0,
+    "next_button": 0,
+    "on_branch_ui_1-next_button": 0,
+    "on_branch_ui_1-previous_button": 0,
+    "previous_button": 0,
+    "revert_changes_ui_1-next_button": 0,
+    "revert_changes_ui_1-previous_button": 0,
+    "sidebarCollapsed": false,
+    "sidebarItemExpanded": "3.BasicGitCommands",
+    "tabs": "commit",
+    "tracking_changes_ui_1-next_button1": 3,
+    "tracking_changes_ui_1-next_button2": 3,
+    "tracking_changes_ui_1-previous_button1": 3,
+    "tracking_changes_ui_1-previous_button2": 3
+  },
+  "output": {
+    "tracking_changes_ui_1-image1": {
+      "src": "[image data sha1: 55551a886b6f2335d91a752efd18ba7d26260d47]",
+      "width": 600,
+      "height": 400
+    },
+    "tracking_changes_ui_1-image2": {
+      "src": "[image data sha1: 34a0e2e97c26394e06bdcd02d9965fcc1c1a6562]",
+      "width": 600,
+      "height": 400
+    },
+    "tracking_changes_ui_1-log": {
+      "src": "[image data sha1: bb3b60238824badf2a795dd57f814043a5df48c5]",
+      "width": 600,
+      "height": 175
+    },
+    "tracking_changes_ui_1-status_1": {
+      "src": "[image data sha1: 4e534fc1ca00fb111d40ef6439a7c7f4b3b6d6a9]",
+      "width": 600,
+      "height": 150
+    },
+    "tracking_changes_ui_1-status_2": {
+      "src": "[image data sha1: 742fbf6c822cd70e80d869e3e6fac61d41d3b3d8]",
+      "width": 600,
+      "height": 150
+    },
+    "tracking_changes_ui_1-status_3": {
+      "src": "[image data sha1: 1e8c1b0ee25bbd7f07157bd27985762c62980450]",
+      "width": 600,
+      "height": 50
+    },
+    "tracking_changes_ui_1-status_4": {
+      "src": "[image data sha1: afd6ab63beab9fadab364defecd6d629cde376eb]",
+      "width": 600,
+      "height": 125
+    },
+    "tracking_changes_ui_1-status_5": {
+      "src": "[image data sha1: c9cbb34cfc97fa7f2d3ff68df110f8542420f65b]",
+      "width": 600,
+      "height": 100
+    },
+    "tracking_changes_ui_1-status_6": {
+      "src": "[image data sha1: 1e8c1b0ee25bbd7f07157bd27985762c62980450]",
+      "width": 600,
+      "height": 50
+    },
+    "tracking_changes_ui_1-vim": {
+      "src": "[image data sha1: bd831c035f2511b0530ae18ed1ca73651ebfebb3]",
+      "width": 600,
+      "height": 300
+    }
+  },
+  "export": {
+
+  }
+}

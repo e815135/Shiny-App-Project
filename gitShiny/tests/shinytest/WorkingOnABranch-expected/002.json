@@ -1,0 +1,50 @@
+{
+  "input": {
+    "basic_branching_ui_1-next_button": 0,
+    "basic_branching_ui_1-previous_button": 0,
+    "basic_git_workflow_ui_1-next_button": 0,
+    "basic_git_workflow_ui_1-previous_button": 0,
+    "intro_merging_ui_1-next_button": 0,
+    "intro_merging_ui_1-next_button2": 0,
+    "intro_merging_ui_1-previous_button": 0,
+    "intro_merging_ui_1-previous_button2": 0,
+    "next_button": 0,
+    "on_branch_ui_1-next_button": 0,
+    "on_branch_ui_1-previous_button": 0,
+    "previous_button": 0,
+    "revert_changes_ui_1-next_button": 0,
+    "revert_changes_ui_1-previous_button": 0,
+    "sidebarCollapsed": false,
+    "sidebarItemExpanded": "4.BasicGitBranching",
+    "tabs": "branch",
+    "tracking_changes_ui_1-next_button1": 0,
+    "tracking_changes_ui_1-next_button2": 0,
+    "tracking_changes_ui_1-previous_button1": 0,
+    "tracking_changes_ui_1-previous_button2": 0
+  },
+  "output": {
+    "on_branch_ui_1-change": {
+      "src": "[image data sha1: 9466c79ac5ef103b522d7630c805e968263db94e]",
+      "width": 300,
+      "height": 125
+    },
+    "on_branch_ui_1-master": {
+      "src": "[image data sha1: fb49aeb6dd1079e1fb4663f711188bf49c0812fc]",
+      "width": 175,
+      "height": 25
+    },
+    "on_branch_ui_1-original": {
+      "src": "[image data sha1: 58ea12f04ae2987f8cdd2ce4a125677e74ff91c7]",
+      "width": 300,
+      "height": 125
+    },
+    "on_branch_ui_1-workflow": {
+      "src": "[image data sha1: 64701acbddf4f5d1613b8b317a00d544c09933ff]",
+      "width": 600,
+      "height": 400
+    }
+  },
+  "export": {
+
+  }
+}

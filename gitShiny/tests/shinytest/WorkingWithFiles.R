@@ -1,0 +1,11 @@
+app <- ShinyDriver$new("../../")
+app$snapshotInit("WorkingWithFiles")
+
+app$setInputs(sidebarCollapsed = FALSE)
+app$setInputs(sidebarItemExpanded = "1.GettingStarted")
+app$snapshot()
+app$setInputs(tabs = "workingwithfiles")
+app$snapshot()
+app$snapshot()
+app$setInputs(next_button = "click")
+app$snapshot()

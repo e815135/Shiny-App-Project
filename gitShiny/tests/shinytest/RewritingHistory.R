@@ -1,0 +1,11 @@
+app <- ShinyDriver$new("../../")
+app$snapshotInit("RewritingHistory")
+
+app$setInputs(sidebarCollapsed = FALSE)
+app$setInputs(sidebarItemExpanded = "3.BasicGitCommands")
+app$snapshot()
+app$setInputs(tabs = "rewrite")
+app$snapshot()
+app$snapshot()
+app$setInputs(next_button = "click")
+app$snapshot()
