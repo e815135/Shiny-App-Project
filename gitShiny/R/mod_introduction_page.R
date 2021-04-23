@@ -12,10 +12,9 @@ mod_introduction_page_ui <- function(id){
   tagList(
     fluidRow(
       shinydashboard::box(title = "Introduction", width = 12,
-                          tags$div("Never heard of Git before?", tags$br(),
-                                   "Heard of it but haven't got the foggiest?", 
-                                   tags$br(),
-                                   "Just need a refresher?", tags$br(""),
+                          tags$div("Within Data Science and Software Development,
+                                   it is best practice to use Version Control.",
+                                   tags$br(""),
                                    "This app provides an ", 
                                    tags$b("interactive step-by-step guide"),
                                    " to the basics of using Git for 
