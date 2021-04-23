@@ -1,6 +1,6 @@
 Package: gitShiny
 Title: Beginner's tool for learning Git
-Version: 0.0.0.9000
+Version: 0.0.1
 Authors@R: person('Elizabeth', 'Brown', email = 'elizabethbettybrown8@gmail.com', role = c('cre', 'aut'))
 Description: This app is designed to be used as an interactive tool for learning Git for Version Control.
 License: MIT + file LICENSE
