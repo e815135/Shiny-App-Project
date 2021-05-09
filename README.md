@@ -23,7 +23,7 @@ The development version can be installed from
 
 ``` r
 # install.packages("devtools")
-devtools::install_github("e815135/Shiny-App-Project")
+devtools::install_github("e815135/Shiny-App-Project/gitShiny")
 ```
 
 ## Run App
