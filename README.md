@@ -4,7 +4,7 @@ This project includes the the shiny app gitShiny, a tool for beginners to learn 
 control. This was made using {golem}. Additionally, it includes some other smaller apps showing examples of action buttons, creating a 
 bottom navigation bar and modularisation.
 
-This app is the first version, future development is being carried out internally and not on through GitHub.
+This app is the first version, future development is being carried out internally and not through GitHub.
 
 # gitShiny
 
