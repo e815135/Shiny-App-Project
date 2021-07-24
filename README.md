@@ -1,10 +1,12 @@
 # Shiny-App-Project
 
-This project includes the the shiny app gitShiny, a tool for beginners to learn Git locally for version
-control. This was made using {golem}. Additionally, it includes some other smaller apps showing examples of action buttons, creating a 
+*Copyright 2021 Elizabeth Brown. Licensed under the MIT license.*
+
+This project includes the shiny app `{gitShiny}`, a tool for beginners to learn Git locally for version
+control. This was made using `{golem}`. Additionally, it includes some other smaller apps showing examples of action buttons, creating a 
 bottom navigation bar and modularisation.
 
-This app is the first version, future development is being carried out internally and not through GitHub.
+This app is the first version, further development won't be carried out here.
 
 # gitShiny
 
@@ -12,11 +14,6 @@ gitShiny is a tool for beginners to learn how to use Git for version
 control.
 
 ## Installation
-
-<!-- You can install the released version of gitShiny from [CRAN](https://CRAN.R-project.org) with: -->
-<!-- ``` r -->
-<!-- install.packages("gitShiny") -->
-<!-- ``` -->
 
 The development version can be installed from
 [GitHub](https://github.com/) with:

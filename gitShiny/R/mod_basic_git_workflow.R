@@ -47,7 +47,7 @@ mod_basic_git_workflow_server <- function(id){
     output$image <- renderImage({
       list(
         src = file.path(
-          "R/images/basic_git_workflow/workflow_image_1.png"),
+          "gitShiny/R/images/basic_git_workflow/workflow_image_1.png"),
         contentType = "image/png",
         width = 700,
         height = 400
@@ -72,7 +72,7 @@ mod_basic_git_workflow_server <- function(id){
       output$image <- renderImage({
         list(
           src = file.path(
-            "R/images/basic_git_workflow/workflow_image_2.png"),
+            "gitShiny/R/images/basic_git_workflow/workflow_image_2.png"),
           contentType = "image/png",
           width = 700,
           height = 400
@@ -83,7 +83,7 @@ mod_basic_git_workflow_server <- function(id){
         output$image <- renderImage({
           list(
             src = file.path(
-              "R/images/basic_git_workflow/workflow_image_3.png"),
+              "gitShiny/R/images/basic_git_workflow/workflow_image_3.png"),
             contentType = "image/png",
             width = 700,
             height = 400
@@ -94,7 +94,7 @@ mod_basic_git_workflow_server <- function(id){
           
           list(
             src = file.path(
-              "R/images/basic_git_workflow/workflow_image_4.png"),
+              "gitShiny/R/images/basic_git_workflow/workflow_image_4.png"),
             contentType = "image/png",
             width = 700,
             height = 400
@@ -107,7 +107,7 @@ mod_basic_git_workflow_server <- function(id){
           
           list(
             src = file.path(
-              "R/images/basic_git_workflow/workflow_image_5.png"),
+              "gitShiny/R/images/basic_git_workflow/workflow_image_5.png"),
             contentType = "image/png",
             width = 700,
             height = 400
@@ -120,7 +120,7 @@ mod_basic_git_workflow_server <- function(id){
           
           list(
             src = file.path(
-              "R/images/basic_git_workflow/workflow_image_6.png"),
+              "gitShiny/R/images/basic_git_workflow/workflow_image_6.png"),
             contentType = "image/png",
             width = 700,
             height = 400
@@ -133,7 +133,7 @@ mod_basic_git_workflow_server <- function(id){
           
           list(
             src = file.path(
-              "R/images/basic_git_workflow/workflow_image_7.png"),
+              "gitShiny/R/images/basic_git_workflow/workflow_image_7.png"),
             contentType = "image/png",
             width = 700,
             height = 400
@@ -146,7 +146,7 @@ mod_basic_git_workflow_server <- function(id){
           
           list(
             src = file.path(
-              "R/images/basic_git_workflow/workflow_image_8.png"),
+              "gitShiny/R/images/basic_git_workflow/workflow_image_8.png"),
             contentType = "image/png",
             width = 700,
             height = 400
@@ -159,7 +159,7 @@ mod_basic_git_workflow_server <- function(id){
           
           list(
             src = file.path(
-              "R/images/basic_git_workflow/workflow_image_9.png"),
+              "gitShiny/R/images/basic_git_workflow/workflow_image_9.png"),
             contentType = "image/png",
             width = 700,
             height = 400
@@ -172,7 +172,7 @@ mod_basic_git_workflow_server <- function(id){
           
           list(
             src = file.path(
-              "R/images/basic_git_workflow/workflow_image_10.png"),
+              "gitShiny/R/images/basic_git_workflow/workflow_image_10.png"),
             contentType = "image/png",
             width = 700,
             height = 400
@@ -202,7 +202,7 @@ mod_basic_git_workflow_server <- function(id){
       output$image <- renderImage({
         list(
           src = file.path(
-            "R/images/basic_git_workflow/workflow_image_2.png"),
+            "gitShiny/R/images/basic_git_workflow/workflow_image_2.png"),
           contentType = "image/png",
           width = 700,
           height = 400
@@ -213,7 +213,7 @@ mod_basic_git_workflow_server <- function(id){
         output$image <- renderImage({
           list(
             src = file.path(
-              "R/images/basic_git_workflow/workflow_image_3.png"),
+              "gitShiny/R/images/basic_git_workflow/workflow_image_3.png"),
             contentType = "image/png",
             width = 700,
             height = 400
@@ -224,7 +224,7 @@ mod_basic_git_workflow_server <- function(id){
           
           list(
             src = file.path(
-              "R/images/basic_git_workflow/workflow_image_4.png"),
+              "gitShiny/R/images/basic_git_workflow/workflow_image_4.png"),
             contentType = "image/png",
             width = 700,
             height = 400
@@ -237,7 +237,7 @@ mod_basic_git_workflow_server <- function(id){
           
           list(
             src = file.path(
-              "R/images/basic_git_workflow/workflow_image_5.png"),
+              "gitShiny/R/images/basic_git_workflow/workflow_image_5.png"),
             contentType = "image/png",
             width = 700,
             height = 400
@@ -250,7 +250,7 @@ mod_basic_git_workflow_server <- function(id){
           
           list(
             src = file.path(
-              "R/images/basic_git_workflow/workflow_image_6.png"),
+              "gitShiny/R/images/basic_git_workflow/workflow_image_6.png"),
             contentType = "image/png",
             width = 700,
             height = 400
@@ -263,7 +263,7 @@ mod_basic_git_workflow_server <- function(id){
           
           list(
             src = file.path(
-              "R/images/basic_git_workflow/workflow_image_7.png"),
+              "gitShiny/R/images/basic_git_workflow/workflow_image_7.png"),
             contentType = "image/png",
             width = 700,
             height = 400
@@ -276,7 +276,7 @@ mod_basic_git_workflow_server <- function(id){
           
           list(
             src = file.path(
-              "R/images/basic_git_workflow/workflow_image_8.png"),
+              "gitShiny/R/images/basic_git_workflow/workflow_image_8.png"),
             contentType = "image/png",
             width = 700,
             height = 400
@@ -289,7 +289,7 @@ mod_basic_git_workflow_server <- function(id){
           
           list(
             src = file.path(
-              "R/images/basic_git_workflow/workflow_image_9.png"),
+              "gitShiny/R/images/basic_git_workflow/workflow_image_9.png"),
             contentType = "image/png",
             width = 700,
             height = 400
@@ -302,7 +302,7 @@ mod_basic_git_workflow_server <- function(id){
           
           list(
             src = file.path(
-              "R/images/basic_git_workflow/workflow_image_10.png"),
+              "gitShiny/R/images/basic_git_workflow/workflow_image_10.png"),
             contentType = "image/png",
             width = 700,
             height = 400
@@ -314,7 +314,7 @@ mod_basic_git_workflow_server <- function(id){
         output$image <- renderImage({
           list(
             src = file.path(
-              "R/images/basic_git_workflow/workflow_image_1.png"),
+              "gitShiny/R/images/basic_git_workflow/workflow_image_1.png"),
             contentType = "image/png",
             width = 700,
             height = 400

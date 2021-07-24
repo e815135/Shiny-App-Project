@@ -274,7 +274,7 @@ mod_on_branch_server <- function(id){
     output$master <- renderImage({
       list(
         src = file.path(
-          "R/images/work_on_branch/master_branch.png"),
+          "gitShiny/R/images/work_on_branch/master_branch.png"),
         contentType = "image/png",
         width = 175,
         height = 25
@@ -284,7 +284,7 @@ mod_on_branch_server <- function(id){
     output$change <- renderImage({
       list(
         src = file.path(
-          "R/images/work_on_branch/change.png"),
+          "gitShiny/R/images/work_on_branch/change.png"),
         contentType = "image/png",
         width = 300,
         height = 125
@@ -294,7 +294,7 @@ mod_on_branch_server <- function(id){
     output$original <- renderImage({
       list(
         src = file.path(
-          "R/images/work_on_branch/original.png"),
+          "gitShiny/R/images/work_on_branch/original.png"),
         contentType = "image/png",
         width = 300,
         height = 125
@@ -311,7 +311,7 @@ mod_on_branch_server <- function(id){
     output$workflow <- renderImage({
       list(
         src = file.path(
-          "R/images/work_on_branch/workflow1.png"),
+          "gitShiny/R/images/work_on_branch/workflow1.png"),
         contentType = "image/png",
         width = 600,
         height = 400
@@ -337,7 +337,7 @@ mod_on_branch_server <- function(id){
         output$workflow <- renderImage({
           list(
             src = file.path(
-              "R/images/work_on_branch/workflow2.png"),
+              "gitShiny/R/images/work_on_branch/workflow2.png"),
             contentType = "image/png",
             width = 600,
             height = 400
@@ -348,7 +348,7 @@ mod_on_branch_server <- function(id){
         output$workflow <- renderImage({
           list(
             src = file.path(
-              "R/images/work_on_branch/workflow3.png"),
+              "gitShiny/R/images/work_on_branch/workflow3.png"),
             contentType = "image/png",
             width = 600,
             height = 400
@@ -359,7 +359,7 @@ mod_on_branch_server <- function(id){
           
           list(
             src = file.path(
-              "R/images/work_on_branch/workflow4.png"),
+              "gitShiny/R/images/work_on_branch/workflow4.png"),
             contentType = "image/png",
             width = 600,
             height = 400
@@ -371,7 +371,7 @@ mod_on_branch_server <- function(id){
           
           list(
             src = file.path(
-              "R/images/work_on_branch/workflow5.png"),
+              "gitShiny/R/images/work_on_branch/workflow5.png"),
             contentType = "image/png",
             width = 600,
             height = 400
@@ -383,7 +383,7 @@ mod_on_branch_server <- function(id){
           
           list(
             src = file.path(
-              "R/images/work_on_branch/workflow6.png"),
+              "gitShiny/R/images/work_on_branch/workflow6.png"),
             contentType = "image/png",
             width = 600,
             height = 400
@@ -395,7 +395,7 @@ mod_on_branch_server <- function(id){
           
           list(
             src = file.path(
-              "R/images/work_on_branch/workflow7.png"),
+              "gitShiny/R/images/work_on_branch/workflow7.png"),
             contentType = "image/png",
             width = 600,
             height = 400
@@ -426,7 +426,7 @@ mod_on_branch_server <- function(id){
         output$workflow <- renderImage({
           list(
             src = file.path(
-              "R/images/work_on_branch/workflow2.png"),
+              "gitShiny/R/images/work_on_branch/workflow2.png"),
             contentType = "image/png",
             width = 600,
             height = 400
@@ -437,7 +437,7 @@ mod_on_branch_server <- function(id){
         output$workflow <- renderImage({
           list(
             src = file.path(
-              "R/images/work_on_branch/workflow3.png"),
+              "gitShiny/R/images/work_on_branch/workflow3.png"),
             contentType = "image/png",
             width = 600,
             height = 400
@@ -448,7 +448,7 @@ mod_on_branch_server <- function(id){
           
           list(
             src = file.path(
-              "R/images/work_on_branch/workflow4.png"),
+              "gitShiny/R/images/work_on_branch/workflow4.png"),
             contentType = "image/png",
             width = 600,
             height = 400
@@ -460,7 +460,7 @@ mod_on_branch_server <- function(id){
           
           list(
             src = file.path(
-              "R/images/work_on_branch/workflow5.png"),
+              "gitShiny/R/images/work_on_branch/workflow5.png"),
             contentType = "image/png",
             width = 600,
             height = 400
@@ -472,7 +472,7 @@ mod_on_branch_server <- function(id){
           
           list(
             src = file.path(
-              "R/images/work_on_branch/workflow6.png"),
+              "gitShiny/R/images/work_on_branch/workflow6.png"),
             contentType = "image/png",
             width = 600,
             height = 400
@@ -484,7 +484,7 @@ mod_on_branch_server <- function(id){
           
           list(
             src = file.path(
-              "R/images/work_on_branch/workflow7.png"),
+              "gitShiny/R/images/work_on_branch/workflow7.png"),
             contentType = "image/png",
             width = 600,
             height = 400
@@ -495,7 +495,7 @@ mod_on_branch_server <- function(id){
         output$workflow <- renderImage({
           list(
             src = file.path(
-              "R/images/work_on_branch/workflow1.png"),
+              "gitShiny/R/images/work_on_branch/workflow1.png"),
             contentType = "image/png",
             width = 600,
             height = 400

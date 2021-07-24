@@ -432,7 +432,7 @@ mod_tracking_changes_server <- function(id){
     output$status_1 <- renderImage({
       list(
         src = file.path(
-          "R/images/tracking_changes/git_status_1.png"),
+          "gitShiny/R/images/tracking_changes/git_status_1.png"),
         contentType = "image/png",
         width = 600,
         height = 150
@@ -442,7 +442,7 @@ mod_tracking_changes_server <- function(id){
     output$status_2 <- renderImage({
       list(
         src = file.path(
-          "R/images/tracking_changes/git_status_2.png"),
+          "gitShiny/R/images/tracking_changes/git_status_2.png"),
         contentType = "image/png",
         width = 600,
         height = 150
@@ -452,7 +452,7 @@ mod_tracking_changes_server <- function(id){
     output$status_3 <- renderImage({
       list(
         src = file.path(
-          "R/images/tracking_changes/git_status_3.png"),
+          "gitShiny/R/images/tracking_changes/git_status_3.png"),
         contentType = "image/png",
         width = 600,
         height = 50
@@ -462,7 +462,7 @@ mod_tracking_changes_server <- function(id){
     output$status_4 <- renderImage({
       list(
         src = file.path(
-          "R/images/tracking_changes/git_status_4.png"),
+          "gitShiny/R/images/tracking_changes/git_status_4.png"),
         contentType = "image/png",
         width = 600,
         height = 125
@@ -472,7 +472,7 @@ mod_tracking_changes_server <- function(id){
     output$status_5 <- renderImage({
       list(
         src = file.path(
-          "R/images/tracking_changes/git_status_5.png"),
+          "gitShiny/R/images/tracking_changes/git_status_5.png"),
         contentType = "image/png",
         width = 600,
         height = 100
@@ -482,7 +482,7 @@ mod_tracking_changes_server <- function(id){
     output$status_6 <- renderImage({
       list(
         src = file.path(
-          "R/images/tracking_changes/git_status_6.png"),
+          "gitShiny/R/images/tracking_changes/git_status_6.png"),
         contentType = "image/png",
         width = 600,
         height = 50
@@ -492,7 +492,7 @@ mod_tracking_changes_server <- function(id){
     output$log <- renderImage({
       list(
         src = file.path(
-          "R/images/tracking_changes/git_log.png"),
+          "gitShiny/R/images/tracking_changes/git_log.png"),
         contentType = "image/png",
         width = 600,
         height = 175
@@ -502,7 +502,7 @@ mod_tracking_changes_server <- function(id){
     output$vim <- renderImage({
       list(
         src = file.path(
-          "R/images/tracking_changes/vim.png"),
+          "gitShiny/R/images/tracking_changes/vim.png"),
         contentType = "image/png",
         width = 600,
         height = 300
@@ -520,7 +520,7 @@ mod_tracking_changes_server <- function(id){
     output$image1 <- renderImage({
       list(
         src = file.path(
-          "R/images/tracking_changes/commit_image_1.png"),
+          "gitShiny/R/images/tracking_changes/commit_image_1.png"),
         contentType = "image/png",
         width = 600,
         height = 400
@@ -546,7 +546,7 @@ mod_tracking_changes_server <- function(id){
         output$image1 <- renderImage({
           list(
             src = file.path(
-              "R/images/tracking_changes/commit_image_2.png"),
+              "gitShiny/R/images/tracking_changes/commit_image_2.png"),
             contentType = "image/png",
             width = 600,
             height = 400
@@ -557,7 +557,7 @@ mod_tracking_changes_server <- function(id){
         output$image1 <- renderImage({
           list(
             src = file.path(
-              "R/images/tracking_changes/commit_image_3.png"),
+              "gitShiny/R/images/tracking_changes/commit_image_3.png"),
             contentType = "image/png",
             width = 600,
             height = 400
@@ -568,7 +568,7 @@ mod_tracking_changes_server <- function(id){
           
           list(
             src = file.path(
-              "R/images/tracking_changes/commit_image_4.png"),
+              "gitShiny/R/images/tracking_changes/commit_image_4.png"),
             contentType = "image/png",
             width = 600,
             height = 400
@@ -599,7 +599,7 @@ mod_tracking_changes_server <- function(id){
         output$image1 <- renderImage({
           list(
             src = file.path(
-              "R/images/tracking_changes/commit_image_2.png"),
+              "gitShiny/R/images/tracking_changes/commit_image_2.png"),
             contentType = "image/png",
             width = 600,
             height = 400
@@ -610,7 +610,7 @@ mod_tracking_changes_server <- function(id){
         output$image1 <- renderImage({
           list(
             src = file.path(
-              "R/images/tracking_changes/commit_image_3.png"),
+              "gitShiny/R/images/tracking_changes/commit_image_3.png"),
             contentType = "image/png",
             width = 600,
             height = 400
@@ -621,7 +621,7 @@ mod_tracking_changes_server <- function(id){
           
           list(
             src = file.path(
-              "R/images/tracking_changes/commit_image_4.png"),
+              "gitShiny/R/images/tracking_changes/commit_image_4.png"),
             contentType = "image/png",
             width = 600,
             height = 400
@@ -633,7 +633,7 @@ mod_tracking_changes_server <- function(id){
         output$image1 <- renderImage({
           list(
             src = file.path(
-              "R/images/tracking_changes/commit_image_1.png"),
+              "gitShiny/R/images/tracking_changes/commit_image_1.png"),
             contentType = "image/png",
             width = 600,
             height = 400
@@ -653,7 +653,7 @@ mod_tracking_changes_server <- function(id){
     output$image2 <- renderImage({
       list(
         src = file.path(
-          "R/images/tracking_changes/commit_image_5.png"),
+          "gitShiny/R/images/tracking_changes/commit_image_5.png"),
         contentType = "image/png",
         width = 600,
         height = 400
@@ -679,7 +679,7 @@ mod_tracking_changes_server <- function(id){
         output$image2 <- renderImage({
           list(
             src = file.path(
-              "R/images/tracking_changes/commit_image_6.png"),
+              "gitShiny/R/images/tracking_changes/commit_image_6.png"),
             contentType = "image/png",
             width = 600,
             height = 400
@@ -690,7 +690,7 @@ mod_tracking_changes_server <- function(id){
         output$image2 <- renderImage({
           list(
             src = file.path(
-              "R/images/tracking_changes/commit_image_7.png"),
+              "gitShiny/R/images/tracking_changes/commit_image_7.png"),
             contentType = "image/png",
             width = 600,
             height = 400
@@ -701,7 +701,7 @@ mod_tracking_changes_server <- function(id){
           
           list(
             src = file.path(
-              "R/images/tracking_changes/commit_image_8.png"),
+              "gitShiny/R/images/tracking_changes/commit_image_8.png"),
             contentType = "image/png",
             width = 600,
             height = 400
@@ -732,7 +732,7 @@ mod_tracking_changes_server <- function(id){
         output$image2 <- renderImage({
           list(
             src = file.path(
-              "R/images/tracking_changes/commit_image_6.png"),
+              "gitShiny/R/images/tracking_changes/commit_image_6.png"),
             contentType = "image/png",
             width = 600,
             height = 400
@@ -743,7 +743,7 @@ mod_tracking_changes_server <- function(id){
         output$image2 <- renderImage({
           list(
             src = file.path(
-              "R/images/tracking_changes/commit_image_7.png"),
+              "gitShiny/R/images/tracking_changes/commit_image_7.png"),
             contentType = "image/png",
             width = 600,
             height = 400
@@ -754,7 +754,7 @@ mod_tracking_changes_server <- function(id){
           
           list(
             src = file.path(
-              "R/images/tracking_changes/commit_image_8.png"),
+              "gitShiny/R/images/tracking_changes/commit_image_8.png"),
             contentType = "image/png",
             width = 600,
             height = 400
@@ -765,7 +765,7 @@ mod_tracking_changes_server <- function(id){
         output$image2 <- renderImage({
           list(
             src = file.path(
-              "R/images/tracking_changes/commit_image_5.png"),
+              "gitShiny/R/images/tracking_changes/commit_image_5.png"),
             contentType = "image/png",
             width = 600,
             height = 400

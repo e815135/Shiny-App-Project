@@ -53,7 +53,7 @@ mod_basic_branching_server <- function(id){
     output$workflow <- renderImage({
       list(
         src = file.path(
-          "R/images/basic_branching/branch_example1.png"),
+          "gitShiny/R/images/basic_branching/branch_example1.png"),
         contentType = "image/png",
         width = 600,
         height = 400
@@ -79,7 +79,7 @@ mod_basic_branching_server <- function(id){
         output$workflow <- renderImage({
           list(
             src = file.path(
-              "R/images/basic_branching/branch_example2.png"),
+              "gitShiny/R/images/basic_branching/branch_example2.png"),
             contentType = "image/png",
             width = 600,
             height = 400
@@ -90,7 +90,7 @@ mod_basic_branching_server <- function(id){
         output$workflow <- renderImage({
           list(
             src = file.path(
-              "R/images/basic_branching/branch_example3.png"),
+              "gitShiny/R/images/basic_branching/branch_example3.png"),
             contentType = "image/png",
             width = 600,
             height = 400
@@ -101,7 +101,7 @@ mod_basic_branching_server <- function(id){
           
           list(
             src = file.path(
-              "R/images/basic_branching/branch_example4.png"),
+              "gitShiny/R/images/basic_branching/branch_example4.png"),
             contentType = "image/png",
             width = 600,
             height = 400
@@ -131,7 +131,7 @@ mod_basic_branching_server <- function(id){
         output$workflow <- renderImage({
           list(
             src = file.path(
-              "R/images/basic_branching/branch_example2.png"),
+              "gitShiny/R/images/basic_branching/branch_example2.png"),
             contentType = "image/png",
             width = 600,
             height = 400
@@ -142,7 +142,7 @@ mod_basic_branching_server <- function(id){
         output$workflow <- renderImage({
           list(
             src = file.path(
-              "R/images/basic_branching/branch_example3.png"),
+              "gitShiny/R/images/basic_branching/branch_example3.png"),
             contentType = "image/png",
             width = 600,
             height = 400
@@ -153,7 +153,7 @@ mod_basic_branching_server <- function(id){
           
           list(
             src = file.path(
-              "R/images/basic_branching/branch_example4.png"),
+              "gitShiny/R/images/basic_branching/branch_example4.png"),
             contentType = "image/png",
             width = 600,
             height = 400
@@ -165,7 +165,7 @@ mod_basic_branching_server <- function(id){
         output$workflow <- renderImage({
           list(
             src = file.path(
-              "R/images/basic_branching/branch_example1.png"),
+              "gitShiny/R/images/basic_branching/branch_example1.png"),
             contentType = "image/png",
             width = 600,
             height = 400

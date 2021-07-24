@@ -206,7 +206,7 @@ mod_intro_merging_server <- function(id){
     output$workflow <- renderImage({
       list(
         src = file.path(
-          "R/images/intro_merging/workflow1.png"),
+          "gitShiny/R/images/intro_merging/workflow1.png"),
         contentType = "image/png",
         width = 600,
         height = 400
@@ -232,7 +232,7 @@ mod_intro_merging_server <- function(id){
         output$workflow <- renderImage({
           list(
             src = file.path(
-              "R/images/intro_merging/workflow2.png"),
+              "gitShiny/R/images/intro_merging/workflow2.png"),
             contentType = "image/png",
             width = 600,
             height = 400
@@ -243,7 +243,7 @@ mod_intro_merging_server <- function(id){
         output$workflow <- renderImage({
           list(
             src = file.path(
-              "R/images/intro_merging/workflow3.png"),
+              "gitShiny/R/images/intro_merging/workflow3.png"),
             contentType = "image/png",
             width = 600,
             height = 400
@@ -254,7 +254,7 @@ mod_intro_merging_server <- function(id){
           
           list(
             src = file.path(
-              "R/images/intro_merging/workflow4.png"),
+              "gitShiny/R/images/intro_merging/workflow4.png"),
             contentType = "image/png",
             width = 600,
             height = 400
@@ -266,7 +266,7 @@ mod_intro_merging_server <- function(id){
           
           list(
             src = file.path(
-              "R/images/intro_merging/workflow5.png"),
+              "gitShiny/R/images/intro_merging/workflow5.png"),
             contentType = "image/png",
             width = 600,
             height = 400
@@ -278,7 +278,7 @@ mod_intro_merging_server <- function(id){
           
           list(
             src = file.path(
-              "R/images/intro_merging/workflow6.png"),
+              "gitShiny/R/images/intro_merging/workflow6.png"),
             contentType = "image/png",
             width = 600,
             height = 400
@@ -290,7 +290,7 @@ mod_intro_merging_server <- function(id){
           
           list(
             src = file.path(
-              "R/images/intro_merging/workflow7.png"),
+              "gitShiny/R/images/intro_merging/workflow7.png"),
             contentType = "image/png",
             width = 600,
             height = 400
@@ -302,7 +302,7 @@ mod_intro_merging_server <- function(id){
           
           list(
             src = file.path(
-              "R/images/intro_merging/workflow8.png"),
+              "gitShiny/R/images/intro_merging/workflow8.png"),
             contentType = "image/png",
             width = 600,
             height = 400
@@ -314,7 +314,7 @@ mod_intro_merging_server <- function(id){
           
           list(
             src = file.path(
-              "R/images/intro_merging/workflow9.png"),
+              "gitShiny/R/images/intro_merging/workflow9.png"),
             contentType = "image/png",
             width = 600,
             height = 400
@@ -345,7 +345,7 @@ mod_intro_merging_server <- function(id){
         output$workflow <- renderImage({
           list(
             src = file.path(
-              "R/images/intro_merging/workflow2.png"),
+              "gitShiny/R/images/intro_merging/workflow2.png"),
             contentType = "image/png",
             width = 600,
             height = 400
@@ -356,7 +356,7 @@ mod_intro_merging_server <- function(id){
         output$workflow <- renderImage({
           list(
             src = file.path(
-              "R/images/intro_merging/workflow3.png"),
+              "gitShiny/R/images/intro_merging/workflow3.png"),
             contentType = "image/png",
             width = 600,
             height = 400
@@ -367,7 +367,7 @@ mod_intro_merging_server <- function(id){
           
           list(
             src = file.path(
-              "R/images/intro_merging/workflow4.png"),
+              "gitShiny/R/images/intro_merging/workflow4.png"),
             contentType = "image/png",
             width = 600,
             height = 400
@@ -379,7 +379,7 @@ mod_intro_merging_server <- function(id){
           
           list(
             src = file.path(
-              "R/images/intro_merging/workflow5.png"),
+              "gitShiny/R/images/intro_merging/workflow5.png"),
             contentType = "image/png",
             width = 600,
             height = 400
@@ -391,7 +391,7 @@ mod_intro_merging_server <- function(id){
           
           list(
             src = file.path(
-              "R/images/intro_merging/workflow6.png"),
+              "gitShiny/R/images/intro_merging/workflow6.png"),
             contentType = "image/png",
             width = 600,
             height = 400
@@ -403,7 +403,7 @@ mod_intro_merging_server <- function(id){
           
           list(
             src = file.path(
-              "R/images/intro_merging/workflow7.png"),
+              "gitShiny/R/images/intro_merging/workflow7.png"),
             contentType = "image/png",
             width = 600,
             height = 400
@@ -415,7 +415,7 @@ mod_intro_merging_server <- function(id){
           
           list(
             src = file.path(
-              "R/images/intro_merging/workflow8.png"),
+              "gitShiny/R/images/intro_merging/workflow8.png"),
             contentType = "image/png",
             width = 600,
             height = 400
@@ -427,7 +427,7 @@ mod_intro_merging_server <- function(id){
           
           list(
             src = file.path(
-              "R/images/intro_merging/workflow9.png"),
+              "gitShiny/R/images/intro_merging/workflow9.png"),
             contentType = "image/png",
             width = 600,
             height = 400
@@ -438,7 +438,7 @@ mod_intro_merging_server <- function(id){
         output$workflow <- renderImage({
           list(
             src = file.path(
-              "R/images/intro_merging/workflow1.png"),
+              "gitShiny/R/images/intro_merging/workflow1.png"),
             contentType = "image/png",
             width = 600,
             height = 400
@@ -459,7 +459,7 @@ mod_intro_merging_server <- function(id){
     output$another_example <- renderImage({
       list(
         src = file.path(
-          "R/images/intro_merging/another1.png"),
+          "gitShiny/R/images/intro_merging/another1.png"),
         contentType = "image/png",
         width = 600,
         height = 400
@@ -485,7 +485,7 @@ mod_intro_merging_server <- function(id){
         output$another_example <- renderImage({
           list(
             src = file.path(
-              "R/images/intro_merging/another2.png"),
+              "gitShiny/R/images/intro_merging/another2.png"),
             contentType = "image/png",
             width = 600,
             height = 400
@@ -496,7 +496,7 @@ mod_intro_merging_server <- function(id){
         output$another_example <- renderImage({
           list(
             src = file.path(
-              "R/images/intro_merging/another3.png"),
+              "gitShiny/R/images/intro_merging/another3.png"),
             contentType = "image/png",
             width = 600,
             height = 400
@@ -507,7 +507,7 @@ mod_intro_merging_server <- function(id){
           
           list(
             src = file.path(
-              "R/images/intro_merging/another4.png"),
+              "gitShiny/R/images/intro_merging/another4.png"),
             contentType = "image/png",
             width = 600,
             height = 400
@@ -519,7 +519,7 @@ mod_intro_merging_server <- function(id){
           
           list(
             src = file.path(
-              "R/images/intro_merging/another5.png"),
+              "gitShiny/R/images/intro_merging/another5.png"),
             contentType = "image/png",
             width = 600,
             height = 400
@@ -531,7 +531,7 @@ mod_intro_merging_server <- function(id){
           
           list(
             src = file.path(
-              "R/images/intro_merging/another6.png"),
+              "gitShiny/R/images/intro_merging/another6.png"),
             contentType = "image/png",
             width = 600,
             height = 400
@@ -543,7 +543,7 @@ mod_intro_merging_server <- function(id){
           
           list(
             src = file.path(
-              "R/images/intro_merging/another7.png"),
+              "gitShiny/R/images/intro_merging/another7.png"),
             contentType = "image/png",
             width = 600,
             height = 400
@@ -555,7 +555,7 @@ mod_intro_merging_server <- function(id){
           
           list(
             src = file.path(
-              "R/images/intro_merging/another8.png"),
+              "gitShiny/R/images/intro_merging/another8.png"),
             contentType = "image/png",
             width = 600,
             height = 400
@@ -567,7 +567,7 @@ mod_intro_merging_server <- function(id){
           
           list(
             src = file.path(
-              "R/images/intro_merging/another9.png"),
+              "gitShiny/R/images/intro_merging/another9.png"),
             contentType = "image/png",
             width = 600,
             height = 400
@@ -598,7 +598,7 @@ mod_intro_merging_server <- function(id){
         output$another_example <- renderImage({
           list(
             src = file.path(
-              "R/images/intro_merging/another2.png"),
+              "gitShiny/R/images/intro_merging/another2.png"),
             contentType = "image/png",
             width = 600,
             height = 400
@@ -609,7 +609,7 @@ mod_intro_merging_server <- function(id){
         output$another_example <- renderImage({
           list(
             src = file.path(
-              "R/images/intro_merging/another3.png"),
+              "gitShiny/R/images/intro_merging/another3.png"),
             contentType = "image/png",
             width = 600,
             height = 400
@@ -620,7 +620,7 @@ mod_intro_merging_server <- function(id){
           
           list(
             src = file.path(
-              "R/images/intro_merging/another4.png"),
+              "gitShiny/R/images/intro_merging/another4.png"),
             contentType = "image/png",
             width = 600,
             height = 400
@@ -632,7 +632,7 @@ mod_intro_merging_server <- function(id){
           
           list(
             src = file.path(
-              "R/images/intro_merging/another5.png"),
+              "gitShiny/R/images/intro_merging/another5.png"),
             contentType = "image/png",
             width = 600,
             height = 400
@@ -644,7 +644,7 @@ mod_intro_merging_server <- function(id){
           
           list(
             src = file.path(
-              "R/images/intro_merging/another6.png"),
+              "gitShiny/R/images/intro_merging/another6.png"),
             contentType = "image/png",
             width = 600,
             height = 400
@@ -656,7 +656,7 @@ mod_intro_merging_server <- function(id){
           
           list(
             src = file.path(
-              "R/images/intro_merging/another7.png"),
+              "gitShiny/R/images/intro_merging/another7.png"),
             contentType = "image/png",
             width = 600,
             height = 400
@@ -668,7 +668,7 @@ mod_intro_merging_server <- function(id){
           
           list(
             src = file.path(
-              "R/images/intro_merging/another8.png"),
+              "gitShiny/R/images/intro_merging/another8.png"),
             contentType = "image/png",
             width = 600,
             height = 400
@@ -680,7 +680,7 @@ mod_intro_merging_server <- function(id){
           
           list(
             src = file.path(
-              "R/images/intro_merging/another9.png"),
+              "gitShiny/R/images/intro_merging/another9.png"),
             contentType = "image/png",
             width = 600,
             height = 400
@@ -691,7 +691,7 @@ mod_intro_merging_server <- function(id){
         output$another_example <- renderImage({
           list(
             src = file.path(
-              "R/images/intro_merging/another1.png"),
+              "gitShiny/R/images/intro_merging/another1.png"),
             contentType = "image/png",
             width = 600,
             height = 400
