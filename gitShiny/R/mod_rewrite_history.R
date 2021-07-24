@@ -174,7 +174,7 @@ mod_rewrite_history_server <- function(id){
     output$log1 <- renderImage({
       list(
         src = file.path(
-          "R/images/rewriting_history/git_log.png"),
+          "gitShiny/R/images/rewriting_history/git_log.png"),
         contentType = "image/png",
         width = 600,
         height = 150
@@ -184,7 +184,7 @@ mod_rewrite_history_server <- function(id){
     output$log2 <- renderImage({
       list(
         src = file.path(
-          "R/images/rewriting_history/git_log2.png"),
+          "gitShiny/R/images/rewriting_history/git_log2.png"),
         contentType = "image/png",
         width = 600,
         height = 150

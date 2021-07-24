@@ -101,7 +101,6 @@ app_ui <- function(request) {
       
       shinydashboard::dashboardBody(
         shinyjs::useShinyjs(),
-        #shinyjs::extendShinyjs(text = "shinyjs.toTop = function() {document.body.scrollTop = 0;}"),
         bootstrapPage('',
                       
                       navbarPageWithInputs(

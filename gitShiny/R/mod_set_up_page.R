@@ -122,7 +122,7 @@ mod_set_up_page_server <- function(id){
     output$download <- renderImage({
       list(
         src = file.path(
-          "R/images/getting_started/set_up/download_git_bash.png"),
+          "gitShiny/R/images/getting_started/set_up/download_git_bash.png"),
         contentType = "image/png",
         width = 600,
         height = 400
@@ -132,7 +132,7 @@ mod_set_up_page_server <- function(id){
     output$location <- renderImage({
       list(
         src = file.path(
-          "R/images/getting_started/set_up/setting_location.png"),
+          "gitShiny/R/images/getting_started/set_up/setting_location.png"),
         contentType = "image/png",
         width = 600,
         height = 400
@@ -142,7 +142,7 @@ mod_set_up_page_server <- function(id){
     output$default1 <- renderImage({
       list(
         src = file.path(
-          "R/images/getting_started/set_up/default_settings.png"),
+          "gitShiny/R/images/getting_started/set_up/default_settings.png"),
         contentType = "image/png",
         width = 600,
         height = 400
@@ -152,7 +152,7 @@ mod_set_up_page_server <- function(id){
     output$default2 <- renderImage({
       list(
         src = file.path(
-          "R/images/getting_started/set_up/default_settings2.png"),
+          "gitShiny/R/images/getting_started/set_up/default_settings2.png"),
         contentType = "image/png",
         width = 600,
         height = 400
@@ -162,7 +162,7 @@ mod_set_up_page_server <- function(id){
     output$opening <- renderImage({
       list(
         src = file.path(
-          "R/images/getting_started/set_up/opening.png"),
+          "gitShiny/R/images/getting_started/set_up/opening.png"),
         contentType = "image/png",
         width = 600,
         height = 400

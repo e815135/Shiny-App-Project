@@ -199,7 +199,7 @@ mod_revert_changes_server <- function(id){
     output$workflow <- renderImage({
       list(
         src = file.path(
-          "R/images/revert_changes/revert_1.png"),
+          "gitShiny/R/images/revert_changes/revert_1.png"),
         contentType = "image/png",
         width = 600,
         height = 400
@@ -225,7 +225,7 @@ mod_revert_changes_server <- function(id){
         output$workflow <- renderImage({
           list(
             src = file.path(
-              "R/images/revert_changes/revert_2.png"),
+              "gitShiny/R/images/revert_changes/revert_2.png"),
             contentType = "image/png",
             width = 600,
             height = 400
@@ -236,7 +236,7 @@ mod_revert_changes_server <- function(id){
         output$workflow <- renderImage({
           list(
             src = file.path(
-              "R/images/revert_changes/revert_3.png"),
+              "gitShiny/R/images/revert_changes/revert_3.png"),
             contentType = "image/png",
             width = 600,
             height = 400
@@ -247,7 +247,7 @@ mod_revert_changes_server <- function(id){
           
           list(
             src = file.path(
-              "R/images/revert_changes/revert_4.png"),
+              "gitShiny/R/images/revert_changes/revert_4.png"),
             contentType = "image/png",
             width = 600,
             height = 400
@@ -259,7 +259,7 @@ mod_revert_changes_server <- function(id){
           
           list(
             src = file.path(
-              "R/images/revert_changes/revert_5.png"),
+              "gitShiny/R/images/revert_changes/revert_5.png"),
             contentType = "image/png",
             width = 600,
             height = 400
@@ -271,7 +271,7 @@ mod_revert_changes_server <- function(id){
           
           list(
             src = file.path(
-              "R/images/revert_changes/revert_6.png"),
+              "gitShiny/R/images/revert_changes/revert_6.png"),
             contentType = "image/png",
             width = 600,
             height = 400
@@ -302,7 +302,7 @@ mod_revert_changes_server <- function(id){
         output$workflow <- renderImage({
           list(
             src = file.path(
-              "R/images/revert_changes/revert_2.png"),
+              "gitShiny/R/images/revert_changes/revert_2.png"),
             contentType = "image/png",
             width = 600,
             height = 400
@@ -313,7 +313,7 @@ mod_revert_changes_server <- function(id){
         output$workflow <- renderImage({
           list(
             src = file.path(
-              "R/images/revert_changes/revert_3.png"),
+              "gitShiny/R/images/revert_changes/revert_3.png"),
             contentType = "image/png",
             width = 600,
             height = 400
@@ -324,7 +324,7 @@ mod_revert_changes_server <- function(id){
           
           list(
             src = file.path(
-              "R/images/revert_changes/revert_4.png"),
+              "gitShiny/R/images/revert_changes/revert_4.png"),
             contentType = "image/png",
             width = 600,
             height = 400
@@ -336,7 +336,7 @@ mod_revert_changes_server <- function(id){
           
           list(
             src = file.path(
-              "R/images/revert_changes/revert_5.png"),
+              "gitShiny/R/images/revert_changes/revert_5.png"),
             contentType = "image/png",
             width = 600,
             height = 400
@@ -348,7 +348,7 @@ mod_revert_changes_server <- function(id){
           
           list(
             src = file.path(
-              "R/images/revert_changes/revert_6.png"),
+              "gitShiny/R/images/revert_changes/revert_6.png"),
             contentType = "image/png",
             width = 600,
             height = 400
@@ -360,7 +360,7 @@ mod_revert_changes_server <- function(id){
         output$workflow <- renderImage({
           list(
             src = file.path(
-              "R/images/revert_changes/revert_1.png"),
+              "gitShiny/R/images/revert_changes/revert_1.png"),
             contentType = "image/png",
             width = 600,
             height = 400
@@ -376,7 +376,7 @@ mod_revert_changes_server <- function(id){
     output$change1 <- renderImage({
       list(
         src = file.path(
-          "R/images/revert_changes/first_change.png"),
+          "gitShiny/R/images/revert_changes/first_change.png"),
         contentType = "image/png",
         width = 450,
         height = 100
@@ -386,7 +386,7 @@ mod_revert_changes_server <- function(id){
     output$change2 <- renderImage({
       list(
         src = file.path(
-          "R/images/revert_changes/second_change.png"),
+          "gitShiny/R/images/revert_changes/second_change.png"),
         contentType = "image/png",
         width = 450,
         height = 100
@@ -396,7 +396,7 @@ mod_revert_changes_server <- function(id){
     output$log <- renderImage({
       list(
         src = file.path(
-          "R/images/revert_changes/git_log_revert.png"),
+          "gitShiny/R/images/revert_changes/git_log_revert.png"),
         contentType = "image/png",
         width = 600,
         height = 300
@@ -406,7 +406,7 @@ mod_revert_changes_server <- function(id){
     output$reverted <- renderImage({
       list(
         src = file.path(
-          "R/images/revert_changes/reverted.png"),
+          "gitShiny/R/images/revert_changes/reverted.png"),
         contentType = "image/png",
         width = 450,
         height = 100

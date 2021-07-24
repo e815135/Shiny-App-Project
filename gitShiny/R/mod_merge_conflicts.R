@@ -280,7 +280,7 @@ mod_merge_conflicts_server <- function(id){
     output$change1 <- renderImage({
       list(
         src = file.path(
-          "R/images/merge_conflicts/change1.png"),
+          "gitShiny/R/images/merge_conflicts/change1.png"),
         contentType = "image/png",
         width = 250,
         height = 75
@@ -290,7 +290,7 @@ mod_merge_conflicts_server <- function(id){
     output$change2 <- renderImage({
       list(
         src = file.path(
-          "R/images/merge_conflicts/change2.png"),
+          "gitShiny/R/images/merge_conflicts/change2.png"),
         contentType = "image/png",
         width = 250,
         height = 75
@@ -300,7 +300,7 @@ mod_merge_conflicts_server <- function(id){
     output$conflict <- renderImage({
       list(
         src = file.path(
-          "R/images/merge_conflicts/conflict.png"),
+          "gitShiny/R/images/merge_conflicts/conflict.png"),
         contentType = "image/png",
         width = 400,
         height = 75
@@ -310,7 +310,7 @@ mod_merge_conflicts_server <- function(id){
     output$git_status <- renderImage({
       list(
         src = file.path(
-          "R/images/merge_conflicts/git_status.png"),
+          "gitShiny/R/images/merge_conflicts/git_status.png"),
         contentType = "image/png",
         width = 500,
         height = 150
@@ -320,7 +320,7 @@ mod_merge_conflicts_server <- function(id){
     output$conflict_file <- renderImage({
       list(
         src = file.path(
-          "R/images/merge_conflicts/conflict_file.png"),
+          "gitShiny/R/images/merge_conflicts/conflict_file.png"),
         contentType = "image/png",
         width = 300,
         height = 125
@@ -330,7 +330,7 @@ mod_merge_conflicts_server <- function(id){
     output$resolve_file <- renderImage({
       list(
         src = file.path(
-          "R/images/merge_conflicts/change2.png"),
+          "gitShiny/R/images/merge_conflicts/change2.png"),
         contentType = "image/png",
         width = 250,
         height = 75
@@ -340,7 +340,7 @@ mod_merge_conflicts_server <- function(id){
     output$graph <- renderImage({
       list(
         src = file.path(
-          "R/images/merge_conflicts/graph.png"),
+          "gitShiny/R/images/merge_conflicts/graph.png"),
         contentType = "image/png",
         width = 500,
         height = 150
