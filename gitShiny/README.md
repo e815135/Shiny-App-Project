@@ -8,11 +8,6 @@ control.
 
 ## Installation
 
-<!-- You can install the released version of gitShiny from [CRAN](https://CRAN.R-project.org) with: -->
-<!-- ``` r -->
-<!-- install.packages("gitShiny") -->
-<!-- ``` -->
-
 The development version can be installed from
 [GitHub](https://github.com/) with:
 

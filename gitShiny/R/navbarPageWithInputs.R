@@ -1,4 +1,7 @@
 #' Navigation Bar with Input Widgets
+#' 
+#' Copyright 2016 Dean Attali. Licensed under the MIT license.
+#' https://github.com/daattali/advanced-shiny/tree/master/navbar-add-text
 #'
 #' @param ... Arguments in shiny::navbarPage
 #' @param input1 first input widget

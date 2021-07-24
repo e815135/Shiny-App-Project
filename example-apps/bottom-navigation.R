@@ -5,6 +5,7 @@ library("shinyjs")
 # example -----------------------------------------------------------------
 
 # This function allows input elements to be added to a navigation bar
+# Copyright 2016 Dean Attali. Licensed under the MIT license.
 # code from https://github.com/daattali/advanced-shiny/tree/master/navbar-add-text
 navbarPageWithInputs <- function(..., inputs) {
   navbar <- navbarPage(...)
