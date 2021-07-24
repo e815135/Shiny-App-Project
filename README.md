@@ -15,12 +15,20 @@ control.
 
 ## Installation
 
-The development version can be installed from
+<!--The development version can be installed from
 [GitHub](https://github.com/) with:
 
 ``` r
 # install.packages("devtools")
 devtools::install_github("e815135/Shiny-App-Project/gitShiny")
+```
+-->
+
+In order to run the app, download the project to a zip folder. In RStudio, set your working directory to "Shiny-App-Project-main". Then run the following:
+
+``` r
+#install.packages("devtools")
+devtools::load_all("gitShiny")
 ```
 
 ## Run App
@@ -28,7 +36,6 @@ devtools::install_github("e815135/Shiny-App-Project/gitShiny")
 To open the application run the following code in the console:
 
 ``` r
-library(gitShiny)
 run_app()
 ```
 
